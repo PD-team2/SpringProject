@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-   <%@ include file="inc/taglibMenu.jsp" %>
+   <%@ include file="../inc/taglibMenu.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />	
+        <link href="../css/styles.css" rel="stylesheet" />	
 	<title>Insert title here</title>
 </head>
 <body>
@@ -19,6 +19,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" Style="background-color: white;">
             <div class="container">
+            <!-- 로고 추가해야함  -->
                 <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -40,6 +41,5 @@
                 </div>
             </div>
         </nav>
-        
-</body>
-</html>
+  </body>
+  </html>
