@@ -21,3 +21,14 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/.metadata/
+Side-On/bin/src/main/resources/logback-spring.xml
+Side-On/bin/src/main/resources/log4jdbc.log4j2.properties
+Side-On/bin/src/main/resources/application.properties
+Side-On/bin/pom.xml
+Side-On/bin/mvnw.cmd
+Side-On/bin/mvnw
+Side-On/bin/.mvn/wrapper/maven-wrapper.properties
+Side-On/bin/.mvn/wrapper/maven-wrapper.jar
+Side-On/bin/.mvn/wrapper/maven-wrapper.jar
+Side-On/bin/.mvn/wrapper/maven-wrapper.jar
