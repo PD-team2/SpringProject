@@ -21,28 +21,28 @@
 <div><p>
 A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
 질문에 대한 답변입니다.<br>
-    질문에 대한 답변입니다.
+질문에 대한 답변입니다.
 </p></div>
 <input type="radio" name="accordian" id="answer02"/>
 <label for="answer02">Q. 팀원 모집 관련 질문<em></em></label>
 <div><p>
-A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
+A. 팀원 모집관련 질문에 대한 답변입니다.<br>
 질문에 대한 답변입니다.<br>
-    질문에 대한 답변입니다.
+질문에 대한 답변입니다.
 </p></div>
 <input type="radio" name="accordian" id="answer03"/>
 <label for="answer03">Q. 투표 관련 질문<em></em></label>
 <div><p>
-A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
+A. 투표 관련 질문에 대한 답변입니다.<br>
 질문에 대한 답변입니다.<br>
-    질문에 대한 답변입니다.
+질문에 대한 답변입니다.
 </p></div>
 <input type="radio" name="accordian" id="answer04"/>
 <label for="answer04">Q. 신고 관련 질문<em></em></label>
 <div><p>
-A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
+A. 신고 관련 질문에 대한 답변입니다.<br>
 질문에 대한 답변입니다.<br>
-    질문에 대한 답변입니다.
+질문에 대한 답변입니다.
 </p></div>
 </div>
 </div>
