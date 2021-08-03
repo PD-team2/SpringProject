@@ -8,7 +8,7 @@
 <title>SideOn</title>
 </head>
 <body>
-
+<%@ include file="../jsp/inc/header.jsp" %>
    Test Page
 </body>
 </html>
