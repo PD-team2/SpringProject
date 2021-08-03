@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>프로젝트 모집/지원 | Side-On</title>
 
 <link type="text/css" rel="stylesheet" href="../css/RecruitHome_juri_JHK.css">
 
@@ -113,7 +113,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                                <img class="img-fluid" src="https://lh3.googleusercontent.com/proxy/cRMUBr9Npfe0rD1ZioszSJUd1uS0bVWdE5hRnXchzLVZx4EU2zZ8UZRkxyPWl_Ov1c9NYNaGka-tucEE03rHndmtEyeEy663NPCCpIrIb9FrGZxhj1o" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Threads</div>
@@ -128,7 +128,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                                <img class="img-fluid" src="https://lh3.googleusercontent.com/proxy/cRMUBr9Npfe0rD1ZioszSJUd1uS0bVWdE5hRnXchzLVZx4EU2zZ8UZRkxyPWl_Ov1c9NYNaGka-tucEE03rHndmtEyeEy663NPCCpIrIb9FrGZxhj1o" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Explore</div>
@@ -143,7 +143,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                                <img class="img-fluid" src="https://lh3.googleusercontent.com/proxy/cRMUBr9Npfe0rD1ZioszSJUd1uS0bVWdE5hRnXchzLVZx4EU2zZ8UZRkxyPWl_Ov1c9NYNaGka-tucEE03rHndmtEyeEy663NPCCpIrIb9FrGZxhj1o" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Finish</div>
@@ -158,7 +158,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                                <img class="img-fluid" src="https://lh3.googleusercontent.com/proxy/cRMUBr9Npfe0rD1ZioszSJUd1uS0bVWdE5hRnXchzLVZx4EU2zZ8UZRkxyPWl_Ov1c9NYNaGka-tucEE03rHndmtEyeEy663NPCCpIrIb9FrGZxhj1o" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Lines</div>
@@ -173,7 +173,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                                <img class="img-fluid" src="https://lh3.googleusercontent.com/proxy/cRMUBr9Npfe0rD1ZioszSJUd1uS0bVWdE5hRnXchzLVZx4EU2zZ8UZRkxyPWl_Ov1c9NYNaGka-tucEE03rHndmtEyeEy663NPCCpIrIb9FrGZxhj1o" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Southwest</div>
@@ -188,7 +188,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                                <img class="img-fluid" src="https://lh3.googleusercontent.com/proxy/cRMUBr9Npfe0rD1ZioszSJUd1uS0bVWdE5hRnXchzLVZx4EU2zZ8UZRkxyPWl_Ov1c9NYNaGka-tucEE03rHndmtEyeEy663NPCCpIrIb9FrGZxhj1o" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Window</div>
