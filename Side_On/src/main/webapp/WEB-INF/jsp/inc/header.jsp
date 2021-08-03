@@ -27,8 +27,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
-                            >Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+                            >Recruit</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
                             > Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
