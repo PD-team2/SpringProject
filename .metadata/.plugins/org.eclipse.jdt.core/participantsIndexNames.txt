@@ -11,3 +11,5 @@ C:\00.practice\SpringProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsear
 \Side_On\src\main\java
 C:\00.practice\SpringProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2439504048.index
 \Side-On\src\main\java
+C:\00.practice\SpringProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\328320431.index
+\Side_On\src\main\java
