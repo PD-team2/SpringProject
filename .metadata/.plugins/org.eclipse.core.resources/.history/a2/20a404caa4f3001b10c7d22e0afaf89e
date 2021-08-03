@@ -1,0 +1,16 @@
+package com.work;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class ExampleController {
+
+	@RequestMapping("/")
+	public String home(HttpServletRequest request) {
+		ServletContext application = request.getServletContext();
+		String path = application.getContextPath();
+		application.setAttribute("path", path);
+		log.info("### context path: " + path);
+		return "main";
+	}
+}
