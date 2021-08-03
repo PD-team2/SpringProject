@@ -14,6 +14,6 @@ public class ExampleController {
 		ServletContext application = request.getServletContext();
 		String path = application.getContextPath();
 		application.setAttribute("path", path);
-		return "example";
+		return "recruitHome";
 	}
 }
