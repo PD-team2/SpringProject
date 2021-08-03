@@ -16,4 +16,12 @@ public class ExampleController {
 		application.setAttribute("path", path);
 		return "recruitHome";
 	}
+	
+	
+	@RequestMapping("/recruit/recruitHome")
+	public String recruitHome() {
+		
+		return "recruit/recruitHome"; 
+	}
+	
 }

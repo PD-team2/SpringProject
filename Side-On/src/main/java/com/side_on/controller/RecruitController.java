@@ -6,9 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class RecruitController {
 	
-	@RequestMapping("/recruit")
+	@RequestMapping("/recruit/recruitHome")
 	public String recruitHome() {
 		
-		return "recruitHome"; 
+		return "recruit/recruitHome"; 
 	}
+	
+	
 }
+
