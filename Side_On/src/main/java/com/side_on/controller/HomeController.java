@@ -26,9 +26,5 @@ public class HomeController {
 	}
 	
 	
-	@RequestMapping("/board/FaQBoard")
-	public String FaQBoard() {
 	
-		return "board/FaQBoard";
-	}
 }
