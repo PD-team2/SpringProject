@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>FaQ Board</title>
+<title>FaQ|Side-On</title>
 <link type="text/css" rel="stylesheet" href="../css/FaQBoard_JHK.css">
 </head>
 <body>
