@@ -15,7 +15,7 @@
 		
 			<div class="btn-area">
 			<button type="submit" class="button" 
-                    onclick="location.href='index.html'">메인화면 복귀</button>
+                    onclick="location.href='/'">메인화면 복귀</button>
 		</div>
 	
 </section>
