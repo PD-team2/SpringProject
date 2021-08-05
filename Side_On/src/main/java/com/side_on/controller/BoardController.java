@@ -26,4 +26,10 @@ public class BoardController {
 	
 		return "board/contactResult";
 	}
+	
+	@RequestMapping("/board/chat")
+	public String chat() {
+	
+		return "board/chat";
+	}
 }
