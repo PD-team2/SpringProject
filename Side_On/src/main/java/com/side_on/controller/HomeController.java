@@ -25,6 +25,10 @@ public class HomeController {
 		return "main";
 	}
 	
+	@RequestMapping("/vote/makePoll")
+	public String makePoll() {
 	
+		return "vote/makePoll";
+	}
 	
 }
