@@ -7,78 +7,8 @@
 <meta charset="UTF-8">
 <title>프로젝트 상세 페이지 | Side-On</title>
 
-<link type="text/css" rel="stylesheet" href="../css/RecruitHome_juri_JHK.css">
+<link type="text/css" rel="stylesheet" href="../css/RecruitHome_juri.css">
 
-<style>
-.tags {
-  list-style: none;
-  margin: 0;
-  overflow: hidden; 
-  padding: 0;
-}
-
-.tags li {
-  float: left; 
-}
-
-.tag {
-  background: #eee;
-  border-radius: 3px 0 0 3px;
-  color: #999;
-  display: inline-block;
-  height: 26px;
-  line-height: 26px;
-  padding: 0 20px 0 23px;
-  position: relative;
-  margin: 0 10px 10px 0;
-  text-decoration: none;
-  -webkit-transition: color 0.2s;
-}
-
-.tag::before {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-  content: '';
-  height: 6px;
-  left: 10px;
-  position: absolute;
-  width: 6px;
-  top: 10px;
-}
-
-.tag::after {
-  background: #fff;
-  border-bottom: 13px solid transparent;
-  border-left: 10px solid #eee;
-  border-top: 13px solid transparent;
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.tag:hover {
-  background-color: #ffc800;
-  color: white;
-}
-
-.tag:hover::after {
-   border-left-color: #ffc800; 
-}
-.box {
-    width: 150px;
-    height: 150px; 
-    border-radius: 70%;
-    overflow: hidden;
-}
-.profile {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-</style>
 </head>
 <body>
    <%@ include file="../inc/header.jsp" %>
@@ -92,26 +22,42 @@
 			<div class="row" >
 				  <div class="col-md-4" style="border: 1px solid">
 				  
-					  <h3  style="text-align:center;"> < 리더 > </h3>
+					  <h3  style="text-align:center; margin:0 auto; ">  리더 </h3>
 					  <!--<i class="fas fa-user-circle fa-10x" ></i>  -->
 					  
-					  <div class="box" style="background: #BDBDBD;">
-						    <img class="profile" src="/images/tistory.JPG">
+					 <div id="circle1" >
+						<img class ="profile" src="../img/bear2.jpg">
 						</div>
-					  <img> 
+					 
+	
 					  <div>
-			     		 <h4  style="text-align:center;">memberId님 </h4> 
+			     		 <h4  style="text-align:center; margin-top:5%;">memberId님 </h4> 
 					  </div>
 				  </div>
 				  
 				  <div class="col-md-4" style="border: 1px solid; backgroud: gray;">
-				 	<span>이러이러한프로젝트를 만들고 싶섭니다</span>
-				  
+				
+					<blockquote class="rectangle-speech-border">
+						  <p>
+						  		같이 열심히 할 분들 환영합니당
+						  </p>
+						</blockquote>
 				  </div>
 				  
 				  <div class="col-md-4" style="border: 1px solid">
-				  .col-md-4
-				  
+				 	<h4 style="text-align:center; margin-top:5%;">모집 분야</h4>
+				 	<hr>
+				 			 	
+				 	<div style="border: 1px solid black;">
+				 		
+				 		<ul>
+				 			<li>
+				 				<span>프론트엔드 </span> <span> 0/2</span> <button>지원하기</button>
+				 			</li>
+				 		</ul>
+				 		
+				 	</div>
+				 
 				  </div>
 			</div>
               

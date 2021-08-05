@@ -6083,3 +6083,1051 @@ Binding(CTRL+SHIFT+C,
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-04 01:00:49.684
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.CSDORAlw => OK
+!SESSION 2021-08-04 09:23:53.624 -----------------------------------------------
+eclipse.buildId=4.11.0.202106180608
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-08-04 09:24:08.671
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-08-04 09:24:08.671
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@50dd1e3a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3b764e66,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY Activator 1 0 2021-08-04 09:24:17.625
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-08-04 09:24:21.942
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY Activator 1 0 2021-08-04 09:24:23.090
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 09:24:25.099
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 09:24:26.691
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 09:24:28.336
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY org.eclipse.ui 2 2 2021-08-04 15:06:51.765
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY Activator 1 0 2021-08-04 15:08:35.474
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:08:36.182
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:08:46.772
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:08:46.915
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:09:22.538
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:09:22.686
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:09:55.934
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:09:56.083
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:10:43.230
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:10:43.381
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:10:45.577
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:10:45.727
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:11:25.966
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:11:26.176
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:11:28.825
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:11:29.079
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:13:55.428
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:13:55.577
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:14:36.745
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:14:36.896
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:15:05.032
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:15:05.166
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:15:44.279
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:15:44.416
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:15:51.299
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:15:51.435
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:15:57.424
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:15:57.555
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:16:27.153
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:16:27.731
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:16:32.971
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:16:33.122
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:16:38.150
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:16:38.278
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:17:34.241
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:17:34.370
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:17:40.020
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:17:40.147
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:21:06.171
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:21:06.298
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:21:18.718
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:21:18.854
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:21:30.870
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:21:31.001
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:21:39.471
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:21:39.621
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:22:27.456
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:22:27.588
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:22:38.630
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:22:38.774
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:22:50.117
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:22:50.254
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:22:59.085
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:22:59.214
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:23:34.926
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:23:35.056
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:24:37.757
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:24:37.898
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:24:43.315
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:24:43.438
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:24:56.541
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:24:56.713
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:24:58.342
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:24:58.735
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:25:14.692
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:25:14.825
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:25:29.518
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:25:29.654
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:25:37.261
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:25:37.389
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:25:38.475
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:25:39.457
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:25:43.582
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:25:43.726
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:25:52.452
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:25:52.580
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:25:59.200
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:25:59.334
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:26:06.804
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:26:07.368
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:26:27.256
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:26:27.382
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:26:39.992
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:26:41.613
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:26:51.650
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:27:03.933
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:27:05.642
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:29:45.532
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:30:08.651
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:31:20.466
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:33:27.039
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:33:54.496
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY org.eclipse.jface 2 0 2021-08-04 15:34:14.284
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-08-04 15:34:14.284
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@506161d7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@73554acf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY Activator 1 0 2021-08-04 15:34:18.123
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:34:18.255
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:34:32.408
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:34:32.540
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:34:40.469
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:34:40.602
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:37:10.265
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:38:29.525
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:38:32.481
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:38:32.606
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:39:25.650
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:39:25.779
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:39:30.148
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:40:23.396
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:41:00.853
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:41:08.676
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:41:15.073
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:41:37.123
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:41:42.846
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 15:42:15.146
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:10:32.628
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:10:32.753
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:10:47.787
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:11:13.557
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:16:53.774
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:17:16.552
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:17:27.102
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:17:28.527
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:17:40.860
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:18:32.019
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:18:41.752
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:35:22.294
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:35:46.043
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:35:52.298
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:36:07.532
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:36:24.003
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:36:24.131
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:36:29.247
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:36:29.375
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:36:55.256
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:37:03.350
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:37:05.787
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:37:20.981
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:37:31.482
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:37:43.398
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:37:53.506
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:37:56.412
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:37:58.062
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:37:58.886
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:38:00.324
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:38:01.791
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:38:07.124
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:38:07.520
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:38:08.295
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:38:15.139
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:38:26.593
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:40:00.385
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:40:22.568
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:40:23.543
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:40:37.819
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:40:37.932
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:40:38.498
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:40:46.675
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:40:46.820
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:40:51.964
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:40:52.098
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:41:01.026
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:41:01.137
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:41:01.258
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:41:09.918
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:54:52.862
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:54:55.065
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:54:55.798
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:54:57.519
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:54:57.641
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:54:57.778
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:55:21.424
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:55:34.444
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:55:41.940
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:56:54.048
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:57:05.088
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:57:10.840
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:57:17.016
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:58:18.543
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:58:32.800
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:58:32.931
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:58:40.528
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 16:58:40.656
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:00:14.020
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:00:14.176
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:00:23.569
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:01:05.434
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:01:30.008
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:01:32.906
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:01:46.798
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:01:46.971
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:02:07.635
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:02:07.764
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:02:23.421
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:02:31.288
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:02:33.633
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:02:38.371
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:16:21.388
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:16:32.657
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:17:05.639
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:17:17.017
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-04 17:28:57.733
+!MESSAGE Has main method computation for project 'Side_On'
+!SESSION 2021-08-05 17:43:48.538 -----------------------------------------------
+eclipse.buildId=4.11.0.202106180608
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-08-05 17:44:06.110
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-08-05 17:44:06.110
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@585672dd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@49c947f7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY Activator 1 0 2021-08-05 17:44:16.272
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-08-05 17:44:20.050
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY Activator 1 0 2021-08-05 17:44:21.938
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-05 17:44:28.488
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-05 17:44:57.759
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY org.eclipse.ui 2 2 2021-08-05 17:44:58.350
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2021-08-05 17:44:59.623 -----------------------------------------------
+eclipse.buildId=4.11.0.202106180608
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-08-05 17:45:04.986
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-08-05 17:45:04.986
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@39451d92,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@46610fc9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY Activator 1 0 2021-08-05 17:45:10.761
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-08-05 17:45:13.198
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY Activator 1 0 2021-08-05 17:45:13.622
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-05 17:45:14.144
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-05 17:45:16.181
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:45:36.968
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:45:36.969
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@33c6c4f[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=559)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:45:36.978
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:45:37.129
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:45:42.234
+!MESSAGE Boot LS startup time from start to initialized: 5249ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:45:42.329
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.yRDcCTvwisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:45:42.332
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:45:42.335
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:45:42.336
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:45:42.336
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:45:42.337
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.yRDcCTvw => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:45:42.359
+!MESSAGE classpath=113 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:45:42.364
+!MESSAGE buffering callback sts4.classpath.yRDcCTvw Side_On false 113
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:45:42.365
+!MESSAGE executing callback sts4.classpath.yRDcCTvw 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:45:42.646
+!MESSAGE executing callback sts4.classpath.yRDcCTvw SUCCESS [done]
+
+!ENTRY org.eclipse.jface 2 0 2021-08-05 17:45:58.140
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-08-05 17:45:58.140
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@40bb73ff,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6fc3c9d6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY Activator 1 0 2021-08-05 17:46:16.250
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY org.eclipse.ui 2 2 2021-08-05 17:46:30.853
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY Activator 1 0 2021-08-05 17:47:38.549
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-05 17:50:03.618
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-05 17:50:04.239
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY org.eclipse.lsp4e 2 0 2021-08-05 17:50:05.155
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2092)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:50:44.490
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.yRDcCTvw
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:50:44.490
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.yRDcCTvw
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:50:44.491
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:50:44.491
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.yRDcCTvw => OK
+!SESSION 2021-08-05 17:50:47.478 -----------------------------------------------
+eclipse.buildId=4.11.0.202106180608
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -data file:/C:/00.practice/SpringProject/ -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-08-05 17:50:51.195
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-08-05 17:50:51.195
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@21d48c40,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4a10c019,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:50:57.913
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:50:57.914
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@2109a9d9[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=559)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:50:57.916
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:50:57.960
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-08-05 17:50:59.888
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:51:01.118
+!MESSAGE Boot LS startup time from start to initialized: 3183ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:51:01.377
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.lmuTpZUNisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:51:01.380
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:51:01.383
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:51:01.384
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:51:01.384
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:51:01.385
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.lmuTpZUN => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:51:01.395
+!MESSAGE classpath=113 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:51:01.400
+!MESSAGE buffering callback sts4.classpath.lmuTpZUN Side_On false 113
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:51:01.401
+!MESSAGE executing callback sts4.classpath.lmuTpZUN 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:51:01.901
+!MESSAGE executing callback sts4.classpath.lmuTpZUN SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:51:52.811
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.lmuTpZUN
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:51:52.813
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.lmuTpZUN
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:51:52.814
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 17:51:52.814
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.lmuTpZUN => OK
+
+!ENTRY org.eclipse.ui 2 2 2021-08-05 17:51:53.295
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2021-08-05 18:20:54.693 -----------------------------------------------
+eclipse.buildId=4.11.0.202106180608
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-08-05 18:21:00.381
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-08-05 18:21:00.381
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@48cbe1c9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@67e628b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 18:21:06.901
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 18:21:06.901
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@5743ac9c[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=559)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 18:21:06.904
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 18:21:06.944
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-08-05 18:21:08.479
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 18:21:10.875
+!MESSAGE Boot LS startup time from start to initialized: 3956ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 18:21:11.797
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.BKlIwKSGisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 18:21:11.801
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 18:21:11.803
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 18:21:11.804
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 18:21:11.806
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.BKlIwKSG => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 18:21:11.809
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 18:21:11.844
+!MESSAGE classpath=113 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 18:21:11.851
+!MESSAGE buffering callback sts4.classpath.BKlIwKSG Side_On false 113
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 18:21:11.852
+!MESSAGE executing callback sts4.classpath.BKlIwKSG 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-05 18:21:12.312
+!MESSAGE executing callback sts4.classpath.BKlIwKSG SUCCESS [done]
