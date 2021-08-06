@@ -35,8 +35,22 @@
                             >About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
                             >Team</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/board/FaQBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+                         <c:choose>
+							<c:when test="${(empty memberId && empty grade) || empty dto}">
+								 <li class="nav-item"><a class="nav-link" href="/board/FaQBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
                             >Contact</a></li>
+							</c:when>
+							
+							<c:when test="${(not empty memberId && not empty grade) || empty dto}">
+								<c:if test="${grade == 'A' || dto.grade == 'A'}">
+									 <li class="nav-item"><a class="nav-link" href="#contact" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+                            >AdminPage</a></li>
+								</c:if>
+								
+								<li class="nav-item"><a class="nav-link" href="/board/Mypage" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+                            >MyPage</a></li>
+							</c:when>
+						</c:choose>  
                     </ul>
                 </div>
             </div>
