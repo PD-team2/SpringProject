@@ -15,14 +15,14 @@
     <div class="Img"><a href="#">
     <img src="https://raw.githubusercontent.com/PD-team2/SpringProject_Output/main/JaeHyunKim/IMG/MyProfile.png"></a></div>
     <div class="title"> 내 프로필</div> 
-    <div class="expalin"> 개인 프로필을 확인할 수 있습니다.</div> 
+    <div class="expalin"> 회원님의 정보를 확인하고 변경할 수 있습니다.</div> 
     <input type="button" class="button" value="프로필 보기">
 </div>
 <div class="MyProfile">
     <div class="Img"><a href="#">
     <img src="https://raw.githubusercontent.com/PD-team2/SpringProject_Output/main/JaeHyunKim/IMG/MyInfo.png"></a></div>
-    <div class="title"> 내 정보 변경</div> 
-    <div class="expalin"> 회원님의 정보를 변경할 수 있습니다.</div> 
+    <div class="title"> 프로젝트 관리</div> 
+    <div class="expalin"> 회원님의 모집글 참여현황을 관리할 수 있습니다.</div> 
     <input type="button" class="button" value="변경하기">
 </div>
 
@@ -34,11 +34,11 @@
     <input type="button" class="button" value="문의하기" onclick="location.href='FaQBoard'"> 
 </div>
 <div class="MyProfile">
-    <div class="Img"><a href="#">
+    <div class="Img"><a href="/member/deleteForm">
     <img src="https://raw.githubusercontent.com/PD-team2/SpringProject_Output/main/JaeHyunKim/IMG/Myrecord.png"></a></div>
-    <div class="title"> 내 활동 기록</div> 
-    <div class="expalin"> 작성하신 게시물을 조회할 수 있습니다.</div> 
-    <input type="button" class="button" value="활동기록보기">
+    <div class="title"> 회원 탈퇴</div> 
+    <div class="expalin"> 등록된 아이디를 삭제할 수 있습니다.</div> 
+    <input type="button" class="button" value="탈퇴하기" onclick="location.href='/member/deleteForm'" >
      
 </div>
     
