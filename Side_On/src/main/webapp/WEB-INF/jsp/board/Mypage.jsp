@@ -23,7 +23,7 @@
     <img src="https://raw.githubusercontent.com/PD-team2/SpringProject_Output/main/JaeHyunKim/IMG/MyInfo.png"></a></div>
     <div class="title"> 프로젝트 관리</div> 
     <div class="expalin"> 회원님의 모집글 참여현황을 관리할 수 있습니다.</div> 
-    <input type="button" class="button" value="변경하기">
+    <input type="button" class="button" value="프로젝트 관리">
 </div>
 
 <div class="MyProfile">
