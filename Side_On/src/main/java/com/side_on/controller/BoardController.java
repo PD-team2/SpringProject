@@ -8,7 +8,12 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @Slf4j
 public class BoardController {
-
+	@RequestMapping("/board/Mypage")
+	public String Mypage() {
+	
+		return "board/Mypage";
+	}
+	
 	@RequestMapping("/board/FaQBoard")
 	public String FaQBoard() {
 	
