@@ -48,12 +48,6 @@ public class HomeController {
 		return "main";
 	}
 	
-	@RequestMapping("/vote/makePoll")
-	public String makePoll() {
-	
-		return "vote/makePoll";
-	}
-	
 	@RequestMapping("/admin/dashboard")
 	public String dashboard(Model model) {
 		List<Notice> noticeList = noticeService.noticeList();
