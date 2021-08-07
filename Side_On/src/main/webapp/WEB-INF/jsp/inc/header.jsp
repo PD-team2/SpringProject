@@ -27,29 +27,54 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
-                            >Recruit</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
-                            > Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
-                            >About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/board/replyBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
-                            >Board</a></li>
+                       
                          <c:choose>
 							<c:when test="${(empty memberId && empty grade) || empty dto}">
-								 <li class="nav-item"><a class="nav-link" href="/board/FaQBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
-                            >Contact</a></li>
+								<li class="nav-item"><a class="nav-link" href="/member/loginForm" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>LogIn</a></li>	
+								<li class="nav-item"><a class="nav-link" href="#about" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>Notice</a></li>	
+								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>Recruit</a></li>
+								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>Find</a></li>
+								<li class="nav-item"><a class="nav-link" href="/board/FaQBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>Contact</a></li>
 							</c:when>
 							
 							<c:when test="${(not empty memberId && not empty grade) || empty dto}">
-								<c:if test="${grade == 'A' || dto.grade == 'A'}">
-									 <li class="nav-item"><a class="nav-link" href="#contact" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
-                            >AdminPage</a></li>
-								</c:if>
-								
+							<c:if test="${grade == 'A' || dto.grade == 'A'}">
+								<li class="nav-item"><a class="nav-link" href="#about" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>Notice</a></li>	
+								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>Recruit</a></li>
+								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>Find</a></li>
+								<li class="nav-item"><a class="nav-link" href="/board/replyBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>Board</a></li>
 								<li class="nav-item"><a class="nav-link" href="/board/Mypage" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
-                            >MyPage</a></li>
-							</c:when>
+									>MyPage</a></li>
+								<li class="nav-item"><a class="nav-link" href="#contact" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>AdminPage</a></li>
+								<li class="nav-item"><a class="nav-link" href="/member/logout" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>LogOut</a></li>	
+							</c:if>
+							
+							<c:if test="${grade == 'G' || dto.grade == 'G'}">
+								<li class="nav-item"><a class="nav-link" href="#about" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>Notice</a></li>	
+								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>Recruit</a></li>
+								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>Find</a></li>
+								<li class="nav-item"><a class="nav-link" href="/board/replyBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>Board</a></li>
+								<li class="nav-item"><a class="nav-link" href="/board/Mypage" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>MyPage</a></li>
+								<li class="nav-item"><a class="nav-link" href="/member/logout" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>LogOut</a></li>
+							</c:if>	
+							</c:when>			
 						</c:choose>  
                     </ul>
                 </div>
