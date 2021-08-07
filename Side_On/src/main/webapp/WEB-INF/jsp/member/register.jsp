@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>회원가입</title>
+    <title>회원가입 | Side-On</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -20,87 +20,84 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../css/register_sh.css" rel="stylesheet">
 
 </head>
 
-<body class="bg-gradient-primary">
-
+<body class="bg-gradient-warning">
+   <!-- navibar -->
+       <%@ include file="../inc/header.jsp" %>
     <div class="container">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-5 d-none d-lg-block bg-login-image"></div>
                     <div class="col-lg-7">
                         <div class="p-5">
+                        
+                        <br>
+                        <br>
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">회원가입</h1>
+                                <h1 class="h4 text-gray-900 mb-4">환영합니다!</h1>
                             </div>
-                           <form>
-  <fieldset>
-    
-    <div class="form-group row">
-     
-    </div>
-    <div class="form-group">
-      <label for="exampleInputId" class="form-label mt-4">아이디</label>
-      <input type="email" class="form-control" id="exampleInputId">
-      <small id="emailHelp" class="form-text text-muted">영문대/소문자,숫자를 포함해 6-20자 이내로 입력해주세요.</small>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1" class="form-label mt-4">비밀번호</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-	  <small id="emailHelp" class="form-text text-muted">영문대/소문자,숫자,특수문자(!@#$%^&*_-)를 포함해 8-20자 이내로 입력해주세요.</small>
-	</div>
-	
-	 <div class="form-group">
-      <label for="exampleInputPassword2" class="form-label mt-4">비밀번호 확인</label>
-      <input type="password" class="form-control" id="exampleInputPassword2">
-	</div>
-	
-	 <div class="form-group">
-      <label for="exampleInputName" class="form-label mt-4">이름</label>
-      <input type="name" class="form-control" id="exampleInputName">
-	</div>
-
-	<div class="form-group">
-      <label for="exampleInputEmail" class="form-label mt-4">이메일</label>
-      <input type="name" class="form-control" id="exampleInputEmail">
-	  <small id="emailHelp" class="form-text text-muted">email@example.com</small>
-	
-      <label for="exampleSelect1" class="form-label mt-4"> @ </label>
-      <select class="form-select" id="exampleSelect1">
-        <option>gmail.com</option>
-        <option>naver.com</option>
-        <option>hanmail.com</option>
-        <option>nate.com</option>
-        <option>직접입력</option>
-      </select>
-  
-	</div>
-	
-	<div class="form-group">
-      <label for="exampleInputMobile" class="form-label mt-4">핸드폰번호</label>
-      <input type="name" class="form-control" id="exampleInputMobile">
-	  <button type="button" class="btn btn-outline-warning btn-sm">인증</button>
-
-	</div>
-	
-	<div class="button1">
-   <button type="button" class="btn btn-warning">완료</button>
-	<button type="button" class="btn btn-light">취소</button>
-
-  </fieldset>
-</form>
-
+                            <form class="user">
+                               
+                               <!-- 이미지어케바꾸냐.. -->
+                                <div class="form-group row">
+                                <div class="col-sm-8 mb-3 mb-sm-0">
+                                    <input type="id" class="form-control form-control-user" id="exampleInputId"
+                                        placeholder="아이디">
+                                </div>
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                   <a href="#" class="btn btn-outline-warning btn-user btn-block">
+                                   중복확인
+                                </a>
+                                </div>
+                                </div>
+                                
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-user"
+                                            id="exampleInputPassword" placeholder="비밀번호">
+                                   	</div>
+                                   <div class="form-group">
+                                        <input type="password" class="form-control form-control-user"
+                                            id="exampleRepeatPassword" placeholder="비밀번호 확인">
+                                    </div>
+                
+                                <div class="form-group">
+                                    <input type="name" class="form-control form-control-user" id="exampleInputName"
+                                        placeholder="이름">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="이메일 ex)id@mail.com">
+                                </div>
+                                  <div class="form-group row">
+                                <div class="col-sm-8 mb-3 mb-sm-0">
+                                    <input type="mobile" class="form-control form-control-user" id="exampleInputMobile"
+                                        placeholder="핸드폰번호 ex)010-0000-0000">
+                                </div>
+                                 <div class="col-sm-4 mb-3 mb-sm-0">
+                                   <a href="#" class="btn btn-outline-warning btn-user btn-block">
+                                   인증
+                                </a>
+                                </div>
+                                </div>
+                              
+                                <a href="loginForm" class="btn btn-primary btn-user btn-block">
+                                   완료
+                                </a>
+                                <a href="/" class="btn btn-light btn-user btn-block">
+                                   취소
+                                </a>
+                              
+                           
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="forgot-password.html">Forgot Password?</a>
-                            </div>
-                            <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
+                                <a class="small" href="loginForm">이미 회원가입이 되어 있어요!</a>
                             </div>
                         </div>
                     </div>

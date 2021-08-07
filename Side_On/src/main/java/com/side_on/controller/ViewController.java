@@ -1,6 +1,7 @@
 package com.side_on.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -8,18 +9,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ViewController {
 
-	@RequestMapping("/register")
+	@RequestMapping("/member/register")
 	public String Register() {
 		return "member/register";
 	}
 	
-	@RequestMapping("/findMemberList")
+	@RequestMapping("/find/list")
 	public String FindMemberList() {
-		return "member/findMemberList";
+		return "find/list";
 	}
 	
-	@RequestMapping("/findMemberForm")
+	@RequestMapping("/find/form")
 	public String FindMemberForm() {
-		return "member/FindMemberForm";
+		return "find/form";
+	}
+	
+	@RequestMapping("/find/detail")
+	public String FindMemberDetail() {
+		return "find/detail";
 	}
 }
