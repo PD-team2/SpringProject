@@ -33,8 +33,8 @@
                             > Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
                             >About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
-                            >Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/board/replyBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+                            >Board</a></li>
                          <c:choose>
 							<c:when test="${(empty memberId && empty grade) || empty dto}">
 								 <li class="nav-item"><a class="nav-link" href="/board/FaQBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
