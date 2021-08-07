@@ -2,6 +2,7 @@ package com.side_on.controller;
 
 
 
+import java.util.Enumeration;
 import java.util.List;
 
 import javax.servlet.ServletContext;
@@ -33,6 +34,17 @@ public class HomeController {
 		String path = application.getContextPath();
 		application.setAttribute("path", path);
 		log.info("### context path: " + path);
+		return "main";
+	}
+	
+	@RequestMapping("/member/logout")
+	public String logout(HttpSession session) {
+		Enumeration<String> attributes = session.getAttributeNames();
+		while (attributes.hasMoreElements()) {
+			String attribute = attributes.nextElement();
+			session.removeAttribute(attribute);
+		}
+		session.invalidate();
 		return "main";
 	}
 	
