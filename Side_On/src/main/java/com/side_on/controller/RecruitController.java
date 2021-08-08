@@ -27,5 +27,18 @@ public class RecruitController {
 		return "recruit/recruitWrite"; 
 	}
 	
+	/** 마이페이지 모집현황 보기 */
+	@RequestMapping("/recruit/recruitMypage")
+	public String recruitMypage() {
+		
+		return "recruit/recruitMypage"; 
+	}
+	
+	/** 마이페이지 지원현황 보기 */
+	@RequestMapping("/recruit/recruitMypage2")
+	public String recruitMypage2() {
+		
+		return "recruit/recruitMypage2"; 
+	}
 }
 

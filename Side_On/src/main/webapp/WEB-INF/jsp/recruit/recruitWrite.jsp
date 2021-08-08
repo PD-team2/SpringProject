@@ -23,12 +23,12 @@
 		
 		 $(document).ready (function () {     
 			 
-			   $('.btnAdd').click (function () {         
+			   $('#btnAdd').click (function () {         
 				   alert('hi');
 			   });
 
 				
-	            $('.btnAdd').click (function () {         
+	            $('#btnAdd').click (function () {         
 	    			alert('hi');
 	                $('.buttons').append (                        
 	                    '<input type="text" name="txt"> <input type="button" class="btnRemove" value="Remove"><br>'                    
@@ -158,7 +158,7 @@
 							
 								  <input type="number" name="amount" id="amount" min="1" max="20"> 명
 								  <div class="buttons">            
-								        <input type="text" name="txt"> <input type="button" class="btnAdd" value="Add"><br>        
+								        <input type="text" name="txt"> <input type="button" id="btnAdd" value="Add"><br>        
 								     </div>    
 								    
                         </div>
