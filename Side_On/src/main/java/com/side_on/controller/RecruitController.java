@@ -20,6 +20,12 @@ public class RecruitController {
 		return "recruit/recruitDetail"; 
 	}
 	
+	/** 모집 페이지 글 쓰기 */
+	@RequestMapping("/recruit/recruitWrite")
+	public String recruitWrite() {
+		
+		return "recruit/recruitWrite"; 
+	}
 	
 }
 

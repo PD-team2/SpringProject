@@ -49,7 +49,7 @@
                                     <h2>
                                     	프로젝트 이름 : Side-On
                                     </h2>
-                                    <h4>
+                                    <h4 style="color:gray;">
                                  		사이드 프로젝트가 메인인 홈페이지 제작
                                  		<hr>
                                     </h4>
@@ -60,10 +60,10 @@
                                    	<p>해당 게시글은 결제 후 지원이 가능합니다</p>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">리더 소개</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">프로젝트 소개</a>
                                 </li>
                             </ul>
                         </div>
@@ -78,9 +78,7 @@
                     <div class="col-md-4">
                         <div class="profile-work">
                         <hr>
-                        	 <%-- 리더 자기소개  --%>
-                        	 <h6 class="center">안녕하세요. 현직 백엔드 개발자로 일하고 있는 케어베어라고 합니다.</h6>
-								 <hr>                       
+                    
 	                           <h5 class="center">모집 분야</h5>
 	                            <div>
 	                            <ul class="center" style="list-style: none; margin-top:5%; margin-bottom:5%" >
@@ -103,97 +101,30 @@
 					 		</div>	
                         </div>
                     </div>
-                    <div class="col-md-8">
+                      <div class="col-md-8">
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <label>User Id</label>
+                                            <div class="col-md-8">
+                                           dfkjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdj
+                                           kjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdj
+                                           
                                             </div>
-                                            <div class="col-md-6">
-                                                <p>Kshiti123</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Name</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Kshiti Ghelani</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Email</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>kshitighelani@gmail.com</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Phone</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>123 456 7890</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Profession</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Web Developer and Designer</p>
-                                            </div>
-                                        </div>
+                                         </div>   
+                       
                             </div>
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Experience</label>
+                                                <label>프로젝트 기간</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Expert</p>
+                                                <p>2000.00.00~2000.00.00</p>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Hourly Rate</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>10$/hr</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Total Projects</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>230</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>English Level</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Expert</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Availability</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>6 months</p>
-                                            </div>
-                                        </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label>Your Bio</label><br/>
-                                        <p>Your detail description</p>
-                                    </div>
-                                </div>
+                                        
+               
                             </div>
                         </div>
                     </div>
