@@ -65,8 +65,10 @@
 									>Notice</a></li>	
 								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>Recruit</a></li>
-								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/find/list" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>Find</a></li>
+								<li class="nav-item"><a class="nav-link" href="/vote/voteHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>vote</a></li>	
 								<li class="nav-item"><a class="nav-link" href="/board/replyBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>Board</a></li>
 								<li class="nav-item"><a class="nav-link" href="/board/Mypage" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
