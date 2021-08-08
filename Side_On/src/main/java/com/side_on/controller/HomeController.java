@@ -25,8 +25,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class HomeController {
 	
-	@Autowired
-	public NoticeService noticeService;
 	
 	@RequestMapping("/")
 	public String home(HttpServletRequest request) {
@@ -48,11 +46,5 @@ public class HomeController {
 		return "main";
 	}
 	
-	@RequestMapping("/admin/dashboard")
-	public String dashboard(Model model) {
-		List<Notice> noticeList = noticeService.noticeList();
-		model.addAttribute("noticeList", noticeList);
-		return "admin/dashboard";
-	}
 	
 }
