@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"                                                                                                                                                           
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <script type="text/javascript">
     $(document).ready(function () {
 
@@ -82,15 +84,16 @@
             <div class="container px-1 px-lg-1 my-1">
                 <div class="text-center text-white">
                 <!-- 헤더...어떻게... -->
-                <div style="padding-top: 8%;">
-                    <h1 class="display-5 fw-bolder">투표만들기</h1>
-                    <p class="lead fw-normal text-white-80 mb-0">직접 프로젝트에 필요한 투표를 만들어보세요.</p>
+                <div style="padding-top: 1%;">
+                    <h1 class="display-5 fw-bolder">투표하기</h1>
+                    <p class="lead fw-normal text-white-80 mb-0">투표를 만들어보세요.</p>
             </div>
             </div>
          </div>
         </header>
+        
 	<br><br>
-    <div class="container tm-mt-big tm-mb-big">
+    <div class="row">
     <form action="/survey/addSurvey" method="post" enctype="multipart/form-data"
     class="tm-edit-product-form" id="addSurveyForm">
         <div class="row">
@@ -109,12 +112,10 @@
                                 <label for="description">투표 목적 또는 기타 주의사항</label>
                             </div>
                             <div class="form-group mb-3"></div>
-                            <br>
 
                         </div>
                         
                         <div class="col-xl-6 col-lg-6 col-md-12 bigbox">
-                            <br> <br> <br>
                             <div class="warning">
                                 * 다음항목에 해당되는 설문항목이 포함되어있을 시 경고조치없이 삭제될수있습니다.<br /> 1.폭력적이거나,
                                 선정적인 문항.<br /> 2.타인의 권리를 침해하거나, 명예를 훼손하는 문항<br /> 3.개인정보를
