@@ -52,7 +52,7 @@
 					<c:if test="${ survey.member_seq eq pageContext.request.userPrincipal.principal.member_seq}">
 						<button type="submit" id="surveyClose" class="btn btn-primary text-uppercase btn-show" style="float:left; margin-right: 4px;">삭제</button>
 					</c:if>
-					<button type="button" id="surveyHome" class="btn btn-primary text-uppercase btn-show" style="float:right;">홈</button>
+					<button onclick="location.href='<%=request.getContextPath() %>voteHome'" type="button" id="surveyHome" class="btn btn-primary text-uppercase btn-show" style="float:right;">홈</button>
 				</span>
 			</div>
 		</div>
