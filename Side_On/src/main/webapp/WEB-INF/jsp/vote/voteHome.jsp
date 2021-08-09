@@ -26,9 +26,7 @@
 		<div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 tm-block-col">
 			<div class="tm-bg-primary-dark tm-radius-product">
 				<div class="tm-product-categories">
-					<c:if test="${ empty surveyList }">
-						<h2 class="tm-block-title">출력할 설문조사가 없습니다.</h2>
-					</c:if>
+					
 					<c:forEach items="${ surveyList }" var="survey">
 						<div class="media tm-notification-item-radius">
 							<a href="/survey/readSurvey${cri.makeSearch()}&survey_seq=${ survey.survey_seq }">
@@ -77,7 +75,7 @@
 			<div style="padding-top: 20px;"
 				class="tm-bg-primary-dark tm-radius-product tm-block tm-block-product-categories">
 				
-				<button onclick="location.href='<%=request.getContextPath() %>makePoll'" class="btn btn-primary btn-block text-uppercase mb-3" >설문 등록</button>
+				<button onclick="location.href='<%=request.getContextPath() %>addSurvey'" class="btn btn-primary btn-block text-uppercase mb-3" >설문 등록</button>
 				<br>
 					<c:forEach items="${ adminList }" var="admin">
 						<div class="media tm-notification-item">
