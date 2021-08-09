@@ -72,15 +72,10 @@
 		</div>
 		<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 tm-block-col">
 			<div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-overflow" style="padding: 10px">
-					<h2 class="tm-block-title">Reply board</h2>
 					<div id="mydiv" class="tm-notification-items">
 						<div class="media tm-notification-item">
 							<div style="width: 100%">
-								<textarea class="reply-text" type="text"
-									style="width: 100%; height: 100px; word-wrap: break-word;"></textarea>
 								<br>
-								<button type="button" class="btn-reply"
-									style="width: 100%; color: #fff; background-color: #f5a623; border: 2px solid #f5a623;">댓글입력</button>
 							</div>
 						</div>
 						<c:forEach items="${ reply }" var="dto" varStatus="status">
