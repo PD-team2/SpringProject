@@ -3,7 +3,19 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ include file="../inc/header.jsp" %><br><br><br><br>
-<div class="container mt-5">
+<!-- Header-->
+        <header class="bg-warning py-5">
+            <div class="container px-1 px-lg-1 my-1">
+                <div class="text-center text-white">
+                <!-- 헤더...어떻게... -->
+                <div style="padding-top: 1%;">
+                    <h1 class="display-5 fw-bolder">투표하기</h1>
+                    <p class="lead fw-normal text-white-80 mb-0">투표결과를 확인할 수 있습니다.</p>
+            </div>
+            </div>
+         </div>
+        </header>
+<div style = "padding: 0px 100px 0px 100px;" class="container mt-5">
 	<div class="row tm-content-row">
 		<div class="col-xl-6 tm-block-col ">
 			<div class="tm-bg-primary-dark tm-block tm-block-settings">
