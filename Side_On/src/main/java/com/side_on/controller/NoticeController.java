@@ -33,4 +33,10 @@ public class NoticeController {
 		return "notice/noticeDetail";
 	}
 	
+	@RequestMapping("/notice/noticeForm")
+	public String noticeForm() {
+		log.debug("공지사항 작성 폼......");
+		return "notice/noticeForm";
+	}
+	
 }
