@@ -5,13 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>QnA Board|Side-On</title>
-<link type="text/css" rel="stylesheet" href="/resource/css/QnABoard_JHK.css">
-<script type="text/javascript" src="/resource/js/QnABoard_JHK.js"></script>
+<link type="text/css" rel="stylesheet" href="../css/QnABoard_JHK.css">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript" src="../js/QnABoard_JHK.js"></script>
 </head>
 <body>
 <%@ include file="../inc/header.jsp" %>
 <!-- Header-->
 <header class="bg-warning py-5">
+<a href="/board/QnABoard" style="text-decoration:none">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
         <!-- 헤더...어떻게... -->
@@ -21,6 +23,7 @@
     </div>
     </div>
  </div>
+ </a>
 </header>
 <div class="QnAForm">
 <table class="QnATable" >
@@ -29,7 +32,7 @@
 		<th>문의제목</th>
 		<th>작성자</th>
 		<th>작성일</th>
-		<th>조회수</th>
+		<th class="QnA_Views">조회수</th>
 	</tr>
 	
 	<tr>
@@ -48,20 +51,28 @@
 		<th></th>
 		<th></th>
 	</tr>
-	<tr>
-		<th>${dto.qnaBoardContents}</th>
+	<tr class="qnaContents">
+	<th colspan="5"><textarea id="qnaContentsArea" name="qnaContentsArea" rows="5" cols="33">
+	${dto.qnaBoardContents}</textarea>
 	</tr>
+	</th>	
 </table>
 </div>
 <div class=UpdateButtonArea>
-	<button type="button" class="UpdateButton" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';">
-	<a href="QnABoardUpdate?qnaBoardNo=${dto.qnaBoardNo}">수정하기</a></button>
 	<button type="button" class="UpdateButton" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
-	onclick="deleteConfirm();">삭제하기</button>
+	onclick="location.href='QnABoardUpdate?qnaBoardNo=${dto.qnaBoardNo}'">수정하기</button>
+	<button type="button" class="UpdateButton" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+	onclick="deleteConfirm()">삭제하기</button>
+	
+	<!-- onclick="location.href='QnABoardDelete?qnaBoardNo=${dto.qnaBoardNo}'">삭제하기</button> -->
+	
+	<!-- onclick="location.href='/board/QnABoardDelete'">삭제하기</button> --> 
+	
 	<button type="button" class="UpdateButton" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 	onclick="location.href='QnABoard'">되돌아가기</button>
 </div>
 
+<button name="deleteButton" id="deleteButton"  style="display:none" onclick="location.href='QnABoardDelete?qnaBoardNo=${dto.qnaBoardNo}'"></button>
 
 
 
