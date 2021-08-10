@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>QnA Board|Side-On</title>
 <link type="text/css" rel="stylesheet" href="/resource/css/QnABoard_JHK.css">
+<script type="text/javascript" src="/resource/js/QnABoard_JHK.js"></script>
 </head>
 <body>
 <%@ include file="../inc/header.jsp" %>
@@ -56,7 +57,7 @@
 	<button type="button" class="UpdateButton" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';">
 	<a href="QnABoardUpdate?qnaBoardNo=${dto.qnaBoardNo}">수정하기</a></button>
 	<button type="button" class="UpdateButton" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
-	onclick="location.href='/board/QnADelete'">삭제하기</button>
+	onclick="deleteConfirm();">삭제하기</button>
 	<button type="button" class="UpdateButton" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 	onclick="location.href='QnABoard'">되돌아가기</button>
 </div>
