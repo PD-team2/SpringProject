@@ -17,32 +17,32 @@
     
 <div class="accordian">
 <input type="radio" name="accordian" id="answer01"/>
-<label for="answer01">Q. 프로젝트 모집 관련 질문<em></em></label>
+<label for="answer01">Q. 프로젝트 모집은 누가 할 수 있나요?<em></em></label>
 <div><p>
-A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
-질문에 대한 답변입니다.<br>
-    질문에 대한 답변입니다.
+A.  비로그인 회원은 프로젝트 모집 게시글을 열람하실 수 있습니다.<br>
+로그인 회원은 모집 글을 작성하실 수 있으며 마이페이지에서 확인하실 수 있습니다.<br>
+추가 문의사항은 아래 채팅 문의나 메일 문의로 부탁드립니다.
 </p></div>
 <input type="radio" name="accordian" id="answer02"/>
-<label for="answer02">Q. 팀원 모집 관련 질문<em></em></label>
+<label for="answer02">Q. 팀원 모집을 하고 싶습니다.<em></em></label>
 <div><p>
-A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
-질문에 대한 답변입니다.<br>
-    질문에 대한 답변입니다.
+A. 비로그인 회원은 팀 모집 게시글을 열람하실 수 있습니다.<br>
+로그인 회원은 모집 글을 작성하실 수 있으며 마이페이지에서 확인하실 수 있습니다.<br>
+추가 문의사항은 아래 채팅 문의나 메일 문의로 부탁드립니다.
 </p></div>
 <input type="radio" name="accordian" id="answer03"/>
-<label for="answer03">Q. 투표 관련 질문<em></em></label>
+<label for="answer03">Q. 투표는 어떻게 하나요?<em></em></label>
 <div><p>
-A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
-질문에 대한 답변입니다.<br>
-    질문에 대한 답변입니다.
+A. 특정 주제에 대하여 운영자가 투표 게시글을 작성합니다.<br>
+로그인한 회원은 투표에 참여하실 수 있습니다.<br>
+추가 문의사항은 아래 채팅 문의나 메일 문의로 부탁드립니다.
 </p></div>
 <input type="radio" name="accordian" id="answer04"/>
-<label for="answer04">Q. 신고 관련 질문<em></em></label>
+<label for="answer04">Q. 신고는 어떻게 이루어지나요?<em></em></label>
 <div><p>
-A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
-질문에 대한 답변입니다.<br>
-    질문에 대한 답변입니다.
+A. 광고, 욕설 등에 대한 신고가 접수되면 운영자가 해당 내용을 파악합니다.<br>
+누적 경고횟수가 많아지면 강퇴처리됩니다.<br>
+추가 문의사항은 아래 채팅 문의나 메일 문의로 부탁드립니다.
 </p></div>
 </div>
 </div>
