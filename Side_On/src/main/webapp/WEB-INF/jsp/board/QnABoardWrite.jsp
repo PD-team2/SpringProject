@@ -5,9 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>FaQ Board</title>
-<link type="text/css" rel="stylesheet" href="/resource/css/contactEmail_JHK.css">
+<link type="text/css" rel="stylesheet" href="../css/contactEmail_JHK.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script type="text/javascript" src="/resource/js/contactEmail_JHK.js"></script>
+<script type="text/javascript" src="../js/contactEmail_JHK.js"></script>
 </head>
 <body>
 <%@ include file="../inc/header.jsp" %>
