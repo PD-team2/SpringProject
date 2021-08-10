@@ -5,24 +5,28 @@
 <head>
 <meta charset="UTF-8">
 <title>QnA Board|Side-On</title>
-<link type="text/css" rel="stylesheet" href="/resource/css/QnABoard_JHK.css">
+<link type="text/css" rel="stylesheet" href="../css/QnABoard_JHK.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 <body>
 <%@ include file="../inc/header.jsp" %>
-<!-- Header-->
+<!-- Header -->
 <header class="bg-warning py-5">
-    <div class="container px-4 px-lg-5 my-5">
+    <a href="/board/QnABoard" style="text-decoration:none">
+    	<div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
         <!-- 헤더...어떻게... -->
         <div style="padding-top: 8%;">
             <h1 class="display-5 fw-bolder">문의게시판</h1>
             <p class="lead fw-normal text-white-80 mb-0">직접 문의글을 남겨보세요.</p>
-    </div>
-    </div>
- </div>
+	    </div>
+	    </div>
+		</div>
+ 	</a>
 </header>
+
+<!-- QnA 게시판 항목 -->
 <div class="QnAForm">
 <table class="QnATable">
 	<tr class="QnATitle">
@@ -50,6 +54,7 @@
 	</c:forEach>
 </table>  	          
 
+<!-- 페이징 영역 -->
 <div class="mappingArea">
 	 <ul class="pagination">
 	     <li class="page-item">
@@ -78,16 +83,28 @@
 		<input type="hidden" name="type" value="${pageMaker.cri.type }">	
 	</form>
 	
+<!-- 검색창 -->
+<div class="search_wrap">
+		<div class="search_area">
+			<select name="type">
+				<option value="TCW" <c:out value="${pageMaker.cri.type eq 'TCW'?'selected':'' }"/>>제목 + 내용 + 작성자</option>
+				<option value="TC" <c:out value="${pageMaker.cri.type eq 'TC'?'selected':'' }"/>>제목 + 내용</option>
+				<option value="TW" <c:out value="${pageMaker.cri.type eq 'TW'?'selected':'' }"/>>제목 + 작성자</option>
+				<option value="T" <c:out value="${pageMaker.cri.type eq 'T'?'selected':'' }"/>>제목</option>
+				<option value="C" <c:out value="${pageMaker.cri.type eq 'C'?'selected':'' }"/>>내용</option>
+				<option value="W" <c:out value="${pageMaker.cri.type eq 'W'?'selected':'' }"/>>작성자</option>
+			</select>		
+			<input type="text" name="keyword"  id="search" value="${pageMaker.cri.keyword }">
+			<button>Search</button>
+		</div>
+	</div>		    
+
+<!-- 글쓰기 버튼 -->
 <button type="button" class="WriteButton" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 onclick="location.href='QnABoardWrite'">글쓰기</button>
 </div>  
 </div> 
-  
 
-
-<div class="btn-area">
-
-</div>
 
   
 <script>
@@ -108,6 +125,45 @@ $(".pagination a").on("click", function(e){
 	moveForm.submit();
 	
 });	
+
+$(".search_area button").on("click", function(e){
+    e.preventDefault();
+    let val = $("input[name='keyword']").val();
+    moveForm.find("input[name='keyword']").val(val);
+    moveForm.find("input[name='pageNum']").val(1);
+    moveForm.submit();
+});
+
+
+
+$('#search').keypress(function(event){
+     if ( event.which == 13 ) {
+         $(".search_area button").click();
+         return false;
+     }
+});
+
+$(".search_area button").on("click", function(e){
+	e.preventDefault();
+	
+	let type = $(".search_area select").val();
+	let keyword = $(".search_area input[name='keyword']").val();
+	
+	if(!type){
+		alert("검색 종류를 선택하세요.");
+		return false;
+	}
+	
+	if(!keyword){
+		alert("키워드를 입력하세요.");
+		return false;
+	}		
+	
+	moveForm.find("input[name='type']").val(type);
+	moveForm.find("input[name='keyword']").val(keyword);
+	moveForm.find("input[name='pageNum']").val(1);
+	moveForm.submit();
+});
 </script> 
 </body>
 
