@@ -74,6 +74,7 @@
                 						</tr>
                 					</tbody>
                 				</table>
+                				<button onclick="history.back()" type="button" class="btn btn-warning" style="width: 100px; height: 35px;">뒤로가기</button>
                 			</div>
                 		</div>
                 	</div>
