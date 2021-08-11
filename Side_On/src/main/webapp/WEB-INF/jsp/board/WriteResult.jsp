@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Contact|Side-On</title>
-<link type="text/css" rel="stylesheet" href="/resource/css/ContactResult_JHK.css">
+<link type="text/css" rel="stylesheet" href="../css/ContactResult_JHK.css">
 </head>
 <body>
 <%@ include file="../inc/header.jsp" %>
