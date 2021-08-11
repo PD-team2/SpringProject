@@ -64,12 +64,14 @@
     <div class="form-group">
       <label for="examplePosition" class="form-label mt-4">희망포지션</label>
       <select class="form-select" id="examplePosition">
-        <option>백엔드</option>
-        <option>프론트엔드</option>
-        <option>풀스택</option>
-        <option>웹디자인</option>
-        <option>기획/마케팅</option>
-		<option>기타</option>
+        <option>Front-end(프론트)</option>
+        <option>Back-end(백엔드)</option>
+        <option>AOS(안드로이드)</option>
+        <option>IOS(애플)</option>
+        <option>Server(서버)</option>
+		<option>UI/UX</option>
+		<option>기획</option>
+		<option>PM(Project Manager)</option>
       </select>
     </div>
     
