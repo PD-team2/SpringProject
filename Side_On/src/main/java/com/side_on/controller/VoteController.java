@@ -29,4 +29,10 @@ public class VoteController {
 	
 		return "vote/readSurvey_on";
 	}
+	
+	@RequestMapping("/vote/addSurvey")
+	public String addSurvey() {
+	
+		return "vote/addSurvey";
+	}
 }
