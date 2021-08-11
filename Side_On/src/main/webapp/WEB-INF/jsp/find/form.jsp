@@ -46,18 +46,18 @@
 	
     <div class="form-group">
       <label for="exampleInputTitle" class="form-label mt-4">제목</label>
-      <input type="title" class="form-control" id="exampleInputTitle" aria-describedby="title" placeholder="목록에 보여질 제목을 작성해주세요.">
+      <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="title" placeholder="목록에 보여질 제목을 작성해주세요.">
     </div>
 	
 	<div class="form-group">
       <label for="exampleInputWriter" class="form-label mt-4">이름</label>
-      <input type="writer" class="form-control" id="exampleInputWriter" aria-describedby="writer" placeholder="본명을 사용해주세요.">
+      <input type="text" class="form-control" id="exampleInputWriter" aria-describedby="writer" placeholder="본명을 사용해주세요.">
       <small id="writer" class="form-text text-muted"></small>
     </div>
 	
    <div class="form-group">
       <label for="exampleInputAdress" class="form-label mt-4">거주지역</label>
-      <input type="adress" class="form-control" id="exampleInputAdress" aria-describedby="emailHelp" placeholder="ex) 서울시 강남구">
+      <input type="text" class="form-control" id="exampleInputAdress" aria-describedby="emailHelp" placeholder="ex) 서울시 강남구">
       <small id="adress" class="form-text text-muted"></small>
     </div>
 	
