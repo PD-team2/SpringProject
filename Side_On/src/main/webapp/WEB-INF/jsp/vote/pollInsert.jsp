@@ -15,12 +15,12 @@
 <jsp:include page="../inc/header.jsp"/><br><br><br><br>
 	
 	<header class="bg-warning py-5">
-            <div class="container px-1 px-lg-1 my-1">
+            <div class="container px-5 px-lg-5 my-5">
                 <div class="text-center text-white">
-                <!-- Çì´õ...¾î¶»°Ô... -->
+                <!-- í—¤ë”...ì–´ë–»ê²Œ... -->
                 <div style="padding-top: 1%;">
-                    <h1 class="display-5 fw-bolder">ÅõÇ¥¸¸µé±â</h1>
-                    <p class="lead fw-normal text-white-80 mb-0">ÅõÇ¥¸¦ ¸¸µé¾îº¸¼¼¿ä.</p>
+                    <h1 class="display-5 fw-bolder">íˆ¬í‘œë§Œë“¤ê¸°</h1>
+                    <p class="lead fw-normal text-white-80 mb-0">íˆ¬í‘œë¥¼ ë§Œë“¤ì–´ë³´ì„¸ìš”.</p>
             </div>
             </div>
          </div>
@@ -28,16 +28,16 @@
 	<div align="center">
 		<br />
 		<hr width="600" />
-		<b>¼³¹®ÀÛ¼º</b>
+		<b>ì„¤ë¬¸ìž‘ì„±</b>
 		<hr width="600" />
 		<form name="frm" method="post" action="pollInsertProc">
 			<table border="1" width="500">
 				<tr>
-					<td><b>Áú¹®</b></td>
+					<td><b>ì§ˆë¬¸</b></td>
 					<td colspan="2"><input name="question" size="30"></td>
 				</tr>
 				<tr>
-					<td rowspan="10"><b>Ç×¸ñ</b></td>
+					<td rowspan="10"><b>í•­ëª©</b></td>
 					<%
 						for (int i = 1; i <= 4; i++) {
 							out.println("<td>" + (i * 2 - 1)
@@ -53,26 +53,26 @@
 						}//for end
 					%>
 				<tr>
-					<td>Á¾·áÀÏ</td>
+					<td>ì¢…ë£Œì¼</td>
 					<td colspan=2><select name="edateY">
 							<option value="2020">2020
 							<option value="2021">2021
-					</select>³â <select name="edateM">
+					</select>ë…„ <select name="edateM">
 							<%
 								for (int i = 1; i <= 12; i++) {
 									out.println("<option value='" + i + "'>" + i);
 								}
 							%>
-					</select>¿ù <select name="edateD">
+					</select>ì›” <select name="edateD">
 							<%
 								for (int i = 1; i <= 31; i++) {
 									out.println("<option value='" + i + "'>" + i);
 								}
 							%>
-					</select>ÀÏ</td>
+					</select>ì¼</td>
 				</tr>
 				<tr>
-					<td>º¹¼öÅõÇ¥</td>
+					<td>ë³µìˆ˜íˆ¬í‘œ</td>
 					<td colspan=2>
 						<input type="radio" name="type" value="1" checked>yes 
 						<input type="radio" name="type" value="0">no
@@ -80,9 +80,9 @@
 				</tr>
 				<tr>
 					<td colspan=3>
-						<input type="button" value="ÀÛ¼ºÇÏ±â" onclick="send()"> 
-						<input type="reset" value="´Ù½Ã¾²±â"> 
-						<input type="button" value="¸®½ºÆ®" onClick="javascript:location.href='pollList'">
+						<input type="button" value="ìž‘ì„±í•˜ê¸°" onclick="send()"> 
+						<input type="reset" value="ë‹¤ì‹œì“°ê¸°"> 
+						<input type="button" value="ë¦¬ìŠ¤íŠ¸" onClick="javascript:location.href='pollList'">
 					</td>
 				</tr>
 			</table>
