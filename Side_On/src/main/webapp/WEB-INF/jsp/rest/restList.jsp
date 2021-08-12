@@ -72,7 +72,8 @@
 	                								<c:when test="${dto.restCheck eq 'T'}">처리완료</c:when>
 	                							</c:choose>
 	                						</th>
-	                						<th><a href="restMenagement?restNo=${dto.restNo}"><i class="fas fa-fw fa-cog"></i></a></th>
+	                						<!-- Modal Open 버튼 -->
+	                						<th><a data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fas fa-fw fa-cog"></i></a></th>
 	                					</tr>
                 					</c:forEach>
                 					</tbody>
@@ -116,5 +117,5 @@
 	<%@ include file="../inc/adminBodyLink.jsp" %>
 
 </body>
-
+<%@ include file="../inc/restManageModalForm.jsp" %>
 </html>
