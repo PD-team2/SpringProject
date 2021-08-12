@@ -32,5 +32,11 @@ public interface MemberDao {
 	public void deleteMember(String memberId, String memberPw);
 
 	public int insertMember(Member dto);
+	
+	/** 내정보 조회 */
+	public Member selectOneToDto(String loginMemberId);
+
+	/** 내정보 변경 */
+	public int updateMember(String memberId, String memberPw, String name, String mobile, String email);
 
 }
