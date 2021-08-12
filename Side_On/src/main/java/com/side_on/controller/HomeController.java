@@ -31,7 +31,7 @@ public class HomeController {
 		ServletContext application = request.getServletContext();
 		String path = application.getContextPath();
 		application.setAttribute("path", path);
-		log.info("### context path: " + path);
+		log.info("### Main : " + path);
 		return "main";
 	}
 	
