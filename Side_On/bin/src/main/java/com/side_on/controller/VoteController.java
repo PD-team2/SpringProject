@@ -6,12 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class VoteController {
 	
-	@RequestMapping("/vote/addSurvey")
-	public String addSurvey() {
-	
-		return "vote/addSurvey";
-	}
-	
 	@RequestMapping("/vote/pollInsert")
 	public String pollInsert() {
 	
