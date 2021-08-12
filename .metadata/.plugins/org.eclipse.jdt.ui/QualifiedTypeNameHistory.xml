@@ -15,8 +15,6 @@
     <fullyQualifiedTypeName name="com.side_on.util.Utility"/>
     <fullyQualifiedTypeName name="javax.annotation.Resource"/>
     <fullyQualifiedTypeName name="com.side_on.util.FileUtil"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestPart"/>
     <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
     <fullyQualifiedTypeName name="org.apache.commons.io.FilenameUtils"/>
@@ -25,6 +23,18 @@
     <fullyQualifiedTypeName name="com.side_on.dto.FileVO"/>
     <fullyQualifiedTypeName name="org.junit.Test"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="com.side_on.dao.RecruitDao"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
     <fullyQualifiedTypeName name="com.side_on.service.RecruitService"/>
+    <fullyQualifiedTypeName name="com.side_on.dao.RecruitDao"/>
+    <fullyQualifiedTypeName name="com.side_on.dto.RecruitCriteria"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="com.side_on.dto.RecruitPaging"/>
+    <fullyQualifiedTypeName name="com.side_on.dto.Criteria"/>
+    <fullyQualifiedTypeName name="com.side_on.dto.Criteria_ex"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="com.side_on.dto.PageMaker_ex"/>
+    <fullyQualifiedTypeName name="com.side_on.dto.Paging"/>
 </qualifiedTypeNameHistroy>

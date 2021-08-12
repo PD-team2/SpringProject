@@ -56,136 +56,54 @@
 						</div>
 				</div>
         </section>
-        <!-- Portfolio Grid-->
+
         <section class="page-section" id="portfolio" style="padding : 0; margin : 0; ">
             <div class="container" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
                
                 <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 1-->
-                        <div class="portfolio-item">
+                
+                   <c:forEach items="${list}" var="list">
+	                    <div class="col-lg-4 col-sm-6 mb-4">
+	                        <!-- 내용-->
+		                        <div class="portfolio-item">         
+			                            <a class="portfolio-link"  href="/recruit/recruitDetail?${list.recruit_num }">                               
+			                              	 <div class="portfolio-hover">
+				                                    <div class="portfolio-hover-content">
+				                                    	<i class="fas fa-plus fa-3x"></i>
+				                                   </div>                  
+			                                </div>
+			                                <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
+			                            </a>
+			                            
+			                            <div class="portfolio-caption">
+			                                <div class="portfolio-caption-heading">${list.title }</div>
+			                                <div class="portfolio-caption-subheading text-muted">${list.memberId }님</div>
+			                            </div>
+			                        </div>
+		                        </div>
+					</c:forEach>
+					
+					<!-- 페이징 -->
+                	<div class="col-md-3 center"  style="padding-top:10%; ">     
+					
+						<ul class="paging">
+						    <c:if test="${paging.prev}">
+						        <span><a href='<c:url value="/boardList?page=${paging.startPage-1}"/>'>이전</a></span>
+						    </c:if>
+						    <c:forEach begin="${paging.startPage}" end="${paging.endPage}" var="num">
+						        <span><a href='<c:url value="/boardList?page=${num}"/>'>${num}</a></span>
+						    </c:forEach>
+						    <c:if test="${paging.next && paging.endPage>0}">
+						        <span><a href='<c:url value="/boardList?page=${paging.endPage+1}"/>'>다음</a></span>
+						    </c:if>
+						</ul>
 
 
-	                            <a class="portfolio-link"  href="/recruit/recruitDetail">
-	                                <div class="portfolio-hover">
-	                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-	                         
-	                                </div>
-	                                <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
-	                            </a>
-	                            
-	                            <div class="portfolio-caption">
-	                                <div class="portfolio-caption-heading">Threads</div>
-	                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
-	                            </div>
-	                        </div>
-                        </div>
-
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 2-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-								 <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Explore</div>
-                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 3-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                 <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
-                                  </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Finish</div>
-                                <div class="portfolio-caption-subheading text-muted">Identity</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- Portfolio item 4-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-				         	 <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />                      
-                                </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Lines</div>
-                                <div class="portfolio-caption-subheading text-muted">Branding</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <!-- Portfolio item 5-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                               <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
-                              	 </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Southwest</div>
-                                <div class="portfolio-caption-subheading text-muted">Website Design</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <!-- Portfolio item 6-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
-                                 </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Window</div>
-                                <div class="portfolio-caption-subheading text-muted">Photography</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                	<div class="col-md-3 center"  style="padding-top:10%;">     
-			               <nav class="pagination-outer center" aria-label="Page navigation">
-			                       <ul class="pagination">
-			                           <li class="page-item">
-			                               <a href="#" class="page-link" aria-label="Previous">
-			                                   <span aria-hidden="true">«</span>
-			                               </a>
-			                           </li>
-			                           <li class="page-item"><a class="page-link" href="#">1</a></li>
-			                           <li class="page-item"><a class="page-link" href="#">2</a></li>
-			                           <li class="page-item active"><a class="page-link" href="#">3</a></li>
-			                           <li class="page-item"><a class="page-link" href="#">4</a></li>
-			                           <li class="page-item"><a class="page-link" href="#">5</a></li>
-			                           <li class="page-item">
-			                               <a href="#" class="page-link" aria-label="Next">
-			                                   <span aria-hidden="true">»</span>
-			                               </a>
-			                           </li>
-			                       </ul>
-			                   </nav>
-						</div>
-                    
-                    
+					<!-- 페이지 끝  -->
                 </div>
             </div>
             
-            
-            
-            
+           </div> 
         </section>
        
         <!-- Bootstrap core JS-->

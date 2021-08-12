@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.side_on.dao.RecruitDao">
+
+ 	<!--1. 모집 게시글 등록하기-->
+	<insert id="insertRecruitBoard" parameterType="com.side_on.dto.RecruitBoard">
+		insert into Recruit
+		values(Recruit_SEQ.nextval, #{memberId}, #{hit}, #{start_date}, #{end_date}, #{title}, #{content},
+		#{save_date}, #{pay_check}, #{pay_amount}, #{visible_check}, #{simple_info}, #{pj_content},
+		#{project_name}, #{Front}, #{Back}, #{aos}, #{ios}, #{uxui}, #{plan}, #{pm})
+	</insert>
+	
+		<!--2. 게시글 총 갯수 -->
+		<select id="allCount" resultType="int">
+			        SELECT count(*)
+			        FROM Recruit
+		</select>
+		<!--3. 게시글 페이징 -->
+		 <select id="recruitList" resultType="hashmap" parameterType="hashmap">
+			        <![CDATA[
+						SELECT COUNT(Recruit_num)
+						  FROM Recruit
+						 WHERE Recruit_num > 0
+					]]>
+		</select>
+	
+		<!-- 왜 안되지 -->
+		<select id="listPage" resultType="kr.co.vo.BoardVO" parameterType="kr.co.vo.Criteria">
+			SELECT  BNO, 
+			        TITLE, 
+			        CONTENT,
+			        WRITER, 
+			        REGDATE
+			 FROM ( 
+			        SELECT BNO, 
+			               TITLE, 
+			               CONTENT, 
+			               WRITER, 
+			               REGDATE, 
+			               ROW_NUMBER() OVER(ORDER BY BNO DESC) AS RNUM
+			         FROM MP_BOARD 
+			                       ) MP
+			WHERE RNUM BETWEEN #{rowStart} AND #{rowEnd}
+			ORDER BY BNO DESC
+		</select>
+
+	
+</mapper>
