@@ -17,6 +17,11 @@ public class RestService {
 	@Autowired
 	private RestDao restDao;
 	
+	public List<Rest> dashboardRestList(){
+		List<Rest> restList = restDao.selectDashboardRestList();
+		return restList;
+	}
+	
 	/**
 	 * rest List
 	 * @return 신고 목록
@@ -36,4 +41,5 @@ public class RestService {
 		log.debug("No.dto REST :: " + restNo + ", " + dto);
 		return dto;
 	}
+
 }
