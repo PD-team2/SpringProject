@@ -6,33 +6,39 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class VoteController {
 	
-	@RequestMapping("/vote/makePoll")
-	public String makePoll() {
+	@RequestMapping("/vote/pollInsert")
+	public String pollInsert() {
 	
-		return "vote/makePoll";
+		return "vote/pollInsert";
 	}
 	
-	@RequestMapping("/vote/voteHome")
-	public String voteHome() {
+	@RequestMapping("/vote/pollInsertProc")
+	public String pollInsertProc() {
 	
-		return "vote/voteHome";
+		return "vote/pollInsertProc";
 	}
 	
-	@RequestMapping("/vote/readSurvey_off")
-	public String readSurvey_off() {
+	@RequestMapping("/vote/pollForm")
+	public String pollForm() {
 	
-		return "vote/readSurvey_off";
+		return "vote/pollForm";
 	}
 	
-	@RequestMapping("/vote/readSurvey_on")
-	public String readSurvey_on() {
+	@RequestMapping("/vote/pollList")
+	public String pollList() {
 	
-		return "vote/readSurvey_on";
+		return "vote/pollList";
 	}
 	
-	@RequestMapping("/vote/addSurvey")
-	public String addSurvey() {
+	@RequestMapping("/vote/pollFormProc")
+	public String pollFormProc() {
 	
-		return "vote/addSurvey";
+		return "vote/pollFormProc";
+	}
+	
+	@RequestMapping("/vote/pollView")
+	public String pollView() {
+	
+		return "vote/pollView";
 	}
 }
