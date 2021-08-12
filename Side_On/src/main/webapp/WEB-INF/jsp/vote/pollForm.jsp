@@ -1,9 +1,9 @@
 <%@page import="java.util.Vector"%>
 <%@page import="com.side_on.poll.PollListBean"%>
-<%@page contentType="text/html; charset=EUC-KR"%>
+<%@page contentType="text/html; charset=UTF-8"%>
 <jsp:useBean id="mgr" class="com.side_on.poll.PollMgr"/>
 <%
-		request.setCharacterEncoding("EUC-KR");
+		request.setCharacterEncoding("UTF-8");
 		int num = 0;
 		if(request.getParameter("num")!=null){
 			num = Integer.parseInt(request.getParameter("num"));
@@ -40,13 +40,13 @@
 	<tr>
 		<td width="150">
 		<%if(active==1){%>
-			<input type="submit" value="ÅõÇ¥">
+			<input type="submit" value="íˆ¬í‘œ">
 		<%}else{%>
-			ÅõÇ¥Á¾·á
+			íˆ¬í‘œì¢…ë£Œ
 		<%}%>	
 		</td>
 		<td>
-			<input type="button" value="°á°ú" 
+			<input type="button" value="ê²°ê³¼" 
 			onclick="javascript:window.open('pollView?num=<%=num%>'
 			,'pollView','width=500, height=350')">
 		</td>

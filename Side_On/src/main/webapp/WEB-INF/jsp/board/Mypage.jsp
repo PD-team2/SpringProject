@@ -30,7 +30,7 @@
     <img src="https://raw.githubusercontent.com/PD-team2/SpringProject_Output/main/JaeHyunKim/IMG/MyProfile.png"></a></div>
     <div class="title"> 내 프로필</div> 
     <div class="expalin"> 회원님의 정보를 확인하고 변경할 수 있습니다.</div> 
-    <input style="margin-top:30px;" type="button" class="btn-warning" value="프로필 보기">
+    <input style="margin-top:30px;" type="button" class="btn-warning" value="프로필 보기" onclick="location.href='/member/myInfo'" >
 </div>
 <div class="MyProfile">
     <div class="Img"><a href="#">

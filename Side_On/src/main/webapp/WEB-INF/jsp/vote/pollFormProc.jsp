@@ -1,13 +1,13 @@
 <!-- pollFormProc.jsp -->
-<%@ page  contentType="text/html; charset=EUC-KR"%>
-<%request.setCharacterEncoding("EUC-KR");%>
+<%@ page  contentType="text/html; charset=UTF-8"%>
+<%request.setCharacterEncoding("UTF-8");%>
 <jsp:useBean id="mgr" class="com.side_on.poll.PollMgr"/>
 <%
 	int listNum=Integer.parseInt(request.getParameter("num"));
 	String itemNum[] = request.getParameterValues("itemnum");
 	boolean result = mgr.updatePoll(listNum, itemNum);
-	String msg="ÅõÇ¥¿¡ ½ÇÆÐ ÇÏ¿´½À´Ï´Ù.";
-	if(result) msg="ÅõÇ¥¸¦ ÇÏ¿´½À´Ï´Ù.";
+	String msg="íˆ¬í‘œì— ì‹¤íŒ¨ í•˜ì˜€ìŠµë‹ˆë‹¤.";
+	if(result) msg="íˆ¬í‘œë¥¼ í•˜ì˜€ìŠµë‹ˆë‹¤.";
 	String url = "pollList";
 %>
 <script>

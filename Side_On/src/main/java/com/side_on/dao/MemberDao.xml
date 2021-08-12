@@ -30,6 +30,16 @@
 		#{reward})
 	</insert>
 	
+	<!-- public Member selectOneToDto(String loginMemberId) -->
+	<select id="selectOneToDto" resultType="com.side_on.dto.Member">
+  	        select * from member where member_id = #{memberId}
+        </select>
+  
+  <!-- public int updateMember(String memberId, String memberPw, String name, String mobile, String email) -->
+        <update id="updateMember"  parameterType="com.side_on.dto.Member">
+  	        update member set member_pw=#{memberPw}, email=#{email}, name=#{name}, mobile=#{mobile} where member_id=#{memberId}
+        </update>
+	
 </mapper>
 
 

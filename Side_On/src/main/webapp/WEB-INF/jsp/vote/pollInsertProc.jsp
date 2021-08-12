@@ -1,6 +1,6 @@
 <!-- pollInsertProc.jsp -->
-<%@page contentType="text/html; charset=EUC-KR"%>
-<%request.setCharacterEncoding("EUC-KR");%>
+<%@page contentType="text/html; charset=UTF-8"%>
+<%request.setCharacterEncoding("UTF-8");%>
 <jsp:useBean id="mgr" class="com.side_on.poll.PollMgr"/>
 <jsp:useBean id="plBean" class="com.side_on.poll.PollListBean"/>
 <jsp:setProperty property="*" name="plBean"/>
@@ -8,10 +8,10 @@
 <jsp:setProperty property="*" name="piBean"/>
 <%
 		boolean result = mgr.insertPoll(plBean, piBean);
-		String msg = "¼³¹® Ãß°¡¿¡ ½ÇÆÐ ÇÏ¿´½À´Ï´Ù.";
+		String msg = "ì„¤ë¬¸ ì¶”ê°€ì— ì‹¤íŒ¨ í•˜ì˜€ìŠµë‹ˆë‹¤.";
 		String url = "pollInsert";
 		if(result){
-			msg = "¼³¹® Ãß°¡¿¡ ¼º°ø ÇÏ¿´½À´Ï´Ù.";
+			msg = "ì„¤ë¬¸ ì¶”ê°€ì— ì„±ê³µ í•˜ì˜€ìŠµë‹ˆë‹¤.";
 			url = "pollList";
 		}
 %>
