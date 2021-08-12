@@ -62,14 +62,10 @@
 	               						<tr>
 	               							<th>${dto.restNo}</th>
 	                						<th>${dto.memberId}</th>
-	                						<th>${dto.noticeNo}</th>
+	                						<th><a href="../notice/adminNoticeDetail?noticeNo=${dto.noticeNo}" style="color: #3f3f3f;">${dto.noticeNo}</a></th>
 	                						<th>${dto.reason}</th>
 	                						<th>${dto.restEnroll}</th>
 	                						<th>${dto.restConfirm}</th>
-	                						<!-- 
-	                						<th>2020-05-11</th>
-	                						<th>2020-11-20</th>
-	                						 -->
 	                						<th>
 	                							<c:choose>
 	                								<c:when test="${dto.restCheck eq 'F'}">처리요청</c:when>
