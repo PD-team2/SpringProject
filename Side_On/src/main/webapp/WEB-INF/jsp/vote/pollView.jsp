@@ -20,12 +20,12 @@
 <jsp:include page="../inc/header.jsp"/><br><br><br><br>
 	
 	<header class="bg-warning py-5">
-            <div class="container px-1 px-lg-1 my-1">
+            <div class="container px-5 px-lg-5 my-5">
                 <div class="text-center text-white">
-                <!-- Çì´õ...¾î¶»°Ô... -->
+                <!-- í—¤ë”...ì–´ë–»ê²Œ... -->
                 <div style="padding-top: 1%;">
-                    <h1 class="display-5 fw-bolder">ÅõÇ¥°á°ú</h1>
-                    <p class="lead fw-normal text-white-80 mb-0">ÅõÇ¥°á°ú¸¦ È®ÀÎÇØº¸¼¼¿ä.</p>
+                    <h1 class="display-5 fw-bolder">íˆ¬í‘œê²°ê³¼</h1>
+                    <p class="lead fw-normal text-white-80 mb-0">íˆ¬í‘œê²°ê³¼ë¥¼ í™•ì¸í•´ë³´ì„¸ìš”.</p>
             </div>
             </div>
          </div>
@@ -36,7 +36,7 @@
 		<td colspan="4"><b>Q : <%=plBean.getQuestion()%></b></td>
 	</tr>
 	<tr>
-		<td colspan="3"><b>ÃÑ ÅõÇ¥ÀÚ :  <%=sumCnt%> ¸í</b></td>
+		<td colspan="3"><b>ì´ íˆ¬í‘œìž :  <%=sumCnt%> ëª…</b></td>
 		<td width="40"><b>count(%)</b></td>
 	</tr>
 	<%
@@ -62,7 +62,7 @@
 	</tr>
 	<%}//--for%>
 </table><br>
-<a href="javascript:window.close()" style="color:black;">´Ý±â</a>
+<a href="javascript:window.close()" style="color:black;">ë‹«ê¸°</a>
 </div>
 </body>
 </html>
