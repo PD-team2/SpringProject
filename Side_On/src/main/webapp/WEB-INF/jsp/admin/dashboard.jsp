@@ -156,43 +156,50 @@
                         </div>
 
 
-                        <!-- Browser Column -->
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Project Card Example -->
+                        <!-- Rest List 상위 5개 -->
+                        <div class="col-6">
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Browser</h6>
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary"><a href="../rest/restList">Rest</a></h6>
+                                    
                                 </div>
+                                <!-- Card Body -->
                                 <div class="card-body">
-                                    <h4 class="small font-weight-bold">Chrome <span
-                                            class="float-right">60%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 60%"
-                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Safari <span
-                                            class="float-right">20%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 20%"
-                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Edge <span
-                                            class="float-right">10%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 10%"
-                                            aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Firefox <span
-                                            class="float-right">10%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 10%"
-                                            aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+				                		<div class="container">
+                							<div class="row">
+                								<table class="table" style="text-align: center; border: 1px solid #dddddd;">
+                									<thead>
+                										<tr>
+                											<th style="background-color: #eeeeee; text-align: center;">No</th>
+                											<th style="background-color: #eeeeee; text-align: center;">번호</th>
+                											<th style="background-color: #eeeeee; text-align: center;">접수</th>
+                											<th style="background-color: #eeeeee; text-align: center;">상태</th>
+                										</tr>
+                									</thead>
+                									
+                									<tbody>
+                										<c:forEach var="rdto" items="${restList}" varStatus="status">
+                											<tr>
+	               												<th>${rdto.restNo}</th>
+	               												<th>${rdto.noticeNo}</th>
+	               												<th>${rdto.restEnroll}</th>
+	               												<th>
+						                							<c:choose>
+						                								<c:when test="${rdto.restCheck eq 'F'}">처리요청</c:when>
+						                								<c:when test="${rdto.restCheck eq 'T'}">처리완료</c:when>
+						                							</c:choose>
+						                						</th>
+						                					</tr>
+                										</c:forEach>
+                									</tbody>
+                								</table>
+                							</div>
+                						</div>
+                					</div>
                                 </div>
-                            </div>
-
-                        </div>
+                        	</div>
 
                         <div class="col-lg-6 mb-4">
 
