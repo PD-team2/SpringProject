@@ -71,4 +71,26 @@ public class MemberService {
 		log.debug("dao result: " + result);
 		return result;
 	}
+	
+	/**
+	 * 내정보조회
+	 * @param loginMemberId
+	 * @return
+	 */
+	public Member getMemberToDto(String loginMemberId) {
+		return memberDao.selectOneToDto(loginMemberId);
+	}
+
+	/**
+	 * 내정보변경
+	 * @param memberId 아이디
+	 * @param memberPw 비밀번호
+	 * @param name 이름
+	 * @param mobile 휴대폰
+	 * @param email 이메일
+	 * @return
+	 */
+	public int setMember(String memberId, String memberPw, String name, String mobile, String email) {
+		return memberDao.updateMember(memberId, memberPw, name, mobile, email);
+	}
 }
