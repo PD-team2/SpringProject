@@ -3,7 +3,7 @@
 <%@page contentType="text/html; charset=UTF-8"%>
 <jsp:useBean id="mgr" class="com.side_on.poll.PollMgr"/>
 <%
-		request.setCharacterEncoding("EUC-KR");
+		request.setCharacterEncoding("UTF-8");
 		int num = 0;
 		if(request.getParameter("num")!=null){
 			num = Integer.parseInt(request.getParameter("num"));
