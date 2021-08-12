@@ -20,7 +20,7 @@
 <jsp:include page="../inc/header.jsp"/><br><br><br><br>
 	
 	<header class="bg-warning py-5">
-            <div class="container px-1 px-lg-1 my-1">
+            <div class="container px-5 px-lg-5 my-5">
                 <div class="text-center text-white">
                 <!-- 헤더...어떻게... -->
                 <div style="padding-top: 1%;">
