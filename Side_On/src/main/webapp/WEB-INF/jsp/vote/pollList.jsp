@@ -1,9 +1,9 @@
 <!-- pollList.jsp -->
 <%@page import="java.util.Vector"%>
 <%@page import="com.side_on.poll.PollListBean"%>
-<%@ page  contentType="text/html; charset=UTF-8"%>
+<%@ page  contentType="text/html; charset=EUC-KR"%>
 <jsp:useBean id="mgr" class="com.side_on.poll.PollMgr"/>
-<%request.setCharacterEncoding("UTF-8");%>
+<%request.setCharacterEncoding("EUC-KR");%>
 <html>
 <head>
 <title>JSP Poll</title>
@@ -14,25 +14,25 @@
 	<header class="bg-warning py-5">
             <div class="container px-5 px-lg-5 my-5">
                 <div class="text-center text-white">
-                <!-- Çì´õ...¾î¶»°Ô... -->
+                <!-- í—¤ë”...ì–´ë–»ê²Œ... -->
                 <div style="padding-top: 1%;">
-                    <h1 class="display-5 fw-bolder">ÅõÇ¥ÇÏ±â</h1>
-                    <p class="lead fw-normal text-white-80 mb-0">ÅõÇ¥¸®½ºÆ®¸¦ È®ÀÎÇÏ°í ÅõÇ¥¸¦ ÇØº¸¼¼¿ä.</p>
+                    <h1 class="display-5 fw-bolder">íˆ¬í‘œí•˜ê¸°</h1>
+                    <p class="lead fw-normal text-white-80 mb-0">íˆ¬í‘œë¦¬ìŠ¤íŠ¸ë¥¼ í™•ì¸í•˜ê³  íˆ¬í‘œë¥¼ í•´ë³´ì„¸ìš”.</p>
             </div>
             </div>
          </div>
         </header><br><br>
 <div align="center">
 <jsp:include page="pollForm.jsp"/>
-<b>¼³¹® ¸®½ºÆ®</b>
+<b>ì„¤ë¬¸ ë¦¬ìŠ¤íŠ¸</b>
 <table>
 	<tr>
 		<td>
 		<table  border="1">
 			<tr>
-				<th width="50">¹øÈ£</th>
-				<th width="250" align="left">Áú¹®</th>
-				<th width="200">½ÃÀÛÀÏ~Á¾·áÀÏ</th>
+				<th width="50">ë²ˆí˜¸</th>
+				<th width="250" align="left">ì§ˆë¬¸</th>
+				<th width="200">ì‹œìž‘ì¼~ì¢…ë£Œì¼</th>
 			</tr>
 			<%
 					Vector<PollListBean> vlist = mgr.getPollList();
@@ -54,7 +54,7 @@
 	</tr>
 	<tr>
 		<td align="center">
-			<a href="pollInsert" style="color:black;">¼³¹®ÀÛ¼ºÇÏ±â</a>
+			<a href="pollInsert" style="color:black;">ì„¤ë¬¸ìž‘ì„±í•˜ê¸°</a>
 		</td>
 	</tr>
 </table>
