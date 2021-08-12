@@ -75,6 +75,9 @@
                 					</tbody>
                 				</table>
                 				<button onclick="history.back()" type="button" class="btn btn-warning" style="width: 100px; height: 35px;">뒤로가기</button>
+                				&nbsp;&nbsp;
+                				<!-- Small modal -->
+								<button type="button" class="btn btn-danger" style="width: 80px; height: 35px;" data-toggle="modal" data-target=".bs-example-modal-lg">신고</button>
                 			</div>
                 		</div>
                 	</div>
@@ -114,5 +117,7 @@
 	<%@ include file="../inc/adminBodyLink.jsp" %>
 
 </body>
+
+<%@ include file="../inc/restModalForm.jsp" %>
 
 </html>
