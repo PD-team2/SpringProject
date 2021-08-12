@@ -54,7 +54,7 @@
 	</tr>
 	<tr>
 		<td align="center">
-			<a href="pollInsert" style="color:black;">설문작성하기</a>
+		<button type="button"  class="btn btn-info" onclick="location.href='/vote/pollInsert'">투표만들기</button>
 		</td>
 	</tr>
 </table>

@@ -40,15 +40,14 @@
 	<tr>
 		<td width="150">
 		<%if(active==1){%>
-			<input type="submit" value="투표">
+		<button type="submit" class="btn btn-info">투표</button>
 		<%}else{%>
 			투표종료
 		<%}%>	
 		</td>
-		<td>
-			<input type="button" value="결과" 
-			onclick="javascript:window.open('pollView?num=<%=num%>'
-			,'pollView','width=500, height=350')">
+		<td><td>
+		<button type="button" class="btn btn-success" onclick="javascript:window.open('pollView?num=<%=num%>'
+			,'pollView','width=500, height=350')">결과</button>
 		</td>
 	</tr>
 </table>	
