@@ -1,0 +1,10 @@
+package com.side_on.util;
+import java.security.SecureRandom;
+
+public class RandomStringUtils {
+
+	private static SecureRandom random = new SecureRandom();
+	[출처] 자바 랜덤 문자열 생성하기 Example 예제|작성자 까만손오공
+
+
+}

@@ -1,0 +1,8 @@
+package com.side_on.util;
+import java.security.SecureRandom;
+
+public class RandomStringUtils {
+
+	private static SecureRandom random = new SecureRandom();	
+	
+}

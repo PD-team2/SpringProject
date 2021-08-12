@@ -1,10 +1,29 @@
 package com.side_on.controller;
 
+import java.io.File;
+import org.apache.commons.io.FilenameUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.side_on.dto.FileVO;
+import com.side_on.dto.RecruitBoard;
+import com.side_on.service.RecruitService;
+import com.side_on.util.Utility;
+import com.side_on.util.RandomStringUtils;
+import lombok.extern.slf4j.Slf4j;
 
 @Controller
+@Slf4j
 public class RecruitController {
+	
+	//Service 연결
+	@Autowired
+	private RecruitService service;
 	
 	/** 모집 페이지 첫 화면 */
 	@RequestMapping("/recruit/recruitHome")
@@ -47,5 +66,61 @@ public class RecruitController {
 		
 		return "recruit/recruitAdmin"; 
 	}
+	
+	/** 모집 페이지 글 작성 DB 저장 
+	 * @throws Exception */
+	@RequestMapping("/recruit/write/complete")
+	public String recruitWriteComplete(RecruitBoard recruitBoard, ModelAndView mv) throws Exception {
+		
+		
+		//날짜 저장getCurrentDate
+		recruitBoard.setSave_date(Utility.getCurrentDate());
+		recruitBoard.setMemberId("user01");
+		recruitBoard.setHit(0);
+		
+		System.out.println("컨트롤러 입니당" + recruitBoard);
+		
+		//서비스 보내기
+		int result = service.insertRecruitBoard(recruitBoard);
+        
+		return "recruit/recruitAdmin"; 
+	}
+	
+	
+	
+	/**파일 업로드 안돼.. 흑.. 왜..*/
+	public String recruitWriteWithFile(RecruitBoard recruitBoard, @RequestPart MultipartFile file) throws Exception {
+		System.out.println("컨트롤러 입니당" + recruitBoard);
+		
+		//file class 설정
+		FileVO fileVO;
+		
+		//날짜 저장getCurrentDate
+		recruitBoard.setSave_date(Utility.getCurrentDate());
+		recruitBoard.setMemberId("user01");
+		recruitBoard.setHit(0);
+		
+		String fileName = file.getOriginalFilename();
+		String fileNameExtension = FilenameUtils.getExtension(fileName).toLowerCase(); 
+		File destinationFile; 
+		String destinationFileName;
+		String baseDir = "/Side_On/src/main/webapp/WEB-INF/profile";
+		String fileUrl = baseDir + "\\"+ file.getOriginalFilename();
+		
+		do { 
+            destinationFileName = RandomStringUtils.getRamdom()+ "." + fileNameExtension; 
+            destinationFile = new File(fileUrl+ destinationFileName); 
+		} while (destinationFile.exists());
+		
+		destinationFile.getParentFile().mkdirs(); 
+		file.transferTo(destinationFile); 
+        
+       // service.insertRecruitBoard(recruitBoard); //게시글 insert
+        
+		
+		return "recruit/recruitAdmin"; 
+	}
+	
+	
 }
 

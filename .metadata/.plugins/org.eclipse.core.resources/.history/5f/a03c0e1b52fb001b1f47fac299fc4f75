@@ -1,0 +1,6 @@
+package com.side_on.util;
+import java.util.Random;
+
+public class RandomStringUtils {
+
+}

@@ -1,0 +1,22 @@
+package com.side_on.dao;
+
+import java.util.Map;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.side_on.dto.RecruitBoard;
+
+@Mapper
+public class RecruitDao {
+
+	public void newRecruit(RecruitBoard recruitBoard) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void insertFile(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

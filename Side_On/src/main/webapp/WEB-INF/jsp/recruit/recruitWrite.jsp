@@ -35,7 +35,7 @@
 			//글 제목 
 			var title = document.getElementById('title').value;
 			//프로필 (아직 안함)
-			var profile = document.getElementById('profile').value;
+			/*var profile = document.getElementById('profile').value; */
 			//프로젝트 이름
 			var project_name = document.getElementById('project_name').value;
 			//프로젝트 간단 설명
@@ -48,6 +48,7 @@
 			//프로젝트 기간(시작일)
 			var start_date = document.getElementById("start_date").value;
 			var end_date = document.getElementById("end_date").value;
+			
 			var today = getToday();
 			//프로젝트 기간(마감일)
 			var end_date = document.getElementById('end_date').value;
@@ -56,8 +57,8 @@
 			//프로젝트 소개
 			var pj_content = document.getElementById('pj_content').value;
 			//모집 분야 (count) 10개 이하 0개 이상
-			var front = document.getElementById('front').value; console.log(front);
-			var back = document.getElementById('back').value; 
+			var front = document.getElementById('Front').value; console.log(front);
+			var back = document.getElementById('Back').value; 
 			var aos = document.getElementById('aos').value;
 			var ios = document.getElementById('ios').value; 
 			var server = document.getElementById('server').value; 
@@ -87,7 +88,12 @@
 			}
 			
 			//input 경로 설정?
-			
+	/*		var fileCheck = document.getElementById("file").value;
+			    if(!fileCheck){
+			        alert("파일을 첨부해 주세요");
+			        return false;
+			    }
+		*/	
 			// 프로젝트 제목 유효성 검사(1) : 미입력 
 			if(project_name.trim() == ""){
 				alert('[안내] 프로젝트 제목을 입력해주세요');
@@ -115,7 +121,33 @@
 				$('#title').focus();
 				return false;
 			}
-		
+			
+			// 리더 소개  내용 유효성 검사(1) : 미입력 
+			if(content.trim() == ""){
+				alert('[안내] 리더 소개 글을 입력해주세요');
+				$('#content').focus();			
+				return false;
+			} 
+			// 리더 소개 검사(2) : 불성실 입력 
+			if(content.length  < 5){
+				alert('[안내] 리더 소개 글을 5자리 이상 입력해주세요');
+				$('#content').focus();
+				return false;
+			}
+			// 프로젝트 소개 유효성 검사(1) : 미입력 
+			if(pj_content.trim() == ""){
+				alert('[안내] 프로젝트 소개 글을 입력해주세요');
+				$('#pj_content').focus();			
+				return false;
+			} 
+			// 프로젝트 소개 검사(2) : 불성실 입력 
+			if(pj_content.length  < 5){
+				alert('[안내] 프로젝트 소개 글을 5자리 이상 입력해주세요');
+				$('#pj_content').focus();
+				return false;
+			}
+			
+			
 			//지원 유/무료 여부 (checked) pay_amount
 			if(pay == true) {
 				
@@ -138,9 +170,14 @@
 			
 			if(pay == false && free == false){
 				alert('[안내] 지원 유/무료 항목을 체크해주세요.');
-				
+				return false;
 			}
 			
+			if(pay == true && free == true){
+				alert('[안내] 지원 유/무료 항목을 하나만 체크해주세요.');
+				return false;
+			}
+
 			//프로젝트 시작, 마지막 날짜 유효성 검사(1) : 날짜 미입력
 			if(start_date == "" || end_date == ""){
 				alert("[안내] 프로젝트 기간을 입력해주세요.");
@@ -194,6 +231,9 @@
 				alert("[안내] 프로젝트 최소인원은 2명 이상입니다. 다시 입력해주세요.");
 				return false;
 			}
+	
+			//폼 전송
+			$('#recruitForm').submit();
 			
 			//함수 끝
 		}
@@ -214,15 +254,26 @@
 		        }
 		    });
 
+
 			/* 유료 금액 input 나오게 */
-	        $("#pay_check2").click(function () {  
-				      $('#pay_amount').show();           
+			  $("#pay_check1").change(function () {  
+	        	 if($("#pay_check1").is(":checked")){ 
+	        			$('#pay_check').val('n');
+	        			 $('#pay_amount').hide();  
+	             }else{
+	            	 $('#pay_amount').hide();  
+	             }
 	   		 });
 			
-	        $("#pay_check1").click(function () {  
-	                $('#pay_amount').hide();  
-   			 });
-
+	        $("#pay_check2").change(function () {  
+	        	 if($("#pay_check2").is(":checked")){
+	        		 $('#pay_amount').show();  
+	        			$('#pay_check').val('y');
+	             }else{
+	            	 $('#pay_amount').hide();  
+	             }
+	   		 });
+			
 	    });
 	    </script>
 
@@ -250,27 +301,27 @@
 			  </button>
 			</div>
 			
-<form action="" method="post" name="recruitForm"  enctype="multipart/form-data">
+<form action="/recruit/write/complete" method="post" name="recruitForm" id="recruitForm" enctype="multipart/form-data">
        	<div class="row" style="margin-top:5%;">
        	<div class="col-md-6 center" >		
             <div class="form-group row" >
 				    <label for="title" class="col-sm-2 col-form-label col-form-label-lg">글 제목</label>
 				    <div class="col-sm-10">
-				      <input type="text" class="form-control form-control-lg" id="title" placeholder="글 제목을 입력해주세요." maxlength="20">
+				      <input type="text" class="form-control form-control-lg" id="title" name="title" placeholder="글 제목을 입력해주세요." maxlength="30">
 				    </div>
 			 </div>
 			 </div>
 		</div>
     
 	<!-- 처음 -->
-	<div class="container-fluid emp-profile" style="font-family: 'Noto Sans KR', sans-serif;">
+	<div class="container emp-profile" style="font-family: 'Noto Sans KR', sans-serif;">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
                             <img src="../img/bear2.jpg" alt=""/>
                             <div class="file btn btn-lg btn-primary">
-                                프로필 사진 선택
-                                <input type="file" name="profile" id = "profile" accept="image/*" required />
+                                대표 사진 선택
+                                <input type="file" name="file" id = "file" accept="image/*"  /> 
                             </div>
                         </div>
                         
@@ -341,10 +392,13 @@
 							    <label for="project_name" class="col-sm-4 col-form-label">지원 유/무료 여부</label>
 							    <div class="col-sm-8">
 							      <label for="pay_check1"> 무료  </label>
-								    <input type="checkbox" class="change"  id="pay_check1" value="free" name="check" checked>
+								    <input type="checkbox" class="change"  id="pay_check1" name="pay_check1"  name="check" >
 								    <label for="pay_check2">유료</label>
-								    <input type="checkbox"  class="change" id="pay_check2" value="pay" name="check">
-								   	<input type='number' name='pay_amount' id='pay_amount' placeholder='금액 입력' style="display:none;"  pattern='\d*' >
+								    <input type="checkbox"  class="change" id="pay_check2" name="pay_check2"  name="check">
+								   	<input type='number' name='pay_amount' id='pay_amount' placeholder='금액 입력' style="display:none;"  pattern='\d*' step="10" >
+								   	
+								   	<!-- input hidden -->
+								   	<input type="hidden" name="pay_check"  id="pay_check" />
 								   	<span id="amout"> </span> 
 								   
 								   </div>
@@ -355,8 +409,8 @@
 							<div class="form-group row">
 							    <label for="project_name" class="col-sm-4 col-form-label">프로젝트 기간  </label>
 							    <div class="col-sm-8">
-                                        <input type="date" id="start_date" name="trip-start" min="2021-08-01" max="2025-12-31"> ~ 
-                                       <input type="date" id="end_date" name="trip-start" min="2021-08-01" max="2025-12-31">
+                                        <input type="date" id="start_date" name="start_date" min="2021-08-01" max="2025-12-31"> ~ 
+                                       <input type="date" id="end_date" name="end_date" min="2021-08-01" max="2025-12-31">
                                  </div>
                        
                               </div>
@@ -387,14 +441,14 @@
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-					            <textarea class="form-control" id="content" name="contents" rows="8" maxlength="500"
-					            style="width:630px; height:400px;">1</textarea>
+					            <textarea class="form-control" id="content" name="content" rows="8" maxlength="500"
+					            style="width:630px; height:400px;"></textarea>
 
                             </div>
                             <div class="tab-pane fade" id="project_content" role="tabpanel" aria-labelledby="project_content-tab">
 
-                              <textarea class="form-control" id="pj_content" name="contents" rows="8" maxlength="500"
-					            style="width:630px; height:400px;">2</textarea>
+                              <textarea class="form-control" id="pj_content" name="pj_content" rows="8" maxlength="500"
+					            style="width:630px; height:400px;"></textarea>
                
                             </div>
                             
@@ -403,12 +457,12 @@
 	                                <div class="form-group row">
                                     <label for="project_name" class="col-sm-4 col-form-label">Front-end(프론트)</label>
                                     <div class="col-sm-5">
-                                      <input type="number" class="form-control" id="front" name="Front" min="0" max="5" value="0">
+                                      <input type="number" class="form-control" id="Front" name="Front" min="0" max="5" value="0">
                                     </div>
                                     
                                     <label for="project_name" class="col-sm-4 col-form-label">Back-end(백엔드)</label>
                                       <div class="col-sm-5">
-                                        <input type="number" class="form-control" id="back" name="Back" min="0" max="5" value="0">
+                                        <input type="number" class="form-control" id="Back" name="Back" min="0" max="5" value="0">
                                       </div>
                                     
                                   <label for="project_name" class="col-sm-4 col-form-label">AOS(안드로이드)</label>

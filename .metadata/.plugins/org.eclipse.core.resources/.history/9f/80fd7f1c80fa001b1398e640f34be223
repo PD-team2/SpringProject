@@ -1,0 +1,10 @@
+package com.side_on.dto;
+
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class RecruitBoard {
+
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+     
+<context:component-scan base-package="com.side_on.util"></context:component-scan>
+ 
+ <!-- 외부 경로를 찾는 방식은 동작하지 않음. -->
+ <!--  외부 경로 찾는 방식으로 다운로드를 구현하려면, 다운로더를 하나 구현하는 것이 빠름. -->
+ <!-- 다운로드 경로는 servlet-context.xml에 넣어야 함. 이중 선언이 되어서 동작 안함. -->
+ <!--
+ <mvc:annotation-driven />
+   
+    <mvc:resources mapping="/static2/**" location="file:///c:/temp/" />
+ <mvc:default-servlet-handler />
+ -->
+ 
+</beans>
