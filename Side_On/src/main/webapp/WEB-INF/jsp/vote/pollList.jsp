@@ -1,9 +1,9 @@
 <!-- pollList.jsp -->
 <%@page import="java.util.Vector"%>
 <%@page import="com.side_on.poll.PollListBean"%>
-<%@ page  contentType="text/html; charset=EUC-KR"%>
+<%@ page  contentType="text/html; charset=UTF-8"%>
 <jsp:useBean id="mgr" class="com.side_on.poll.PollMgr"/>
-<%request.setCharacterEncoding("EUC-KR");%>
+<%request.setCharacterEncoding("UTF-8");%>
 <html>
 <head>
 <title>JSP Poll</title>
