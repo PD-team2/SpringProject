@@ -1,13 +1,9 @@
  function sendMail() {
-    	 // var emailElement = {
-         //     memberId : "user01",
-         //     tempNum : "123456",
-         //	 	email : "jaehyunkim19826@naver.com"
-        //  }
-    	
+   
     	 var emailElement = {};
     	 emailElement.email = document.getElementById("email").value;
     	 emailElement.title = document.getElementById("title").value;
+    	 emailElement.mobile = document.getElementById("mobile").value;
     	 emailElement.contents = document.getElementById("contents").value;
     	 
     	 //emailjs 발송
