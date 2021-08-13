@@ -1,5 +1,10 @@
 package com.side_on.controller;
 
+import java.util.List;
+
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
@@ -10,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.side_on.dto.Find;
 import com.side_on.service.FindService;
+
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -24,7 +30,10 @@ public class FindController {
 	
 	/** 목록 페이지 */
 	@RequestMapping("/find/list")
-	public String FindMemberList() {
+	public String FindMemberList(Model model, HttpSession session) {
+		log.info("### findMember List :: ");
+		List<Find> list = findService.FindMemberList();
+		model.addAttribute("list", list);
 		return "find/list";
 	}
 	
@@ -45,7 +54,7 @@ public class FindController {
 	/** 게시글 상세조회 화면  */
 	@RequestMapping("/find/detail")
 	public String FindMemberDetail(String find_writer, Model model) {
-		log.debug("### FindMemberDetail :: ");
+		log.info("### FindMemberDetail :: ");
 		
 		Find dto = findService.FindMemberDetail(find_writer);
 		
@@ -56,7 +65,7 @@ public class FindController {
 	/** 게시글 삭제 */
 	@RequestMapping("/find/detail/delete")
 	public String FindMemberDelete(String find_writer, Model model) {
-		log.debug("### FindMember Delete :: ");
+		log.info("### FindMember Delete :: ");
 		int result = findService.FindMemberDelete(find_writer);
 		if (result == 1) {
 			return "find/deleteDone";
@@ -101,7 +110,7 @@ public class FindController {
 	/** 게시글 작성화면 */
 	@RequestMapping("/find/form")
 	public String findMemberForm() {
-		log.debug("### findMember form ::");
+		log.info("### findMember form ::");
 		return "find/form";
 	}
 
