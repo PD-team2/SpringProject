@@ -31,7 +31,7 @@
          </div>
         </header><br><br>
 <div align="center"><br/>
-<table border="1" width="400">
+<table border="1" width="800" height="400">
 	<tr>
 		<td colspan="4"><b>Q : <%=plBean.getQuestion()%></b></td>
 	</tr>
