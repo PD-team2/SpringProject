@@ -26,16 +26,20 @@
  	</a>
 </header>
 <div style="margin-top:20px;" class="int-area">
-<input type="text" class="mailForm" name="memberId" id="memberId"
-       placeholder=" 답변받으실 이메일을 정확히 입력해주세요." autocomplete="off" required>
+<input type="text" class="mailForm" name="email" id="email"
+       placeholder="답변받으실 이메일을 입력해주세요." autocomplete="off" required>
 
 </div>
 <div class="int-area">
 <input type="text" class="mailForm" name="title" id="title"
        placeholder="문의 제목을 입력해주세요." autocomplete="off" required>
 </div>
+<div class="int-area">
+<input type="text" class="mailForm" name="mobile" id="mobile"
+       placeholder="연락처를 입력해주세요." autocomplete="off" required>
+</div>
 <div class="text-area">
-<p><textarea name="contents" class="textForm" id="contents"
+<p><textarea class="textForm" name="contents" id="contents"
      placeholder="문의 내용을 입력해주세요."></textarea></p>
 </div>    
 
