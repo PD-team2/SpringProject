@@ -331,7 +331,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-warning mt-auto" href="detail">더 보러가기</a></div>
+                                <div class="text-center"><a class="btn btn-outline-warning mt-auto" href="/find/detail">더 보러가기</a></div>
                             </div>
                         </div>
                     </div>
