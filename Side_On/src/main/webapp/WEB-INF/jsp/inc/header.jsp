@@ -12,7 +12,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="/css/styles.css" rel="stylesheet" />	
-	<title>Insert title here</title>
+	<title>Side-On</title>
 </head>
 <body>
 	 <body id="page-top">
