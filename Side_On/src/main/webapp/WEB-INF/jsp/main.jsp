@@ -277,8 +277,10 @@
                             </div>
                         </div>
                     </div>
-                    <div style="text-align: right">
-                	 더 많은 정보를 확인하려면 <a class="LoginButton" href="/member/login">LogIn</a>
+                    <div style="text-align: right; font-family:'Pretendard'; ">
+                	 더 많은 정보를 확인하려면 
+                	 <button type="button" class="btn-warning" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+						onclick="location.href='/member/loginForm'">LogIn</button>
                     </div>
                 </div>
             </div>
