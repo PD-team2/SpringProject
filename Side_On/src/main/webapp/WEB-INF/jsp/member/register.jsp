@@ -120,7 +120,7 @@ $.ajax({
                                 <!-- 이메일 / 이메일 인증 pattern ? -->
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" id="email" name="email"
-                                        placeholder="이메일 ex)id@mail.com" pattern="[a-zA-z_-@.]{1,40}" maxlength="40" required="required">
+                                        placeholder="이메일 ex)id@mail.com" pattern="[a-zA-z0-9_-@.]{1,40}" maxlength="40" required="required">
                                 </div>
                                 
                                 <!-- 핸드폰번호 -->
