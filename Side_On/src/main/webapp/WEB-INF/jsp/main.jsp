@@ -23,6 +23,9 @@
         <link href="../css/MainPage_JHK.css" rel="stylesheet" />
         <link href="../css/RecruitHome_juri.css" rel="stylesheet" />
         <link href="../css/findMember_sh.css" rel="stylesheet" />
+        <!-- EmailJs Api -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+		<script type="text/javascript" src="../js/contactEmail_JHK.js"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -406,25 +409,25 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="문의하시는 분의 이름을 입력해주세요." data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">이름 항목은 필수입니다.</div>
+                                <input class="form-control" name="title" id="title" type="text" placeholder="문의 제목을 입력해주세요." data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">문의 제목은 필수입니다.</div>
                             </div>
                             <div class="form-group">
                                 <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="답변 받으실 이메일 주소를 입력해주세요." data-sb-validations="required,email" />
+                                <input class="form-control" id="email" type="email" placeholder="답변받으실 이메일을 입력해주세요." data-sb-validations="required,email" />
                                 <div class="invalid-feedback" data-sb-feedback="email:required">이메일 주소는 필수입니다.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email 주소가 정확하지 않습니다.</div>
                             </div>
                             <div class="form-group mb-md-0">
                                 <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="문의하시는 분의 연락처를 입력해주세요." data-sb-validations="required" />
+                                <input class="form-control" name="mobile" id="mobile" type="tel" placeholder="문의하시는 분의 연락처를 입력해주세요." data-sb-validations="required" />
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">연락처는 필수입니다.</div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
                                 <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="문의하실 내용을 기입해주세요" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" name="contents" id="contents" placeholder="문의하실 내용을 기입해주세요" data-sb-validations="required"></textarea>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">문의사항은 필수입니다.</div>
                             </div>
                         </div>
@@ -447,7 +450,7 @@
                     <!-- an error submitting the form-->
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                     <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+                    <div class="text-center"><button type="button" class="btn-warning" onclick="sendMail();">문의하기</button></div>
                 </form>
             </div>
         </section>
