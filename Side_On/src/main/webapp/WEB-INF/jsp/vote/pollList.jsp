@@ -53,8 +53,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td align="center">
-		<button type="button"  class="btn btn-info" onclick="location.href='/vote/pollInsert'">투표만들기</button>
+		<td align="center"><br>
+		<button type="button"  class="btn btn-warning" onclick="location.href='/vote/pollInsert'">투표만들기</button>
 		</td>
 	</tr>
 </table>
