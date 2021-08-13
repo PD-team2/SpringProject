@@ -10,19 +10,22 @@
 		#{save_date}, #{pay_check}, #{pay_amount}, #{visible_check}, #{simple_info}, #{pj_content},
 		#{project_name}, #{Front}, #{Back}, #{aos}, #{ios}, #{uxui}, #{plan}, #{pm})
 	</insert>
-	
-	 <select id="boardList" resultType="hashmap" parameterType="hashmap">
-		<![CDATA[
-			SELECT * 
-			FROM recruit
-			ORDER BY NUM DESC
-			LIMIT #{pageStart}, #{perPageNum}
-		]]>
-	</select>
-	<select id="boardListCnt" resultType="int">
-		SELECT count(*)
-		FROM recruit
-	</select>
+		<!-- 게시판 목록(페이징 적용)  public List<QnABoard> getListPaging(Criteria cri) -->
+	<select id="getListPaging" resultType="com.side_on.dto.RecruitBoard">
+    
+    <![CDATA[
+		select Recruit_num, memberId, title from (
+		select  rownum as rn,Recruit_num, title, memberId, 
+		from Recruit where rownum <= #{pageNum} * #{amount})
+        where rn > (#{pageNum} -1) * #{amount}
+    ]]>	    
+    </select>
+    
+ 	<!-- 게시물 총 갯수  public int getTotal(Criteria cri) -->
+    <select id="getTotal" resultType="int">
+        select count(*) from recruit
+    </select>
+    
 
 	
 		<!--2. 게시글 총 갯수 -->

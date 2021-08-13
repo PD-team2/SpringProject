@@ -37,4 +37,6 @@
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="com.side_on.dto.PageMaker_ex"/>
     <fullyQualifiedTypeName name="com.side_on.dto.Paging"/>
+    <fullyQualifiedTypeName name="com.side_on.dto.CriteriaRc"/>
+    <fullyQualifiedTypeName name="com.side_on.dto.PageMakerRc"/>
 </qualifiedTypeNameHistroy>

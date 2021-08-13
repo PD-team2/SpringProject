@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" >
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	
+
 </head>
 <body>
    <%@ include file="../inc/header.jsp" %>
@@ -34,29 +36,29 @@
     
 	<!-- 처음 -->
 	<div class="container emp-profile" style="font-family: 'Noto Sans KR', sans-serif;">
-            <form method="post">
+            <form  action="/recruit/recruitApply" method="get" name="apply" id="apply">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
                             <img src="../img/bear2.jpg" alt=""/>
                             <div class="file btn btn-lg btn-primary">
-                                Change Photo
+                               <!-- 프로필 사진 -->
                                 <input type="file" name="file"/>
                             </div>
                         </div>
                         
                      <div>
-                  		<h3 class="center">memberId 님</h3>
+                  		<h3 class="center">user01님</h3>
                   	</div>
                         
                     </div>
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h2>
-                                    	프로젝트 이름 : Side-On
+                                    	K사 개발자와 함께하는 미니 프로젝트
                                     </h2>
                                     <h4 style="color:gray;">
-                                 		사이드 프로젝트가 메인인 홈페이지 제작
+                                 		머신러닝을 사용한 프로젝트를 개발합니다.
                                  		<hr>
                                     </h4>
                                    	<h5>지원 방법 : 무료 </h5>
@@ -85,37 +87,24 @@
                         <div class="profile-work">
                         <hr>
                     
-	                           <h5 class="center">모집 분야</h5>
-	                            <div>
-	                            <ul class="center" style="list-style: none; margin-top:5%; margin-bottom:5%" >
-							 			<li>
-							 				<span>프론트엔드 </span> <span> 0/2</span> <button>지원하기</button>
-							 			</li>
-							 			<li>
-							 				<span>프론트엔드 </span> <span> 0/2</span> <button>지원하기</button>
-							 			</li>
-							 			<li>
-							 				<span>프론트엔드 </span> <span> 0/2</span> <button>지원하기</button>
-							 			</li>
-							 			<li>
-							 				<span>프론트엔드 </span> <span> 0/2</span> <button>지원하기</button>
-							 			</li>
-							 			<li>
-							 				<span>프론트엔드 </span> <span> 0/2</span> <button>지원하기</button>
-							 			</li>
-					 			</ul>
-					 		</div>	
+	                           <h5 class="center">모집 분야</h5><br>
+	                            <ul class="center" style=" margin-left: -10%" >
+							 		<li>
+							 				  <h5 class="center">프론트엔드 0/2</h5>
+							 		</li>
+					 			</ul>			
                         </div>
+                        <button type="submit" style = "margin-left:40%"class="btn btn-warning center" onclick="apply()">지원하기</button>
                     </div>
+                    
+                    
                       <div class="col-md-8">
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                       
                                         <div class="row">
-                                            <div class="col-md-8">
-                                           dfkjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdj
-                                           kjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdjkjdkfjslkfjdlksfjlskdj
-                                           
+                                            <div class="col-md-9">
+                                          안녕하세요, 현재 네카라쿠배 중 카카오에 근무하고 있는 5년차 시니어 개발자 김코코입니다. 
                                             </div>
                                          </div>   
                        
@@ -126,10 +115,15 @@
                                                 <label>프로젝트 기간</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>2000.00.00~2000.00.00</p>
+                                                <p>2021.08.15~2021.08.30</p>
                                             </div>
                                         </div>
                                         
+                                    <div class="row">
+                                            <div class="col-md-9">
+                                        머신러닝을 이용한 프로젝트를 개발하려고 합니다. 프로젝트 하는 동안 제가 코드 리뷰 및 멘토링을 진행할거예요. 1석2조의 기회 놓치지마세요!
+                                            </div>
+                                         </div>   
                
                             </div>
                         </div>

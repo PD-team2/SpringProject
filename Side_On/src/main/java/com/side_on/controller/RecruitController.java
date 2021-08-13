@@ -12,9 +12,12 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
-import com.side_on.dto.Criteria_ex;
+
+import com.side_on.dto.Criteria;
+import com.side_on.dto.CriteriaRc;
 import com.side_on.dto.FileVO;
-import com.side_on.dto.Paging;
+import com.side_on.dto.PageMaker;
+import com.side_on.dto.PageMakerRc;
 import com.side_on.dto.RecruitBoard;
 import com.side_on.dto.RecruitCriteria;
 import com.side_on.dto.RecruitPaging;
@@ -33,22 +36,23 @@ public class RecruitController {
 	
 	/** 모집 페이지 첫 화면 
 	 * @throws Exception */
-	@RequestMapping("/recruit/recruitHome")
-	public String recruitHome(Criteria_ex cri, Model model) throws Exception {
+	@RequestMapping("/recruit/recruitHome2")
+	public String recruitHome2(CriteriaRc cri, Model model) throws Exception {
 		
+		model.addAttribute("list", service.getListPaging(cri));
 		// 전체 글 개수
-        int boardListCnt = service.boardListCnt();
-        
-        // 페이징 객체
-        Paging paging = new Paging();
-        paging.setCri(cri);
-        paging.setTotalCount(boardListCnt);    
-        
-        List<Map<String, Object>> list = service.boardList(cri);
-        
-        model.addAttribute("list", list);    
-        model.addAttribute("paging", paging);    
+        int count = service.allCount(cri);
+        PageMakerRc pageMake = new PageMakerRc(cri, count);
+   
+        model.addAttribute("pageMaker", pageMake);
+      
 		return "recruit/recruitHome"; 
+	}
+	
+	@RequestMapping("/recruit/recruitHome")
+	public String recruitHome()  {
+		return "recruit/recruitHome"; 
+		
 	}
 	
 	/** 모집 페이지 상세 페이지 */
@@ -84,6 +88,13 @@ public class RecruitController {
 	public String recruitAdmin() {
 		
 		return "recruit/recruitAdmin"; 
+	}
+	
+	/** 지원하기 recruitApply*/
+	@RequestMapping("/recruit/recruitApply")
+	public String recruitApply() {
+		
+		return "recruit/recruitApply"; 
 	}
 	
 	/** 에러 페이지*/

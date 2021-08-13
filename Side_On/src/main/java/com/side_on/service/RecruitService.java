@@ -2,12 +2,12 @@ package com.side_on.service;
 
 import java.util.List;
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.side_on.dao.RecruitDao;
 import com.side_on.dto.Criteria;
-import com.side_on.dto.Criteria_ex;
+import com.side_on.dto.CriteriaRc;
+import com.side_on.dto.QnABoard;
 import com.side_on.dto.RecruitBoard;
 import com.side_on.dto.RecruitCriteria;
 import com.side_on.dto.RecruitPaging;
@@ -27,15 +27,18 @@ public class RecruitService {
 		return result;
 	}
 
-	public int boardListCnt() {
-		return dao.boardListCnt();
-
+	public int allCount(CriteriaRc cri) {
+		
+		return dao.allCount(cri) ;
 	}
 
-	public List<Map<String, Object>> boardList(Criteria_ex cri) {
-		return dao.boardList(cri);
-
+	public List<RecruitBoard>  getListPaging(CriteriaRc cri) {
+		return dao.getListPaging(cri);
 	}
+
+
+
+
 	
 	/**게시글 목록 조회*/
 

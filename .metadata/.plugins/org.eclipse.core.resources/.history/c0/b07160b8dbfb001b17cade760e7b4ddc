@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.side_on.dao.RecruitDao">
+
+ 	<!--1. 모집 게시글 등록하기-->
+	<insert id="insertRecruitBoard" parameterType="com.side_on.dto.RecruitBoard">
+		insert into Recruit
+		values(Recruit_SEQ.nextval, #{memberId}, #{hit}, #{start_date}, #{end_date}, #{title}, #{content},
+		#{save_date}, #{pay_check}, #{pay_amount}, #{visible_check}, #{simple_info}, #{pj_content},
+		#{project_name}, #{Front}, #{Back}, #{aos}, #{ios}, #{uxui}, #{plan}, #{pm})
+	</insert>
+	
+	 <select id="boardList" resultType="hashmap" parameterType="hashmap">
+		<![CDATA[
+			SELECT * 
+			FROM recruit
+			ORDER BY NUM DESC
+			LIMIT #{pageStart}, #{perPageNum}
+		]]>
+	</select>
+	<select id="boardListCnt" resultType="int">
+		SELECT count(*)
+		FROM recruit
+	</select>
+
+	
+		<!--2. 게시글 총 갯수 -->
+
+		
+		<!--3. 게시글 페이징 -->
+		
+	
+</mapper>
