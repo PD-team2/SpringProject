@@ -1,0 +1,31 @@
+package com.side_on.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class RecruitBoard {
+	
+		/** 글 번호 */
+		private int  recruit_num;
+		/** 아이디 */
+		private String memberId;
+		/** 조회수 */
+		private int hit;
+		/** 프로젝트 시작 날짜 */
+		private String start_date;
+		/** 프로젝트 마감 날짜 */
+		private String end_date;
+		private String save_date;
+		private String title;
+		private String content;
+		
+		
+
+}

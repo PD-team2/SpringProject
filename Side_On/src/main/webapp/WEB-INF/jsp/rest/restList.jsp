@@ -62,21 +62,18 @@
 	               						<tr>
 	               							<th>${dto.restNo}</th>
 	                						<th>${dto.memberId}</th>
-	                						<th>${dto.noticeNo}</th>
+	                						<th><a href="../notice/adminNoticeDetail?noticeNo=${dto.noticeNo}" style="color: #3f3f3f;">${dto.noticeNo}</a></th>
 	                						<th>${dto.reason}</th>
 	                						<th>${dto.restEnroll}</th>
 	                						<th>${dto.restConfirm}</th>
-	                						<!-- 
-	                						<th>2020-05-11</th>
-	                						<th>2020-11-20</th>
-	                						 -->
 	                						<th>
 	                							<c:choose>
 	                								<c:when test="${dto.restCheck eq 'F'}">처리요청</c:when>
 	                								<c:when test="${dto.restCheck eq 'T'}">처리완료</c:when>
 	                							</c:choose>
 	                						</th>
-	                						<th><a href="restMenagement?restNo=${dto.restNo}"><i class="fas fa-fw fa-cog"></i></a></th>
+	                						<!-- Modal Open 버튼 -->
+	                						<th><a data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fas fa-fw fa-cog"></i></a></th>
 	                					</tr>
                 					</c:forEach>
                 					</tbody>
@@ -120,5 +117,5 @@
 	<%@ include file="../inc/adminBodyLink.jsp" %>
 
 </body>
-
+<%@ include file="../inc/restManageModalForm.jsp" %>
 </html>

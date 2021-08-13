@@ -45,6 +45,12 @@
 							</tr>
 						</tbody>
 					</table>
+					<div>
+	                	<button onclick="history.back()" type="button" class="btn btn-warning" style="width: 100px; height: 35px;">뒤로가기</button>
+	                	&nbsp;&nbsp;
+	                	<!-- rest modal -->
+						<button type="button" class="btn btn-danger" style="width: 80px; height: 35px;" data-toggle="modal" data-target=".bs-example-modal-lg">신고</button>
+	                </div>
 				</div>
 			</div>
 		</div>
@@ -71,4 +77,5 @@
 	<script src="../js/sb-admin-2.min_yuna.js"></script>
 
 </body>
+<%@ include file="../inc/restModalForm.jsp" %>
 </html>

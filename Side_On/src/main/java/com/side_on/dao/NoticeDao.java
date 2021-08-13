@@ -10,6 +10,8 @@ import com.side_on.dto.Notice;
 @Mapper
 public interface NoticeDao {
 
+	public List<Notice> selectDashboardNoticeList();
+
 	public List<Notice> selectNoticeList();
 
 	public Notice selectNotice(String noticeNo);
@@ -19,5 +21,5 @@ public interface NoticeDao {
 	public List<Notice> selectAdminNoticeList();
 
 	public Notice selectAdminNotice(String noticeNo);
-	
+
 }

@@ -1,16 +1,58 @@
 package com.side_on.controller;
 
+import java.io.File;
+import java.util.List;
+import java.util.Map;
+import org.apache.commons.io.FilenameUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.side_on.dto.Criteria;
+import com.side_on.dto.CriteriaRc;
+import com.side_on.dto.FileVO;
+import com.side_on.dto.PageMaker;
+import com.side_on.dto.PageMakerRc;
+import com.side_on.dto.RecruitBoard;
+import com.side_on.dto.RecruitCriteria;
+import com.side_on.dto.RecruitPaging;
+import com.side_on.service.RecruitService;
+import com.side_on.util.Utility;
+import com.side_on.util.RandomStringUtils;
+import lombok.extern.slf4j.Slf4j;
 
 @Controller
+@Slf4j
 public class RecruitController {
 	
-	/** 모집 페이지 첫 화면 */
-	@RequestMapping("/recruit/recruitHome")
-	public String recruitHome() {
+	//Service 연결
+	@Autowired
+	private RecruitService service;
+	
+	/** 모집 페이지 첫 화면 
+	 * @throws Exception */
+	@RequestMapping("/recruit/recruitHome2")
+	public String recruitHome2(CriteriaRc cri, Model model) throws Exception {
 		
+		model.addAttribute("list", service.getListPaging(cri));
+		// 전체 글 개수
+        int count = service.allCount(cri);
+        PageMakerRc pageMake = new PageMakerRc(cri, count);
+   
+        model.addAttribute("pageMaker", pageMake);
+      
 		return "recruit/recruitHome"; 
+	}
+	
+	@RequestMapping("/recruit/recruitHome")
+	public String recruitHome()  {
+		return "recruit/recruitHome"; 
+		
 	}
 	
 	/** 모집 페이지 상세 페이지 */
@@ -47,5 +89,78 @@ public class RecruitController {
 		
 		return "recruit/recruitAdmin"; 
 	}
+	
+	/** 지원하기 recruitApply*/
+	@RequestMapping("/recruit/recruitApply")
+	public String recruitApply() {
+		
+		return "recruit/recruitApply"; 
+	}
+	
+	/** 에러 페이지*/
+	@RequestMapping("/recruit/error")
+	public String error() {
+		
+		return "recruit/error"; 
+	}
+	
+	/** 모집 페이지 글 작성 DB 저장 
+	 * @throws Exception */
+	@RequestMapping("/recruit/write/complete")
+	public String recruitWriteComplete(RecruitBoard recruitBoard, Model model)  {
+		
+		//날짜 저장getCurrentDate
+		recruitBoard.setSave_date(Utility.getCurrentDate());
+		recruitBoard.setMemberId("user01");
+		recruitBoard.setHit(0);
+		
+		System.out.println("컨트롤러 입니당" + recruitBoard);
+		
+		//서비스 보내기
+		int result = service.insertRecruitBoard(recruitBoard);
+		
+		if(result==1) {
+			return "recruit/recruitHome";
+		}else {
+			model.addAttribute("message", "[오류] 글 등록을 실패하였습니다. 다시 시도해주세요.");
+			return "error";
+		}
+	}
+	
+	
+	/**파일 업로드 안돼.. 흑.. 왜..*/
+	public String recruitWriteWithFile(RecruitBoard recruitBoard, @RequestPart MultipartFile file) throws Exception {
+		System.out.println("컨트롤러 입니당" + recruitBoard);
+		
+		//file class 설정
+		FileVO fileVO;
+		
+		//날짜 저장getCurrentDate
+		recruitBoard.setSave_date(Utility.getCurrentDate());
+		recruitBoard.setMemberId("user01");
+		recruitBoard.setHit(0);
+		
+		String fileName = file.getOriginalFilename();
+		String fileNameExtension = FilenameUtils.getExtension(fileName).toLowerCase(); 
+		File destinationFile; 
+		String destinationFileName;
+		String baseDir = "/Side_On/src/main/webapp/WEB-INF/profile";
+		String fileUrl = baseDir + "\\"+ file.getOriginalFilename();
+		
+		do { 
+            destinationFileName = RandomStringUtils.getRamdom()+ "." + fileNameExtension; 
+            destinationFile = new File(fileUrl+ destinationFileName); 
+		} while (destinationFile.exists());
+		
+		destinationFile.getParentFile().mkdirs(); 
+		file.transferTo(destinationFile); 
+        
+       // service.insertRecruitBoard(recruitBoard); //게시글 insert
+        
+		
+		return "recruit/recruitAdmin"; 
+	}
+	
+	
 }
 

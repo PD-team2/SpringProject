@@ -1,0 +1,9 @@
+package com.side_on.dto;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class CriteriaRc {
+
+}

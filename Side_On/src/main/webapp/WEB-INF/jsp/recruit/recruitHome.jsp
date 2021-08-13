@@ -56,7 +56,8 @@
 						</div>
 				</div>
         </section>
-        <!-- Portfolio Grid-->
+
+            <!-- Portfolio Grid-->
         <section class="page-section" id="portfolio" style="padding : 0; margin : 0; ">
             <div class="container" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
                
@@ -75,8 +76,8 @@
 	                            </a>
 	                            
 	                            <div class="portfolio-caption">
-	                                <div class="portfolio-caption-heading">Threads</div>
-	                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
+	                                <div class="portfolio-caption-heading">K사 개발자와 함께하는 미니 프로젝트</div>
+	                                <div class="portfolio-caption-subheading text-muted">user01님</div>
 	                            </div>
 	                        </div>
                         </div>
@@ -91,8 +92,8 @@
 								 <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Explore</div>
-                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                                <div class="portfolio-caption-heading">[스프링] 뉴스레터 프로젝트 같이해요</div>
+                                <div class="portfolio-caption-subheading text-muted">user02님</div>
                             </div>
                         </div>
                     </div>
@@ -106,8 +107,8 @@
                                  <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
                                   </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Finish</div>
-                                <div class="portfolio-caption-subheading text-muted">Identity</div>
+                                <div class="portfolio-caption-heading">토스 현직자와 함께하는 프론트 정복</div>
+                                <div class="portfolio-caption-subheading text-muted">user02님</div>
                             </div>
                         </div>
                     </div>
@@ -121,8 +122,8 @@
 				         	 <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />                      
                                 </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Lines</div>
-                                <div class="portfolio-caption-subheading text-muted">Branding</div>
+                                <div class="portfolio-caption-heading">파이썬+django웹 개발 </div>
+                                <div class="portfolio-caption-subheading text-muted">user02님</div>
                             </div>
                         </div>
                     </div>
@@ -136,8 +137,8 @@
                                <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
                               	 </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Southwest</div>
-                                <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                                <div class="portfolio-caption-heading">초보 모여 게시판 만들기</div>
+                                <div class="portfolio-caption-subheading text-muted">user02님</div>
                             </div>
                         </div>
                     </div>
@@ -151,8 +152,8 @@
                                 <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
                                  </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Window</div>
-                                <div class="portfolio-caption-subheading text-muted">Photography</div>
+                                <div class="portfolio-caption-heading">바닥부터 시작하는 vue.js</div>
+                                <div class="portfolio-caption-subheading text-muted">user02님</div>
                             </div>
                         </div>
                     </div>
@@ -165,9 +166,9 @@
 			                                   <span aria-hidden="true">«</span>
 			                               </a>
 			                           </li>
-			                           <li class="page-item"><a class="page-link" href="#">1</a></li>
+			                           <li class="page-item active"><a class="page-link" href="#">1</a></li>
 			                           <li class="page-item"><a class="page-link" href="#">2</a></li>
-			                           <li class="page-item active"><a class="page-link" href="#">3</a></li>
+			                           <li class="page-item"><a class="page-link" href="#">3</a></li>
 			                           <li class="page-item"><a class="page-link" href="#">4</a></li>
 			                           <li class="page-item"><a class="page-link" href="#">5</a></li>
 			                           <li class="page-item">
@@ -178,14 +179,19 @@
 			                       </ul>
 			                   </nav>
 						</div>
-                    
-                    
+                </div>
+            </div>
+        </section>
+       
+					<!-- 페이징 -->
+                	<div class="col-md-3 center"  style="padding-top:10%; ">     
+					
+							 
+					<!-- 페이지 끝  -->
                 </div>
             </div>
             
-            
-            
-            
+           </div> 
         </section>
        
         <!-- Bootstrap core JS-->

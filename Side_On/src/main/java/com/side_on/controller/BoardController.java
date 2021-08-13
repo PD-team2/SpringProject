@@ -22,6 +22,13 @@ public class BoardController {
 	@Autowired
 	public BoardService boardService;
 	
+	/** 관리자 채팅화면 */
+	@RequestMapping("/board/chatAdmin")
+	public String chatAdmin() {
+	
+		return "board/chatAdmin";
+	}
+	
 	/** QnA게시글 상세조회 화면  */
 	@RequestMapping("/board/QnABoardDetail")
 	public String QnABoardDetail(int qnaBoardNo, Model model) {

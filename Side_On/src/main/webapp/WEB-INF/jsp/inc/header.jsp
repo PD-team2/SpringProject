@@ -12,7 +12,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="/css/styles.css" rel="stylesheet" />	
-	<title>Insert title here</title>
+	<title>Side-On</title>
 </head>
 <body>
 	 <body id="page-top">
@@ -32,7 +32,7 @@
 							<c:when test="${(empty memberId && empty grade) || empty dto}">
 								<li class="nav-item"><a class="nav-link" href="/member/loginForm" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>LogIn</a></li>	
-								<li class="nav-item"><a class="nav-link" href="#about" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/notice/noticeList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>Notice</a></li>	
 								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>Recruit</a></li>
@@ -44,12 +44,14 @@
 							
 							<c:when test="${(not empty memberId && not empty grade) || empty dto}">
 							<c:if test="${grade == 'A' || dto.grade == 'A'}">
-								<li class="nav-item"><a class="nav-link" href="#about" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/notice/noticeList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>Notice</a></li>	
 								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>Recruit</a></li>
 								<li class="nav-item"><a class="nav-link" href="/find/list" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>Find</a></li>
+								<li class="nav-item"><a class="nav-link" href="/vote/pollList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+									>vote</a></li>	
 								<li class="nav-item"><a class="nav-link" href="/board/replyBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>Board</a></li>
 								<li class="nav-item"><a class="nav-link" href="/board/Mypage" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
@@ -61,7 +63,7 @@
 							</c:if>
 							
 							<c:if test="${grade == 'G' || dto.grade == 'G'}">
-								<li class="nav-item"><a class="nav-link" href="#about" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/notice/noticeList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>Notice</a></li>	
 								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>Recruit</a></li>

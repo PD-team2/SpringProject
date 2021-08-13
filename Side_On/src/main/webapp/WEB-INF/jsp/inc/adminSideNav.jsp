@@ -52,7 +52,7 @@
 
             <!-- Nav Item - 커뮤니티 -->
             <li class="nav-item">
-                <a class="nav-link" href="../board/chat">
+                <a class="nav-link" href="../board/chatAdmin">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Chat</span>
                 </a>

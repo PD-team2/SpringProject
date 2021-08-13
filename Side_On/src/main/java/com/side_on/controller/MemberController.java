@@ -16,8 +16,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.side_on.dto.Member;
 import com.side_on.dto.Notice;
+import com.side_on.dto.Rest;
 import com.side_on.service.MemberService;
 import com.side_on.service.NoticeService;
+import com.side_on.service.RestService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -30,6 +32,9 @@ public class MemberController {
 	
 	@Autowired
 	public MemberService memberService;
+	
+	@Autowired
+	public RestService restService;
 	
 	@RequestMapping("/member/loginForm")
 	public String loginForm() {
@@ -66,8 +71,10 @@ public class MemberController {
 
 	@RequestMapping("/admin/dashboard")
 	public String dashboard(Model model) {
-		List<Notice> noticeList = noticeService.noticeList();
+		List<Notice> noticeList = noticeService.dashboardNoticeList();
+		List<Rest> restList = restService.dashboardRestList();
 		model.addAttribute("noticeList", noticeList);
+		model.addAttribute("restList", restList);
 		return "admin/dashboard";
 	}
 	

@@ -40,7 +40,7 @@
                 	<div class="card-body">
                 		<div class="container">
                 			<div class="row">
-                				<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd;">
+                				<table class="table" style="text-align: center; border: 1px solid #dddddd;">
                 					<thead>
                 						<tr>
                 							<th style="background-color: #eeeeee; text-align: center;">No</th>

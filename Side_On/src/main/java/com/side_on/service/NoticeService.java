@@ -19,6 +19,15 @@ public class NoticeService {
 	private NoticeDao noticeDao;
 	
 	/**
+	 * dashboard 노출 공지 상위 5 개 글 
+	 * @return
+	 */
+	public List<Notice> dashboardNoticeList(){
+		List<Notice> noticeList = noticeDao.selectDashboardNoticeList();
+		return noticeList;
+	}
+	
+	/**
 	 * notice List
 	 * @return 글 목록
 	 */
@@ -71,5 +80,6 @@ public class NoticeService {
 		log.debug("notice dao result :: " + result);
 		return result;
 	}
+
 	
 }

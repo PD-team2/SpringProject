@@ -26,18 +26,18 @@
          </div>
         </header>
 	<div align="center">
-		<br />
+		
 		<hr width="600" />
 		<b>설문작성</b>
 		<hr width="600" />
 		<form name="frm" method="post" action="pollInsertProc">
-			<table border="1" width="500">
+			<table border="1" width="900" height="500">
 				<tr>
 					<td><b>질문</b></td>
-					<td colspan="2"><input name="question" size="30"></td>
+					<td colspan="2"><input name="question" size="65"></td>
 				</tr>
 				<tr>
-					<td rowspan="10"><b>항목</b></td>
+					<td rowspan="5"><b>항목</b></td>
 					<%
 						for (int i = 1; i <= 4; i++) {
 							out.println("<td>" + (i * 2 - 1)
@@ -50,7 +50,7 @@
 							} else {
 								out.println("<tr>");
 							}
-						}//for end
+						}
 					%>
 				<tr>
 					<td>종료일</td>

@@ -28,11 +28,11 @@
 <table>
 	<tr>
 		<td>
-		<table  border="1">
+		<table  border="1" width="900" height="500">
 			<tr>
-				<th width="50">번호</th>
-				<th width="250" align="left">질문</th>
-				<th width="200">시작일~종료일</th>
+				<th width="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;번호</th>
+				<th width="250" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;질문</th>
+				<th width="200">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;시작일~종료일</th>
 			</tr>
 			<%
 					Vector<PollListBean> vlist = mgr.getPollList();
@@ -53,8 +53,8 @@
 		</td>
 	</tr>
 	<tr>
-		<td align="center">
-		<button type="button"  class="btn btn-info" onclick="location.href='/vote/pollInsert'">투표만들기</button>
+		<td align="center"><br>
+		<button type="button"  class="btn btn-warning" onclick="location.href='/vote/pollInsert'">투표만들기</button>
 		</td>
 	</tr>
 </table>
