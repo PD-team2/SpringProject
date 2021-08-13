@@ -62,138 +62,37 @@
             <div class="container" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
                
                 <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 1-->
-                        <div class="portfolio-item">
-
-
-	                            <a class="portfolio-link"  href="/recruit/recruitDetail">
-	                                <div class="portfolio-hover">
-	                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-	                         
-	                                </div>
-	                                <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
-	                            </a>
-	                            
-	                            <div class="portfolio-caption">
-	                                <div class="portfolio-caption-heading">K사 개발자와 함께하는 미니 프로젝트</div>
-	                                <div class="portfolio-caption-subheading text-muted">user01님</div>
-	                            </div>
+                
+                	<c:forEach var="list" items="${list}" varStatus="status"> 
+	                    <div class="col-lg-4 col-sm-6 mb-4">
+	                        <!-- Portfolio item 1-->
+	                        <div class="portfolio-item">
+									  <a class="portfolio-link"  href="recruitDetail?recruit_num=${list.recruit_num}">
+		                                <div class="portfolio-hover">
+		                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>                     
+		                                </div>
+		                                <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
+		                            </a>
+		                            
+		                            <div class="portfolio-caption">
+		                                <div class="portfolio-caption-heading">${list.title }</div>
+		                                <div class="portfolio-caption-subheading text-muted">${list.memberId }</div>
+		                            </div>
+		                        </div>
 	                        </div>
-                        </div>
-
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 2-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-								 <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">[스프링] 뉴스레터 프로젝트 같이해요</div>
-                                <div class="portfolio-caption-subheading text-muted">user02님</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 3-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                 <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
-                                  </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">토스 현직자와 함께하는 프론트 정복</div>
-                                <div class="portfolio-caption-subheading text-muted">user02님</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- Portfolio item 4-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-				         	 <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />                      
-                                </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">파이썬+django웹 개발 </div>
-                                <div class="portfolio-caption-subheading text-muted">user02님</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <!-- Portfolio item 5-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                               <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
-                              	 </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">초보 모여 게시판 만들기</div>
-                                <div class="portfolio-caption-subheading text-muted">user02님</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <!-- Portfolio item 6-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid"  src="../img/bear2.jpg" alt="..." />
-                                 </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">바닥부터 시작하는 vue.js</div>
-                                <div class="portfolio-caption-subheading text-muted">user02님</div>
-                            </div>
-                        </div>
-                    </div>
-                    
+					</c:forEach>
+   
                 	<div class="col-md-3 center"  style="padding-top:10%;">     
-			               <nav class="pagination-outer center" aria-label="Page navigation">
-			                       <ul class="pagination">
-			                           <li class="page-item">
-			                               <a href="#" class="page-link" aria-label="Previous">
-			                                   <span aria-hidden="true">«</span>
-			                               </a>
-			                           </li>
-			                           <li class="page-item active"><a class="page-link" href="#">1</a></li>
-			                           <li class="page-item"><a class="page-link" href="#">2</a></li>
-			                           <li class="page-item"><a class="page-link" href="#">3</a></li>
-			                           <li class="page-item"><a class="page-link" href="#">4</a></li>
-			                           <li class="page-item"><a class="page-link" href="#">5</a></li>
-			                           <li class="page-item">
-			                               <a href="#" class="page-link" aria-label="Next">
-			                                   <span aria-hidden="true">»</span>
-			                               </a>
-			                           </li>
-			                       </ul>
-			                   </nav>
-						</div>
+					</div>
                 </div>
-            </div>
+            </div>		
         </section>
        
-					<!-- 페이징 -->
-                	<div class="col-md-3 center"  style="padding-top:10%; ">     
-					
-							 
-					<!-- 페이지 끝  -->
-                </div>
-            </div>
-            
-           </div> 
-        </section>
-       
+       	<form id="moveForm" method="get">	
+			<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum }">
+			<input type="hidden" name="amount" value="${pageMaker.cri.amount }">	
+		</form>
+	
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

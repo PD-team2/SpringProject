@@ -48,17 +48,17 @@
                         </div>
                         
                      <div>
-                  		<h3 class="center">user01님</h3>
+                  		<h3 class="center">${list.memberId}</h3>
                   	</div>
                         
                     </div>
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h2>
-                                    	K사 개발자와 함께하는 미니 프로젝트
+                                    	${list.title}
                                     </h2>
                                     <h4 style="color:gray;">
-                                 		머신러닝을 사용한 프로젝트를 개발합니다.
+                                 		${list.simple_info}
                                  		<hr>
                                     </h4>
                                    	<h5>지원 방법 : 무료 </h5>
@@ -104,8 +104,7 @@
                       
                                         <div class="row">
                                             <div class="col-md-9">
-                                          안녕하세요, 현재 네카라쿠배 중 카카오에 근무하고 있는 5년차 시니어 개발자 김코코입니다. 
-                                            </div>
+                              			         ${list.content}
                                          </div>   
                        
                             </div>
@@ -115,16 +114,15 @@
                                                 <label>프로젝트 기간</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>2021.08.15~2021.08.30</p>
+                                                <p>  ${list.start_date} ~ ${list.end_date} </p>
                                             </div>
                                         </div>
                                         
                                     <div class="row">
                                             <div class="col-md-9">
-                                        머신러닝을 이용한 프로젝트를 개발하려고 합니다. 프로젝트 하는 동안 제가 코드 리뷰 및 멘토링을 진행할거예요. 1석2조의 기회 놓치지마세요!
+                              		          ${pj_content}
                                             </div>
                                          </div>   
-               
                             </div>
                         </div>
                     </div>

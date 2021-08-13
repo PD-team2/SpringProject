@@ -1,5 +1,6 @@
 package com.side_on.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,15 +28,25 @@ public class RecruitService {
 		return result;
 	}
 
-	public int allCount(CriteriaRc cri) {
-		
+	/** 모집 게시글 총 갯수 조회*/
+	public int allCount(Criteria cri) {
 		return dao.allCount(cri) ;
 	}
 
-	public List<RecruitBoard>  getListPaging(CriteriaRc cri) {
+	/** 모집 게시글 데이터 전체 조회 */
+	public List<RecruitBoard>  getListPaging(Criteria cri) {
 		return dao.getListPaging(cri);
 	}
 
+	public ArrayList<RecruitBoard> memberAll() {
+		return dao.memberAll();
+	}
+
+	public RecruitBoard memberDetail(int recruit_num) {
+		return dao.memberDetail(recruit_num);
+	}
+
+	
 
 
 

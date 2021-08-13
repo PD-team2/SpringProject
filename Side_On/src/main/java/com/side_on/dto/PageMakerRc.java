@@ -1,48 +1,50 @@
 package com.side_on.dto;
 
 public class PageMakerRc {
-	/* 시작 페이지 */
+	private int totalCount;
 	private int startPage;
-	
-	/* 끝 페이지 */
 	private int endPage;
+	private boolean prev;
+	private boolean next;
 	
-	/* 이전 페이지, 다음 페이지 존재유무 */
-	private boolean prev, next;
+	//Criteria안에 page, pageSize 있음
+	private CriteriaRc cri;
 	
-	/*전체 게시물 수*/
-	private int count;
-	
-	/* 현재 페이지, 페이지당 게시물 표시수 정보 */
-	private CriteriaRc cri;	
-	
-	/* 생성자 */
-	public PageMakerRc(CriteriaRc cri, int count) {
-		
+	//화면에 보여지는 페이지블럭의 수
+	private int displayPageNum = 10;
+
+	public PageMakerRc() {}
+	public PageMakerRc(int totalCount, int startPage, int endPage, boolean prev, boolean next, CriteriaRc cri,
+			int displayPageNum) {
+		super();
+		this.totalCount = totalCount;
+		this.startPage = startPage;
+		this.endPage = endPage;
+		this.prev = prev;
+		this.next = next;
 		this.cri = cri;
-		this.count = count;
-		
-		/* 마지막 페이지 */
-		this.endPage = (int)(Math.ceil(cri.getPageNum()/10.0))*10;
-		
-		/* 시작 페이지 */
-		this.startPage = this.endPage - 9;
-		
-		/* 전체 마지막 페이지 */
-		int realEnd = (int)(Math.ceil(count * 1.0/cri.getAmount()));
-		
-		/* 전체 마지막 페이지(realend)가 화면에 보이는 마지막페이지(endPage)보다 작은 경우, 보이는 페이지(endPage) 값 조정 */
-		if(realEnd < this.endPage) {
-			this.endPage = realEnd;
-		}
-		
-		/* 시작 페이지(startPage)값이 1보다 큰 경우 true */
-		this.prev = this.startPage > 1;
-		
-		/* 마지막 페이지(endPage)값이 1보다 큰 경우 true */
-		this.next = this.endPage < realEnd;
-		
-		
+		this.displayPageNum = displayPageNum;
+	}
+
+	public int getTotalCount() {
+		return totalCount;
+	}
+
+	public void setTotalCount(int totalCount) { //변경
+		this.totalCount = totalCount;
+		System.out.println("DB에서 총 글의 개수를 계산");
+		//총 글의 개수를 가지고 왔을때 필요한 정보를 계산
+		calcDate();
+	}
+	
+	private void calcDate() {
+		endPage = (int) (Math.ceil(cri.getPage()/(double)displayPageNum) * displayPageNum);
+		startPage = (endPage - displayPageNum) +1;
+		int tempEndPage = (int) (Math.ceil(totalCount/(double)cri.getPageSize()));
+		if(endPage > tempEndPage) endPage = tempEndPage;
+		prev = (startPage == 1? false:true);
+		next = (endPage * cri.getPageSize() >= totalCount? false:true);
+		System.out.println("페이징처리정보 계산");
 	}
 
 	public int getStartPage() {
@@ -77,28 +79,25 @@ public class PageMakerRc {
 		this.next = next;
 	}
 
-	public int getCount() {
-		return count;
-	}
-
-	public void setCount(int count) {
-		this.count = count;
-	}
-
 	public CriteriaRc getCri() {
 		return cri;
 	}
 
-	public void setCri(CriteriaRc cri) {
+	public void setCri(CriteriaRc cri) { //변경
 		this.cri = cri;
 	}
 
+	public int getDisplayPageNum() {
+		return displayPageNum;
+	}
+
+	public void setDisplayPageNum(int displayPageNum) {
+		this.displayPageNum = displayPageNum;
+	}
+	
 	@Override
 	public String toString() {
-		return "PageMakerDTO [startPage=" + startPage + ", endPage=" + endPage + ", prev=" + prev + ", next=" + next
-				+ ", count=" + count + ", cri=" + cri + "]";
+		return "PageMaker [totalCount=" + totalCount + ", startPage=" + startPage + ", endPage=" + endPage + ", prev="
+				+ prev + ", next=" + next + ", cri=" + cri + ", displayPageNum=" + displayPageNum + "]";
 	}	
-	
-	
-	
 }

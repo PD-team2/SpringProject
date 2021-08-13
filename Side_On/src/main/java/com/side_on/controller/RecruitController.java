@@ -1,8 +1,12 @@
 package com.side_on.controller;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import javax.servlet.http.HttpSession;
+
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,29 +40,26 @@ public class RecruitController {
 	
 	/** 모집 페이지 첫 화면 
 	 * @throws Exception */
-	@RequestMapping("/recruit/recruitHome2")
-	public String recruitHome2(CriteriaRc cri, Model model) throws Exception {
-		
-		model.addAttribute("list", service.getListPaging(cri));
-		// 전체 글 개수
-        int count = service.allCount(cri);
-        PageMakerRc pageMake = new PageMakerRc(cri, count);
-   
-        model.addAttribute("pageMaker", pageMake);
-      
-		return "recruit/recruitHome"; 
-	}
-	
 	@RequestMapping("/recruit/recruitHome")
-	public String recruitHome()  {
+	public String recruitHome(Model model, Criteria cri)  {
+		
+		//model.addAttribute("list", service.getListPaging(cri));
+		
+		ArrayList<RecruitBoard> list = service.memberAll(); 
+		System.out.println("list"+list);
+		model.addAttribute("list",list);
+		
 		return "recruit/recruitHome"; 
 		
 	}
 	
 	/** 모집 페이지 상세 페이지 */
 	@RequestMapping("/recruit/recruitDetail")
-	public String recruitDetail() {
+	public String recruitDetail(int recruit_num,  Model model) {
+	
+		RecruitBoard list = service.memberDetail(recruit_num);
 		
+		model.addAttribute("list",list);
 		return "recruit/recruitDetail"; 
 	}
 	
