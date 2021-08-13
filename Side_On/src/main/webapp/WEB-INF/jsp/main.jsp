@@ -51,7 +51,7 @@
 							
 							<c:when test="${(not empty memberId && not empty grade) || empty dto}">
 							<c:if test="${grade == 'A' || dto.grade == 'A'}">
-								<li class="nav-item"><a class="nav-link" href="#about" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/notice/noticeList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>Notice</a></li>	
 								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>Recruit</a></li>
@@ -70,7 +70,7 @@
 							</c:if>
 							
 							<c:if test="${grade == 'G' || dto.grade == 'G'}">
-								<li class="nav-item"><a class="nav-link" href="#about" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/notice/noticeList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>Notice</a></li>	
 								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>Recruit</a></li>
