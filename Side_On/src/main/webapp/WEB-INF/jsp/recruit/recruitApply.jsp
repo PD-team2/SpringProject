@@ -12,29 +12,101 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../css/RecruitHome_juri.css" rel="stylesheet" />
         
+        	<!-- 아임포트 링크  -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+		<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+		           
         <script>
         
-        function applyCheck(){
-        	
-        	var target = document.getElementById("part"); 
-        	var value =  target.options[target.selectedIndex].value;   
-        	
-        	
-        	if(value == "null"){
+        function applyCheck() {
+
+        	var message = document.getElementById('message').value;
+			
+			if(applyForm.part.value =="none"){
         		alert('[안내] 희망 포지션을 선택해주세요.');
-        		$('#part').focus();
         		return false;
         	}
-        	
-        	$('#position').val(value);
-        }
+			
+			if(message.trim() == ""){
+				alert('[안내] 자기소개를 입력해주세요');
+				$('#title').focus();			
+				return false;
+			} 
+			// 프로젝트 내용 검사(2) : 불성실 입력 
+			if(message.length  < 2){
+				alert('[안내] 자기소개를 2글자 이상 입력해주세요');
+				$('#title').focus();
+				return false;
+			}
+			
+			var pay = confirm("[안내] 지원을 진행하시겠습니까?");
+			
+			if(pay ==true){
+				alert('[안내] 지원이 성공적으로 처리되었습니다.');
+				$('#applyForm').submit();
+				
+			}else{
+				alert('[안내] 등록이 취소되었습니다.')
+			}
+			
+		}
         
-        </script>
-        
-        <script>
+		function applyPay() {
+			
+			var message = document.getElementById('message').value;
+			
+			if(applyForm.part.value =="none"){
+        		alert('[안내] 희망 포지션을 선택해주세요.');
+        		return false;
+        	}
+			
+			if(message.trim() == ""){
+				alert('[안내] 자기소개를 입력해주세요');
+				$('#title').focus();			
+				return false;
+			} 
+			// 프로젝트 내용 검사(2) : 불성실 입력 
+			if(message.length  < 2){
+				alert('[안내] 자기소개를 2글자 이상 입력해주세요');
+				$('#title').focus();
+				return false;
+			}
+			
+			var pay = confirm("[안내] 결제를 진행하시겠습니까?");
+			
+			if(pay ==true){
+				alert('결제를 시작합니다.');
+				
+				IMP.init('imp44190159');
+				IMP.request_pay({
+				    pg : 'kcp',
+				    pay_method : 'card',
+				    merchant_uid : 'merchant_' + new Date().getTime(),
+				    name : 'Side-ON - ${list.title}' , //결제창에서 보여질 이름
+				    amount : '100', //실제 결제되는 가격
+				    buyer_email : 'iamport@siot.do',
+				    buyer_name : '구매자이름',
+				    buyer_tel : '010-1234-5678',
+				}, 
+					function(rsp) {
+					console.log(rsp);
+					
+				    if ( rsp.success ) {
+				    	var msg = '결제가 완료되었습니다.';
+				    	$('#applyForm').submit();
 
-        </script>
+				    } else {
+				    	 var msg = '[오류] 결제에 실패하였습니다.' + rsp.error_msg;
+				    }
+				    alert(msg);
+				});
+			}else{
+				alert('[안내] 결제를 취소하셨습니다.');
+			}		
+		} 
         
+        </script>
+
     </head>
     <body>
         <!-- navibar -->
@@ -68,13 +140,14 @@
 						    	
 						    	<!-- 글번호 -->
 						    	<input type="hidden" id="recruit_num" name="recruit_num" value="${list.recruit_num }">
+						    	<input type="hidden" id="memberId" name="memberId" value="${list.memberId }">
 						    </div>
 									
 						    <div class="form-group">
 						      <label for="examplePosition" class="form-label mt-4">희망포지션</label>
 						      <select class="form-select" id="part" name="part" required="required">
 						      
-						      <option value="null">희망 포지션을 선택해주세요</option>
+						      <option value="none" selected>희망 포지션을 선택해주세요</option>
 						      
 						       <c:if test="${ list.front != null  && list.front > 0}">
 						        <option  value="front">Front-end(프론트)</option>
@@ -117,12 +190,25 @@
 						      <textarea class="form-control" id="message" name="message" placeholder="자유롭게 자신을 소개해주세요." rows="3" maxlength="30" required></textarea>
 							   
 						    </div>
-
+							<br>			
+						  <div class="form-group">
+						  	 <label for="pay" class="form-label mt-4">최종 결제 금액</label>
+						      <input type="text" class="form-control" id="pay" aria-describedby="pay" placeholder="${list.pay_amount }"disabled>
+						    </div>  
+								<br>
 							<br>
-							<br>
-							
 							<div class="justify-content-center text-center">
-						    <button type="submit" class="btn btn-warning" onclick="applyCheck();">등록</button>
+							
+							<c:choose>
+	                                    <c:when  test="${list.pay_check eq 'y'}">
+	                                     <button type="button" class="btn btn-warning" onclick="applyPay();">결제</button>
+	                                    </c:when>
+	                                    
+	                                     <c:otherwise>
+	                                      <button type="button" class="btn btn-warning" onclick="applyCheck();">등록</button>
+	                                     </c:otherwise>
+	                          </c:choose>           
+						   
 							</div>
 							
 						  </fieldset>

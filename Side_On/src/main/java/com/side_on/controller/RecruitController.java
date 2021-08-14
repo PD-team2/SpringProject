@@ -101,6 +101,14 @@ public class RecruitController {
 		return "recruit/recruitApply"; 
 	}
 	
+	/** 지원하기 - 결제 recruitApply*/
+	@RequestMapping("/recruit/apply/complete")
+	public String recruitApply() {
+			
+		System.out.println("어서옵셔^^");
+		return "recruit/recruitHome"; 
+	}
+	
 	/** 에러 페이지*/
 	@RequestMapping("/recruit/error")
 	public String error() {
