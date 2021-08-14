@@ -127,7 +127,13 @@
                         </div>
                     </div>
                 </div>
-            </form>           
+            </form>
+            <div style="text-align: right;">
+            <button onclick="history.back()" type="button" class="btn btn-default" style="width: 100px; height: 35px;">뒤로가기</button>
+			&nbsp;&nbsp;
+			<!-- Small modal -->
+			<button type="button" class="btn btn-danger" style="width: 80px; height: 35px;" data-toggle="modal" data-target=".bs-example-modal-lg">신고</button>           
+            </div>
         </div>
 
 	<!-- 끝 -->
@@ -143,4 +149,5 @@
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
    
 </body>
+<%@ include file="../inc/restModalForm.jsp" %>
 </html>
