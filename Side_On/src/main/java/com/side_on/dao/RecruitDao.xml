@@ -64,5 +64,23 @@
 	<select id="memberDetail" resultMap="recruitList">
         select * from recruit where recruit_num = #{recruit_num}
     </select>
+    
+    <!-- 4. 지원 접수 : recruitApply-->
+		<insert id="recruitApply" parameterType="com.side_on.dto.Apply">
+		 INSERT INTO Apply  VALUES(
+		 Apply_SEQ.nextval,
+		#{member_id},
+		#{part},
+		#{message}, 
+		#{recruit_num}, 
+		#{join_yn}, 
+		#{payment_date},
+		#{pay_check})
+	</insert>
+	
+	 <select id="getApply_Num"  resultType="int">
+        select apply_num from apply where memberId=#{memberId} and recruit_num = #{recruit_num}
+    </select>
+
 	
 </mapper>

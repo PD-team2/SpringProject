@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.side_on.dto.Apply;
 import com.side_on.dto.Criteria;
 import com.side_on.dto.CriteriaRc;
 import com.side_on.dto.RecruitBoard;
@@ -26,6 +27,12 @@ public interface RecruitDao {
 	public ArrayList<RecruitBoard> memberAll();
 
 	public RecruitBoard memberDetail(int recruit_num);
+
+	public int recruitApply(Apply apply);
+
+	public int getApply_Num(int recruit_num, String memberId);
+
+	public void plusCount(int recruit_num, int apply_num, int count, String part);
 	
 
 

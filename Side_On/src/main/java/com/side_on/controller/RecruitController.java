@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.side_on.dto.Apply;
 import com.side_on.dto.Criteria;
 import com.side_on.dto.CriteriaRc;
 import com.side_on.dto.FileVO;
@@ -103,10 +104,44 @@ public class RecruitController {
 	
 	/** 지원하기 - 결제 recruitApply*/
 	@RequestMapping("/recruit/apply/complete")
-	public String recruitApply() {
+	public String recruitApply(Apply apply, HttpSession session, Model model) {
 			
 		System.out.println("어서옵셔^^");
-		return "recruit/recruitHome"; 
+		
+		//apply table에 저장 
+		String memberId= (String)session.getAttribute("memberId");
+		apply.setMember_id(memberId);
+		apply.setJoin_yn("y");
+		
+		if(apply.getPay_check()=="y") {
+			apply.setPayment_date(Utility.getCurrentDate());
+		}else {
+			apply.setPayment_date("");
+		}
+		
+		//지원 등록
+		int result = service.recruitApply(apply);
+		
+		int recruit_num = apply.getRecruit_num();
+		int apply_num = service.getApply_Num(recruit_num, memberId);
+		String part = apply.getPart();
+		int count = 1;
+		
+		System.out.println(apply_num);
+
+		//모집 분야 count+1
+	//	service.plusCount(recruit_num,apply_num,count,part);
+		
+		if (result == 1) {
+			return "recruit/recruitHome";
+		} else {
+			model.addAttribute("title", "[오류] 지원 실패");
+			model.addAttribute("message", "지원을 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요.");
+			return "error";
+		}
+		
+		
+	
 	}
 	
 	/** 에러 페이지*/
@@ -134,7 +169,8 @@ public class RecruitController {
 		if(result==1) {
 			return "recruit/recruitHome";
 		}else {
-			model.addAttribute("message", "[오류] 글 등록을 실패하였습니다. 다시 시도해주세요.");
+			model.addAttribute("title","[오류] 모집 글 작성 실패");
+			model.addAttribute("message", "모집 글 작성을 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요");
 			return "error";
 		}
 	}

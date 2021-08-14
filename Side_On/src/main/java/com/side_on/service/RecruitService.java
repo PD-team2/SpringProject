@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.side_on.dao.RecruitDao;
+import com.side_on.dto.Apply;
 import com.side_on.dto.Criteria;
 import com.side_on.dto.CriteriaRc;
 import com.side_on.dto.QnABoard;
@@ -44,6 +45,18 @@ public class RecruitService {
 
 	public RecruitBoard memberDetail(int recruit_num) {
 		return dao.memberDetail(recruit_num);
+	}
+
+	public int recruitApply(Apply apply) {
+		return dao.recruitApply(apply);
+	}
+
+	public int getApply_Num(int recruit_num, String memberId) {
+		return dao.getApply_Num( recruit_num,  memberId) ;
+	}
+
+	public void plusCount(int recruit_num, int apply_num, int count, String part) {
+		dao.plusCount( recruit_num,  apply_num,  count,  part);
 	}
 
 	

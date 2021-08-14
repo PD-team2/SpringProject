@@ -84,10 +84,15 @@
                                  		<hr>
                                     </h4>
                                     <c:choose>
-	                                    <c:when  test="${list.pay_check eq 'y' }">
+	                                    <c:when  test="${ list.pay_check == 'y' && list.pay_check == 'Y'}">
 	                                    	<h5>지원 방법 : 유료 (${list.pay_amount} ) </h5>
 		                                   	<p>해당 게시글은 결제 후 지원이 가능합니다</p>
 		                                  </c:when> 	
+		                                  
+		                                  <c:when  test="${ list.pay_check == 'Y'}">
+	                                    	<h5>지원 방법 : 유료 (${list.pay_amount} ) </h5>
+		                                   	<p>해당 게시글은 결제 후 지원이 가능합니다</p>
+		                                  </c:when> 
 		                                  
 		                                  <c:otherwise>
 		                                   	<h5>지원 방법 : 무료 </h5>

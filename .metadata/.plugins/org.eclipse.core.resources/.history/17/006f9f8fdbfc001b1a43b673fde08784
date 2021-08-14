@@ -1,0 +1,12 @@
+package com.side_on.dto;
+
+public class Apply {
+	
+	private int apply_num;
+	private String member_id;
+	private String part;
+	private String message;
+	prviate String join_yn;
+	private String payment_date;
+
+}
