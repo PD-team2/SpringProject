@@ -129,51 +129,68 @@
 	                            
 	                     	   <!-- 모집분야 조건문 -->     
 	                            <c:if test="${ list.front != null  && list.front > 0}">
-							 		<li>
-							 				  <h5 class="center">프론트엔드 0 / ${list.front }</h5>
-							 		</li>
+	                        	    <c:if test="${ part.front != null }">
+								 		<li>
+								 				  <h5 class="center">프론트엔드 ${part.front} / ${list.front }</h5>
+								 		</li>
+							 		</c:if>
 							 	</c:if>	
 							 	
 							 	<c:if test="${ list.back != null  && list.back > 0}">
-							 		<li>
-							 				  <h5 class="center">백엔드 0 / ${list.back }</h5>
-							 		</li>
+							 		 <c:if test="${ part.back != null }">
+								 		<li>
+								 				  <h5 class="center">백엔드 ${part.back} / ${list.back }</h5>
+								 		</li>
+							 		</c:if>
 							 	</c:if>	
 							 	
 							 	<c:if test="${ list.aos != null  && list.aos > 0}">
+							 		<c:if test="${ part.aos != null }">
 							 		<li>
-							 				  <h5 class="center">안드로이드 0 / ${list.aos }</h5>
+							 				  <h5 class="center">안드로이드 ${part.aos} / ${list.aos }</h5>
 							 		</li>
+							 		</c:if>
 							 	</c:if>	
 							 	
 							 	<c:if test="${ list.ios != null  && list.ios > 0}">
+							 		<c:if test="${ part.ios != null }">
 							 		<li>
-							 				  <h5 class="center">IOS 0 / ${list.ios }</h5>
+							 				  <h5 class="center">IOS  ${part.ios} / ${list.ios }</h5>
 							 		</li>
+							 		</c:if>
 							 	</c:if>	
 							 	
 							 	<c:if test="${ list.server != null  && list.server > 0}">
-							 		<li>
-							 				  <h5 class="center">서버 0 / ${list.server }</h5>
-							 		</li>
+							 		<c:if test="${ part.server != null  }">
+								 		<li>
+								 				  <h5 class="center">서버 ${part.server} / ${list.server }</h5>
+								 		</li>
+							 		</c:if>	
 							 	</c:if>	
 							 	
 							 	<c:if test="${ list.uxui != null  && list.uxui > 0}">
-							 		<li>
-							 				  <h5 class="center"> UXUI 0 / ${list.uxui }</h5>
-							 		</li>
+							 		<c:if test="${ part.uxui != null  }">
+								 		<li>
+								 				  <h5 class="center"> UXUI  ${part.uxui} / ${list.uxui }</h5>
+								 		</li>
+							 		</c:if>
 							 	</c:if>	
 							 	
 							 	<c:if test="${ list.plan != null  && list.plan > 0}">
-							 		<li>
-							 				  <h5 class="center">기획 0 / ${list.plan }</h5>
-							 		</li>
+								 	<c:if test="${ part.plan != null }">
+								 		<li>
+								 				  <h5 class="center">기획 ${part.plan} / ${list.plan }</h5>
+								 		</li>
+							 		</c:if>
 							 	</c:if>	
 							 	
+							 	
 							 	<c:if test="${ list.pm != null  && list.pm > 0}">
-							 		<li>
-							 				  <h5 class="center"> PM 0 / ${list.pm }</h5>
-							 		</li>
+							 		<c:if test="${ part.pm != null }">
+								 		<li>
+								 				  <h5 class="center"> PM ${part.pm} / ${list.pm }</h5>
+								 		</li>
+							 		</c:if>
 							 	</c:if>	
 							 		
 							 		

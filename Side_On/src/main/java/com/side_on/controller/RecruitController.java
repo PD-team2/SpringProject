@@ -23,6 +23,7 @@ import com.side_on.dto.CriteriaRc;
 import com.side_on.dto.FileVO;
 import com.side_on.dto.PageMaker;
 import com.side_on.dto.PageMakerRc;
+import com.side_on.dto.Part;
 import com.side_on.dto.RecruitBoard;
 import com.side_on.dto.RecruitCriteria;
 import com.side_on.dto.RecruitPaging;
@@ -60,7 +61,39 @@ public class RecruitController {
 	
 		RecruitBoard list = service.memberDetail(recruit_num);
 		
+		//분야 별 인원 수
+		String front = "Front";
+		String Back = "Back";
+		String aos = "aos";
+		String ios = "ios";
+		String server = "server";
+		String uxui = "uxui";
+		String plan = "plan";
+		String pm = "pm";
+		
+		int FrontCount = service.selectFront(recruit_num, front);
+		int BackCount = service.selectBack(recruit_num, Back);
+		int aosCount = service.selectAos(recruit_num, aos);
+		int iosCount = service.selectIos(recruit_num, ios);
+		int serverCount  = service.selectServer(recruit_num, server);
+		int uxuiCount = service.selectUxui(recruit_num, uxui);
+		int planCount = service.selectPlan(recruit_num, plan);
+		int pmCount = service.selectPm(recruit_num, pm);
+		
+		Part part = new Part();
+		part.setFront(FrontCount);
+		part.setBack(BackCount);
+		part.setAos(aosCount);
+		part.setIos(iosCount);
+		part.setServer(serverCount);
+		part.setUxui(uxuiCount);
+		part.setPlan(planCount);
+		part.setPm(pmCount);		
+		
+		System.out.println(part);
+		
 		model.addAttribute("list",list);
+		model.addAttribute("part",part);
 		return "recruit/recruitDetail"; 
 	}
 	

@@ -59,6 +59,39 @@ public class RecruitService {
 		dao.plusCount( recruit_num,  apply_num,  count,  part);
 	}
 
+	public int selectFront(int recruit_num, String front) {
+		return dao.selectFront(recruit_num, front);
+	}
+
+	public int selectBack(int recruit_num, String back) {
+		return dao.selectBack(recruit_num, back);
+	}
+
+	public int selectAos(int recruit_num, String aos) {
+		return dao.selectAos(recruit_num, aos);
+	}
+
+	public int selectIos(int recruit_num, String ios) {
+		return dao.selectIos(recruit_num, ios);
+	}
+
+	public int selectServer(int recruit_num, String server) {
+		return dao.selectServer(recruit_num, server);
+	}
+
+	public int selectUxui(int recruit_num, String uxui) {
+		return dao.selectUxui(recruit_num, uxui);
+	}
+
+	public int selectPlan(int recruit_num, String plan) {
+		return dao.selectPlan(recruit_num, plan);
+	}
+
+	public int selectPm(int recruit_num, String pm) {
+		return dao.selectPm(recruit_num, pm);
+	}
+	
+
 	
 
 

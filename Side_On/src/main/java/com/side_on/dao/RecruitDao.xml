@@ -81,6 +81,38 @@
 	 <select id="getApply_Num"  resultType="int">
         select apply_num from apply where memberId=#{memberId} and recruit_num = #{recruit_num}
     </select>
+    
+    <select id="selectFront" resultType="int">
+    	select  count(apply_num) from apply where recruit_num = #{recruit_num} and part=#{front}
+    </select>
+    
+     <select id="selectBack" resultType="int">
+    	select  count(apply_num) from apply where recruit_num = #{recruit_num} and part=#{back}
+    </select>
+    
+     <select id="selectAos" resultType="int">
+    	select  count(apply_num) from apply where recruit_num = #{recruit_num} and part=#{aos}
+    </select>
+    
+     <select id="selectIos" resultType="int">
+    	select  count(apply_num) from apply where recruit_num = #{recruit_num} and part=#{ios}
+    </select>
+    
+     <select id="selectServer" resultType="int">
+    	select  count(apply_num) from apply where recruit_num = #{recruit_num} and part=#{server}
+    </select>
+    
+     <select id="selectUxui" resultType="int">
+    	select  count(apply_num) from apply where recruit_num = #{recruit_num} and part=#{uxui}
+    </select>
+    
+     <select id="selectPlan" resultType="int">
+    	select  count(apply_num) from apply where recruit_num = #{recruit_num} and part=#{plan}
+    </select>
+    
+     <select id="selectPm" resultType="int">
+    	select count(apply_num)from apply where recruit_num = #{recruit_num} and part=#{pm}
+    </select>
 
 	
 </mapper>

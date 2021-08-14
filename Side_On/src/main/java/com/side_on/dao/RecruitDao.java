@@ -33,6 +33,15 @@ public interface RecruitDao {
 	public int getApply_Num(int recruit_num, String memberId);
 
 	public void plusCount(int recruit_num, int apply_num, int count, String part);
+
+	public int selectFront(int recruit_num, String front);
+	public int selectBack(int recruit_num, String back);
+	public int selectAos(int recruit_num, String aos);
+	public int selectIos(int recruit_num, String ios);
+	public int selectServer(int recruit_num, String server);
+	public int selectUxui(int recruit_num, String uxui);
+	public int selectPlan(int recruit_num, String plan);
+	public int selectPm(int recruit_num, String pm);
 	
 
 
