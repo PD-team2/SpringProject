@@ -1,6 +1,7 @@
 package com.side_on.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import com.side_on.dto.CriteriaRc;
 import com.side_on.dto.QnABoard;
 import com.side_on.dto.RecruitBoard;
 import com.side_on.dto.RecruitCriteria;
+import com.side_on.dto.RecruitMyPage;
 import com.side_on.dto.RecruitPaging;
 
 import lombok.extern.slf4j.Slf4j;
@@ -90,7 +92,24 @@ public class RecruitService {
 	public int selectPm(int recruit_num, String pm) {
 		return dao.selectPm(recruit_num, pm);
 	}
-	
+
+	public List<HashMap<String,String>> mypageApply(String memberId) {
+			return dao.mypageApply(memberId);
+	}
+
+	public ArrayList<RecruitMyPage> myApplyAll(String memberId) {
+		return dao.myApplyAll(memberId);
+	}
+
+	public ArrayList<RecruitBoard> myRecruit(String memberId) {
+		return dao.myRecruit(memberId);
+	}
+
+	public ArrayList<Apply> myApply(String memberId) {
+		return dao.myApply(memberId);
+	}
+
+
 
 	
 

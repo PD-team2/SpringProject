@@ -2,9 +2,11 @@ package com.side_on.controller;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.io.FilenameUtils;
@@ -26,6 +28,7 @@ import com.side_on.dto.PageMakerRc;
 import com.side_on.dto.Part;
 import com.side_on.dto.RecruitBoard;
 import com.side_on.dto.RecruitCriteria;
+import com.side_on.dto.RecruitMyPage;
 import com.side_on.dto.RecruitPaging;
 import com.side_on.service.RecruitService;
 import com.side_on.util.Utility;
@@ -105,17 +108,25 @@ public class RecruitController {
 	}
 	
 	/** 마이페이지 모집현황 보기 */
-	@RequestMapping("/recruit/recruitMypage")
-	public String recruitMypage() {
+	@RequestMapping("/recruit/recruitMyRecruit")
+	public String recruitMyRecruit() {
 		
-		return "recruit/recruitMypage"; 
+		return "recruit/recruitMyRecruit"; 
 	}
 	
 	/** 마이페이지 지원현황 보기 */
-	@RequestMapping("/recruit/recruitMypage2")
-	public String recruitMypage2() {
+	@RequestMapping("/recruit/recruitMyApply")
+	public String recruitMyApply(HttpSession session, Model model) {
 		
-		return "recruit/recruitMypage2"; 
+		String memberId= (String)session.getAttribute("memberId");
+//		ArrayList<RecruitBoard> list = service.myRecruit(memberId); 
+		List<HashMap<String,String>> list = service.mypageApply(memberId);
+//		ArrayList<Apply> apply = service.myApply(memberId); 
+		System.out.println("list"+list);
+		
+		model.addAttribute("list", list);
+		session.setAttribute("list", list);
+		return "recruit/recruitMyApply"; 
 	}
 	
 	/** 관리자 페이지 recruitAdmin*/
@@ -187,11 +198,13 @@ public class RecruitController {
 	/** 모집 페이지 글 작성 DB 저장 
 	 * @throws Exception */
 	@RequestMapping("/recruit/write/complete")
-	public String recruitWriteComplete(RecruitBoard recruitBoard, Model model)  {
+	public String recruitWriteComplete(RecruitBoard recruitBoard, HttpSession session, Model model)  {
 		
+		String memberId= (String)session.getAttribute("memberId");
 		//날짜 저장getCurrentDate
 		recruitBoard.setSave_date(Utility.getCurrentDate());
-		recruitBoard.setMemberId("user01");
+		recruitBoard.setMemberId(memberId);
+		recruitBoard.setStatus("y");
 		recruitBoard.setHit(0);
 		
 		System.out.println("컨트롤러 입니당" + recruitBoard);

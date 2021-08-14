@@ -9,6 +9,11 @@
  
 <link type="text/css" rel="stylesheet" href="../css/RecruitHome_juri.css">
 
+<script type="text/javascript">
+
+
+</script>
+
 </head>
 <body>
    <%@ include file="../inc/header.jsp" %>
@@ -43,7 +48,7 @@
 							               
 			                 <div style="padding-top: 10%" style="float: left;">
 			                  	<ul class="tags">
-								  <li><a href="#" class="tag">FrontEnd</a></li>
+								  <li><a href="recruitHome?part=front" class="tag">FrontEnd</a></li>
 								  <li><a href="#" class="tag">BackEnd</a></li>
 								  <li><a href="#" class="tag">AOS</a></li>
 								  <li><a href="#" class="tag">IOS</a></li>

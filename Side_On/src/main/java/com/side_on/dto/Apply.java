@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 public class Apply {
 	
 	private int apply_num;
+	private String titie;
 	private int recruit_num;
 	private String member_id;
 	private String part;

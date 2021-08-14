@@ -1,6 +1,7 @@
 package com.side_on.dao;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -11,6 +12,7 @@ import com.side_on.dto.Criteria;
 import com.side_on.dto.CriteriaRc;
 import com.side_on.dto.RecruitBoard;
 import com.side_on.dto.RecruitCriteria;
+import com.side_on.dto.RecruitMyPage;
 
 @Mapper
 public interface RecruitDao {
@@ -42,6 +44,16 @@ public interface RecruitDao {
 	public int selectUxui(int recruit_num, String uxui);
 	public int selectPlan(int recruit_num, String plan);
 	public int selectPm(int recruit_num, String pm);
+
+	public List<HashMap<String,String>> mypageApply(String memberId);
+
+	public ArrayList<RecruitMyPage> myApplyAll(String memberId);
+
+	public ArrayList<RecruitBoard> myRecruit(String memberId);
+
+	public ArrayList<Apply> myApply(String memberId);
+
+
 	
 
 

@@ -39,7 +39,9 @@
     <fullyQualifiedTypeName name="com.side_on.dto.Paging"/>
     <fullyQualifiedTypeName name="com.side_on.dto.CriteriaRc"/>
     <fullyQualifiedTypeName name="com.side_on.dto.PageMakerRc"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="com.side_on.dto.Apply"/>
     <fullyQualifiedTypeName name="com.side_on.dto.Part"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.side_on.dto.RecruitMyPage"/>
 </qualifiedTypeNameHistroy>
