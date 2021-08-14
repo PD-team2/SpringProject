@@ -16,7 +16,7 @@
 		int sumCount = mgr.sumCount(num);
 %>
 <form action="pollFormProc"> 
-<table border="1">
+<table border="1" width="500" height="100">
 	<tr>
 		<td colspan="2" width="300">
 			Q : <%=question%> <font color="blue">(<%=sumCount%>)</font>
@@ -40,13 +40,13 @@
 	<tr>
 		<td width="150">
 		<%if(active==1){%>
-		<button type="submit" class="btn btn-info">투표</button>
+		<button type="submit" class="btn btn-warning">투표</button>
 		<%}else{%>
 			투표종료
 		<%}%>	
 		</td>
 		<td><td>
-		<button type="button" class="btn btn-success" onclick="javascript:window.open('pollView?num=<%=num%>'
+		<button type="button" class="btn btn-info" onclick="javascript:window.open('pollView?num=<%=num%>'
 			,'pollView','width=500, height=350')">결과</button>
 		</td>
 	</tr>

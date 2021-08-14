@@ -80,9 +80,9 @@
 				</tr>
 				<tr>
 					<td colspan=3>
-					<button type="submit" class="btn btn-info" onclick="send()">작성하기</button>
+					<button type="submit" class="btn btn-warning" onclick="send()">작성하기</button>
 					<button type="button"  class="btn btn-danger" onclick="location.href='/vote/pollInsert'">다시쓰기</button>
-					<button type="button" class="btn btn-success" onClick="javascript:location.href='pollList'">리스트</button>
+					<button type="button" class="btn btn-info" onClick="javascript:location.href='pollList'">리스트</button>
 					</td>
 				</tr>
 			</table>
