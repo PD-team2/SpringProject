@@ -40,6 +40,12 @@
   	        update member set member_pw=#{memberPw}, email=#{email}, name=#{name}, mobile=#{mobile} where member_id=#{memberId}
         </update>
 	
+	<update id="updateRestCount" parameterType="String">
+		UPDATE member set 
+		rest_count = to_number(rest_count) + 1 
+		WHERE member_id=#{memberId}
+	</update>
+	
 </mapper>
 
 
