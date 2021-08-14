@@ -93,10 +93,7 @@ public class RecruitController {
 	
 	/** 지원하기 recruitApply*/
 	@RequestMapping("/recruit/recruitApply")
-	public String recruitApply(int recruit_num,  Model model) {
-			
-		RecruitBoard list = service.memberDetail(recruit_num);
-		model.addAttribute("list",list);
+	public String recruitApply() {
 		
 		return "recruit/recruitApply"; 
 	}

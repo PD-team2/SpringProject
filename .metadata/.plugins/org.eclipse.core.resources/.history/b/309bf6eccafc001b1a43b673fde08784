@@ -67,7 +67,7 @@
 						      <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="title" placeholder="${list.title }"disabled>
 						    	
 						    	<!-- 글번호 -->
-						    	<input type="hidden" id="recruit_num" name="recruit_num" value="${list.recruit_num }">
+						    	<input type="hidden" id="recruit_num" name="recruit_num" value="">
 						    </div>
 									
 						    <div class="form-group">
@@ -75,38 +75,15 @@
 						      <select class="form-select" id="part" name="part" required="required">
 						      
 						      <option value="null">희망 포지션을 선택해주세요</option>
-						      
-						       <c:if test="${ list.front != null  && list.front > 0}">
 						        <option  value="front">Front-end(프론트)</option>
-						        </c:if>
-						        
-						        <c:if test="${ list.back != null  && list.back > 0}">
 						        <option  value="back">Back-end(백엔드)</option>
-						        </c:if>	
-						        
-						        <c:if test="${ list.aos != null  && list.aos > 0}">
 						        <option  value="aos">AOS(안드로이드)</option>
-						        </c:if>
-						        
-						        <c:if test="${ list.ios != null  && list.ios > 0}">
 						        <option  value="ios">IOS(애플)</option>
-						        </c:if>
-						        
-						        <c:if test="${ list.server != null  && list.server > 0}">
 						        <option value="server">Server(서버)</option>
-						        </c:if>
-						        
-						        <c:if test="${ list.uxui != null  && list.uxui > 0}">
 								<option  value="uxui">UI/UX</option>
-								</c:if>
-								
-								<c:if test="${ list.plan != null  && list.plan > 0}">
 								<option  value="plan">기획</option>
-								</c:if>
-								
-								<c:if test="${ list.pm != null  && list.pm > 0}">
 								<option value="pm" >PM(Project Manager)</option>
-								</c:if>
+								
 								
 						      </select>
 						      <input type="hidden" id="position" name="position">

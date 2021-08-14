@@ -100,13 +100,9 @@
 								<option  value="uxui">UI/UX</option>
 								</c:if>
 								
-								<c:if test="${ list.plan != null  && list.plan > 0}">
 								<option  value="plan">기획</option>
-								</c:if>
-								
-								<c:if test="${ list.pm != null  && list.pm > 0}">
 								<option value="pm" >PM(Project Manager)</option>
-								</c:if>
+								
 								
 						      </select>
 						      <input type="hidden" id="position" name="position">
