@@ -83,35 +83,35 @@
     </select>
     
     <select id="selectFront"  resultType="int">
-    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part=#{front}
+    	select  count(apply_num) from apply where recruit_num = #{recruit_num} and part=#{front}
     </select>
     
      <select id="selectBack"  resultType="int">
-    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part=#{back}
+    	select  count(apply_num) from apply where recruit_num = #{recruit_num} and part=#{back}
     </select>
     
      <select id="selectAos"  resultType="int">
-    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part=#{aos}
+    	select  count(apply_num) from apply where recruit_num = #{recruit_num} and part=#{aos}
     </select>
     
      <select id="selectIos" resultType="int">
-    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part=#{ios}
+    	select  count(apply_num) from apply where recruit_num = #{recruit_num} and part=#{ios}
     </select>
     
      <select id="selectServer" resultType="int">
-    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part=#{server}
+    	select  count(apply_num) from apply where recruit_num = #{recruit_num} and part=#{server}
     </select>
     
      <select id="selectUxui"  resultType="int">
-    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part=#{uxui}
+    	select  count(apply_num) from apply where recruit_num = #{recruit_num} and part=#{uxui}
     </select>
     
      <select id="selectPlan" resultType="int">
-    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part=#{plan}
+    	select  count(apply_num) from apply where recruit_num = #{recruit_num} and part=#{plan}
     </select>
     
      <select id="selectPm"  resultType="int">
-    	select COUNT(*)from apply where recruit_num = #{recruit_num} and part=#{pm}
+    	select count(apply_num)from apply where recruit_num = #{recruit_num} and part=#{pm}
     </select>
 
 	
