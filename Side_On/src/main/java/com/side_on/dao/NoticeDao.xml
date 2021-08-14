@@ -41,4 +41,10 @@
 		select * from notice where notice_no=#{noticeNo}
 	</select>
 
+	<update id="updatePostCondition" parameterType="String">
+		UPDATE notice set 
+		visible_check = 'F' 
+		WHERE notice_no =#{noticeNo}
+	</update>
+
 </mapper>
