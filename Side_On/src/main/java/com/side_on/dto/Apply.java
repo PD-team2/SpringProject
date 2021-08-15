@@ -21,6 +21,7 @@ public class Apply {
 	private String message;
 	private String join_yn;
 	private String pay_check;
+	
 	private String payment_date;
 
 }
