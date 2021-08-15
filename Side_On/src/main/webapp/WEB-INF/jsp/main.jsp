@@ -100,7 +100,7 @@
                 <div class="head-subheading1">Welcome to</div>
                 <div class="head-subheading2">Side-On Platform!</div>
                 <div class="head-subheading3">Study / Develop / Evolve</div>
-                <a class="JoinButton" href="#services">Side-On?</a>
+                <a class="mastheadButton" href="#services"><img src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/mainButton.png" alt="..." /></a>
             </div>
         </header>
         <!-- Services-->
