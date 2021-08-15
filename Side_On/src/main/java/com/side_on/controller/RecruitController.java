@@ -23,6 +23,7 @@ import com.side_on.dto.Apply;
 import com.side_on.dto.Criteria;
 import com.side_on.dto.CriteriaRc;
 import com.side_on.dto.FileVO;
+import com.side_on.dto.Member;
 import com.side_on.dto.PageMaker;
 import com.side_on.dto.PageMakerRc;
 import com.side_on.dto.Part;
@@ -100,16 +101,73 @@ public class RecruitController {
 		return "recruit/recruitDetail"; 
 	}
 	
+	/** 모집 페이지 상세 페이지 */
+	@RequestMapping("/recruit/recruitMine")
+	public String recruitMine(int recruit_num, Model model) {
+	
+		RecruitBoard list = service.memberDetail(recruit_num);
+		
+		//분야 별 인원 수
+		String front = "Front";
+		String Back = "Back";
+		String aos = "aos";
+		String ios = "ios";
+		String server = "server";
+		String uxui = "uxui";
+		String plan = "plan";
+		String pm = "pm";
+		
+		int FrontCount = service.selectFront(recruit_num, front);
+		int BackCount = service.selectBack(recruit_num, Back);
+		int aosCount = service.selectAos(recruit_num, aos);
+		int iosCount = service.selectIos(recruit_num, ios);
+		int serverCount  = service.selectServer(recruit_num, server);
+		int uxuiCount = service.selectUxui(recruit_num, uxui);
+		int planCount = service.selectPlan(recruit_num, plan);
+		int pmCount = service.selectPm(recruit_num, pm);
+		
+		Part part = new Part();
+		part.setFront(FrontCount);
+		part.setBack(BackCount);
+		part.setAos(aosCount);
+		part.setIos(iosCount);
+		part.setServer(serverCount);
+		part.setUxui(uxuiCount);
+		part.setPlan(planCount);
+		part.setPm(pmCount);		
+		
+		System.out.println(recruit_num);
+		ArrayList<Apply> apply = service.getApplyList(recruit_num);
+	
+		String memberId = list.getMemberId();
+		String readerId = service.getMemberInfo(memberId);
+		
+		model.addAttribute("list",list);
+		model.addAttribute("part",part);
+		model.addAttribute("apply",apply);
+		model.addAttribute("readerId",readerId);
+		return "recruit/recruitMine"; 
+	}
+	
 	/** 모집 페이지 글 쓰기 */
 	@RequestMapping("/recruit/recruitWrite")
-	public String recruitWrite() {
+	public String recruitWrite(HttpSession session, Model model) {
 		
+		String memberId= (String)session.getAttribute("memberId");
+		model.addAttribute("memberId", memberId);
 		return "recruit/recruitWrite"; 
 	}
 	
 	/** 마이페이지 모집현황 보기 */
 	@RequestMapping("/recruit/recruitMyRecruit")
-	public String recruitMyRecruit() {
+	public String recruitMyRecruit(HttpSession session, Model model){
+		
+		String memberId= (String)session.getAttribute("memberId");
+		ArrayList<RecruitBoard> list = service.recruitMyRecruit(memberId); 
+		
+//		ArrayList<Integer> count = list.
+		
+		model.addAttribute("list", list);
 		
 		return "recruit/recruitMyRecruit"; 
 	}
@@ -183,9 +241,23 @@ public class RecruitController {
 			model.addAttribute("message", "지원을 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요.");
 			return "error";
 		}
-		
-		
+	}
 	
+	/** 모집 글 삭제*/
+	@RequestMapping("/recruit/recruitDelete")
+	public String recruitDelete(int recruit_num, Model model) {
+		
+		String n = "n";
+		int result = service.recruitDelete(recruit_num, n);
+		
+		if (result == 1) {
+			return "recruit/recruitMyRecruit";
+		} else {
+			model.addAttribute("title", "[오류] 모집 글 삭제 실패");
+			model.addAttribute("message", "삭제를 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요.");
+			return "error";
+		}
+		
 	}
 	
 	/** 에러 페이지*/
@@ -205,6 +277,7 @@ public class RecruitController {
 		recruitBoard.setSave_date(Utility.getCurrentDate());
 		recruitBoard.setMemberId(memberId);
 		recruitBoard.setStatus("y");
+		recruitBoard.setVisible_check("y");
 		recruitBoard.setHit(0);
 		
 		System.out.println("컨트롤러 입니당" + recruitBoard);
@@ -221,7 +294,99 @@ public class RecruitController {
 		}
 	}
 	
+	@RequestMapping("/recruit/edit/complete")
+	public String recruitEditComplete(RecruitBoard recruitBoard, HttpSession session, Model model)  {
+		
+		String memberId= (String)session.getAttribute("memberId");
+		int recruit_num = recruitBoard.getRecruit_num();
+		System.out.println("recruit_num"+recruit_num);
+		//날짜 저장getCurrentDate
+		recruitBoard.setSave_date(Utility.getCurrentDate());
+		recruitBoard.setMemberId(memberId);
+		recruitBoard.setStatus("y");
+		recruitBoard.setVisible_check("y");
+		recruitBoard.setHit(0);
+		
+		System.out.println("컨트롤러 입니당" + recruitBoard);
+		
+		//서비스 보내기
+		int result = service.updateRecruitBoard(recruitBoard);
+		
+		if(result==1) {
+			return "recruit/recruitHome";
+		}else {
+			model.addAttribute("title","[오류] 모집 글 작성 실패");
+			model.addAttribute("message", "모집 글 작성을 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요");
+			return "error";
+		}
+	}
 	
+<<<<<<< Updated upstream
+=======
+	
+	
+	/** 모집 페이지 글 삭제
+	 * @throws Exception */
+	@RequestMapping("/recruit/recruitCancel")
+	public String recruitCancel(int recruit_num, HttpSession session, Model model)  {
+		
+		String memberId= (String)session.getAttribute("memberId");
+		String join_yn = "n";
+		
+		int result = service.recruitCancel(recruit_num, memberId, join_yn);
+		
+		if(result==1) {
+			return "recruit/recruitHome";
+		}else {
+			model.addAttribute("title","[오류] 모집 글 삭제 실패");
+			model.addAttribute("message", "글 삭제를 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요");
+			return "error";
+		}
+	}
+	
+	/** 모집 글 수정 recruit/recruitEdit*/
+	@RequestMapping("/recruit/recruitEdit")
+		public String recruitEdit(int recruit_num,  Model model) {
+			
+		RecruitBoard list = service.memberDetail(recruit_num);
+			
+			//분야 별 인원 수
+			String front = "Front";
+			String Back = "Back";
+			String aos = "aos";
+			String ios = "ios";
+			String server = "server";
+			String uxui = "uxui";
+			String plan = "plan";
+			String pm = "pm";
+			
+			int FrontCount = service.selectFront(recruit_num, front);
+			int BackCount = service.selectBack(recruit_num, Back);
+			int aosCount = service.selectAos(recruit_num, aos);
+			int iosCount = service.selectIos(recruit_num, ios);
+			int serverCount  = service.selectServer(recruit_num, server);
+			int uxuiCount = service.selectUxui(recruit_num, uxui);
+			int planCount = service.selectPlan(recruit_num, plan);
+			int pmCount = service.selectPm(recruit_num, pm);
+			
+			Part part = new Part();
+			part.setFront(FrontCount);
+			part.setBack(BackCount);
+			part.setAos(aosCount);
+			part.setIos(iosCount);
+			part.setServer(serverCount);
+			part.setUxui(uxuiCount);
+			part.setPlan(planCount);
+			part.setPm(pmCount);		
+			
+			System.out.println(part);
+			
+			model.addAttribute("list",list);
+			model.addAttribute("part",part);
+			return "recruit/recruitEdit"; 
+		}
+	
+>>>>>>> Stashed changes
 	/**파일 업로드 안돼.. 흑.. 왜..*/
 	public String recruitWriteWithFile(RecruitBoard recruitBoard, @RequestPart MultipartFile file) throws Exception {
 		System.out.println("컨트롤러 입니당" + recruitBoard);

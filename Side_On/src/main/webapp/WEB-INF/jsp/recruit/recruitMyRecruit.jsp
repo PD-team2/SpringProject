@@ -10,8 +10,25 @@
 		
 		<!-- Google Font -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preconnect" href="https://fonts.gstatic.com" >
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+	<script>
+	
+	function recruitCancel(){
+		var result = confirm("[안내] 한 번 삭제된 글은 복구가 불가능합니다. 삭제하시겠습니까?");
+		
+		if(result == true){
+			alert("[안내] 글이 성공적으로 삭제 되었습니다.");
+			$('#delete').submit();
+		}else{
+			
+		}
+	}
+	
+	
+	</script>
+	
 
 </head>
 <body>
@@ -62,21 +79,30 @@
 						    <tr>
 						      <th scope="col" class="col-md-1">글 번호 </th>
 						      <th scope="col" class="col-md-6">글 제목</th>
-						      <th scope="col" class="col-md-2">리더</th>
+						      <th scope="col" class="col-md-2">참여자 수 </th>
 						      <th scope="col" class="col-md-3">상태</th>
 						    </tr>
 						  </thead>
 						
 						  <tbody>
-
-						    <tr>
-								      <th scope="row">${apply.recruit_num }</th>
-								      <td colspan="2">${apply.title }</td>
-								      <td>
-								       <button type="button" class="btn btn-info">수정</button>
-								      <button  type="button"  class="btn btn-danger">삭제</button>
+  <c:forEach var="list" items="${list}" > 
+ <form action="/recruit/recruitDelete" method="post" name="delete" id="delete">
+   <input type="hidden" name="recruit_num" id="recruit_num" value="${list.recruit_num}">		
+   </form>
+						    <tr>				    
+								      <th scope="row">${list.recruit_num }</th>
+								     
+								      <td colspan="2">
+								      	<a href="recruitMine?recruit_num=${list.recruit_num}" style="color:black;">${list.title}</a>
 								      </td>
+								      <td>
+										      <c:if test="${list.status == 'y'}">		      
+											       <input type="button" class="btn btn-info" value="수정" onclick="location.href='/recruit/recruitEdit?recruit_num=${list.recruit_num}'">
+											      <button  type="button"  class="btn btn-danger" name="delete" id="delete" onclick="recruitCancel()">삭제</button>
+										      </c:if>				      
+										</td>
 						    </tr>
+ </c:forEach>
 						  </tbody>
 						  
 						</table>

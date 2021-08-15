@@ -10,6 +10,7 @@ import com.side_on.dao.RecruitDao;
 import com.side_on.dto.Apply;
 import com.side_on.dto.Criteria;
 import com.side_on.dto.CriteriaRc;
+import com.side_on.dto.Member;
 import com.side_on.dto.QnABoard;
 import com.side_on.dto.RecruitBoard;
 import com.side_on.dto.RecruitCriteria;
@@ -109,6 +110,33 @@ public class RecruitService {
 		return dao.myApply(memberId);
 	}
 
+<<<<<<< Updated upstream
+=======
+	public int recruitCancel(int recruit_num, String memberId, String join_yn) {
+		return dao.recruitCancel(recruit_num, memberId, join_yn);
+	}
+
+	public ArrayList<RecruitBoard> recruitMyRecruit(String memberId) {
+		return dao.recruitMyRecruit( memberId );
+	}
+
+	public ArrayList<Apply> getApplyList(int recruit_num) {
+		return dao.getApplyList( recruit_num );
+	}
+
+	public String getMemberInfo(String memberId) {
+		return dao.getMemberInfo( memberId );
+	}
+
+	public int recruitDelete(int recruit_num, String n) {
+		return dao.recruitDelete( recruit_num, n );
+	}
+
+	public int updateRecruitBoard(RecruitBoard recruitBoard) {
+		return dao.updateRecruitBoard(recruitBoard);
+	}
+
+>>>>>>> Stashed changes
 
 
 	

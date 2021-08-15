@@ -10,6 +10,7 @@ import org.apache.ibatis.annotations.Mapper;
 import com.side_on.dto.Apply;
 import com.side_on.dto.Criteria;
 import com.side_on.dto.CriteriaRc;
+import com.side_on.dto.Member;
 import com.side_on.dto.RecruitBoard;
 import com.side_on.dto.RecruitCriteria;
 import com.side_on.dto.RecruitMyPage;
@@ -53,6 +54,21 @@ public interface RecruitDao {
 
 	public ArrayList<Apply> myApply(String memberId);
 
+<<<<<<< Updated upstream
+=======
+	public int recruitCancel(int recruit_num, String memberId, String join_yn);
+
+	public ArrayList<RecruitBoard> recruitMyRecruit(String memberId);
+
+	public ArrayList<Apply> getApplyList(int recruit_num);
+
+	public String getMemberInfo(String memberId);
+
+	public int recruitDelete(int recruit_num, String n);
+
+	public int updateRecruitBoard(RecruitBoard recruitBoard);
+
+>>>>>>> Stashed changes
 
 	
 

@@ -28,9 +28,9 @@
 				</resultMap>
 
 	<resultMap type="com.side_on.dto.Apply" id="applyList">
-		 <result property="apply_num" column="server"/>
+		 <result property="apply_num" column="apply_num"/>
 		  <result property="titie" column="title"/>
-		   <result property="recruit_num" column="recruit_num"/>
+		   <result property="recruit_num" column="Recruit_num"/>
 		    <result property="member_id" column="memberId"/>
 		     <result property="part" column="part"/>
 		      <result property="message" column="message"/>
@@ -149,5 +149,33 @@
  	    <select  id="myApply" resultMap="applyList" parameterType="String">
  	   		select apply_num,join_yn from apply where memberId= #{memberId}
  	   </select>
+<<<<<<< Updated upstream
+=======
+ 	   
+ 	   <insert id="recruitCancel">
+ 	   		update apply set join_yn = #{join_yn} where Recruit_num = #{recruit_num} and memberId = #{memberId}
+ 	   </insert>
+ 	   
+ 	   <select id="recruitMyRecruit" resultMap="recruitList"  parameterType="String">
+        select recruit_num, title, status, visible_check  from recruit where memberId = #{memberId} and visible_check = 'y'
+   	 </select>
+   	 
+   	   <select id="getApplyList" resultMap="applyList" > 
+        select *  from apply  where recruit_num = #{recruit_num}  
+   	 </select>
+   	 
+   	  <select id="getMemberInfo" parameterType="String" resultType="String"> 
+        select email  from member where member_Id= #{memberId}
+   	 </select>
+   	 
+   	 <insert id="recruitDelete" >
+   	 	update recruit set visible_check = #{n} where Recruit_num = #{recruit_num}
+   	 </insert>
+   	 
+   	 <insert id="updateRecruitBoard" parameterType="com.side_on.dto.RecruitBoard">
+		update recruit set start_date=#{start_date}, end_date=#{end_date}, title=#{title}, content=#{content},pay_check=#{pay_check}, pay_amount=#{pay_amount}, simple_info=#{simple_info}, pj_content=#{pj_content},project_name=#{project_name}, front=#{Front}, back=#{Back}, aos=#{aos}, ios=#{ios}, uxui=#{uxui}, plan=#{plan}, pm=#{pm}, server=#{server}
+		where recruit_num = #{recruit_num}
+	</insert>
+>>>>>>> Stashed changes
 
 </mapper>

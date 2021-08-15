@@ -67,8 +67,8 @@
 						  <thead>
 						    <tr>
 						      <th scope="col" class="col-md-1">글 번호 </th>
-						      <th scope="col" class="col-md-6">글 제목</th>
 						      <th scope="col" class="col-md-2">리더</th>
+<<<<<<< Updated upstream
 						      <th scope="col" class="col-md-3">상태</th>
 						    </tr>
 						  </thead>
@@ -100,6 +100,56 @@
 								</c:forEach>			    	    
 						 </c:forEach>
 		 				 </tr> 
+=======
+						      <th scope="col" class="col-md-6">글 제목</th>
+						      <th scope="col" class="col-md-2"></th>
+						      <th scope="col" class="col-md-2">상태</th>
+						    </tr>
+						  </thead>
+						  <tbody>   
+							  <tr> 
+							  <c:forEach var="list" items="${list}" > 
+								  <c:forEach items="${list}" var="map">			
+								  	   <c:if test="${map.key == 'RECRUIT_NUM'}">
+								  	   	 <th scope="row">
+								  	   	 			
+										
+								  	   		<a href="recruitMine?recruit_num=${map.value}">
+													      ${map.value}
+											<input type="hidden" name="recruit_num" id="recruit_num" value="${map.value}">		      
+											</a>
+										 
+											</th>
+										</c:if>			      		        
+								
+										   <c:if test="${map.key == 'TITLE'}">
+												<td colspan="2"> 
+													 ${map.value}
+												 </td>
+											</c:if>
+								
+								  			<c:if test="${map.key == 'MEMBERID'}">	
+													 <td> ${map.value}</td>	    
+										  </c:if>  
+										  
+										  <c:if test="${map.key == 'JOIN_YN'}">	
+										  	<c:if test="${map.value == 'y'}">
+										  	 <td>
+										  	 	 <span class="label label-success">참여 중 </span>
+										  	 	 <br/>
+                                				  <button  type="button"  class="btn btn-danger" onclick="applyCancel();">참여 취소</button>
+											</td>	    	
+										  	 </c:if>
+										  	 
+										  	 <c:if test="${map.value == 'n'}">
+										  		  <td>참여 취소</td>	    
+										  	 </c:if>
+										  </c:if>  
+									</c:forEach>			    	    
+							 </c:forEach>
+			 				 </tr> 
+			 		
+>>>>>>> Stashed changes
 						  </tbody>
 						</table>
 						

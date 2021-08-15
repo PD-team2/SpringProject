@@ -45,6 +45,10 @@
 								    <input type="checkbox" name="check1" id="check1" value="1" class="checkbox1">
 							</div>
 							
+							<div class="checkbox" style="float: right;">	    
+								  <input type="button" class="btn btn-warning" style= "margin-left:38%;"onclick="location.href='/recruit/recruitWrite'" value="모집 글쓰기">
+							</div>
+							
 							               
 			                 <div style="padding-top: 10%" style="float: left;">
 			                  	<ul class="tags">
