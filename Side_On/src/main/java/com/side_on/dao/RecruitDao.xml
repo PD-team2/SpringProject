@@ -149,9 +149,7 @@
  	    <select  id="myApply" resultMap="applyList" parameterType="String">
  	   		select apply_num,join_yn from apply where memberId= #{memberId}
  	   </select>
-<<<<<<< Updated upstream
-=======
- 	   
+
  	   <insert id="recruitCancel">
  	   		update apply set join_yn = #{join_yn} where Recruit_num = #{recruit_num} and memberId = #{memberId}
  	   </insert>
@@ -176,6 +174,4 @@
 		update recruit set start_date=#{start_date}, end_date=#{end_date}, title=#{title}, content=#{content},pay_check=#{pay_check}, pay_amount=#{pay_amount}, simple_info=#{simple_info}, pj_content=#{pj_content},project_name=#{project_name}, front=#{Front}, back=#{Back}, aos=#{aos}, ios=#{ios}, uxui=#{uxui}, plan=#{plan}, pm=#{pm}, server=#{server}
 		where recruit_num = #{recruit_num}
 	</insert>
->>>>>>> Stashed changes
-
 </mapper>

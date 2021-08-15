@@ -207,16 +207,17 @@ public class RecruitController {
 	/** 지원하기 - 결제 recruitApply*/
 	@RequestMapping("/recruit/apply/complete")
 	public String recruitApply(Apply apply, HttpSession session, Model model) {
-			
-		System.out.println("어서옵셔^^");
-		
+	
 		//apply table에 저장 
 		String memberId= (String)session.getAttribute("memberId");
 		apply.setMember_id(memberId);
 		apply.setJoin_yn("y");
 		
+		
+		
 		if(apply.getPay_check()=="y") {
 			apply.setPayment_date(Utility.getCurrentDate());
+		//	int result = service.setReward();
 		}else {
 			apply.setPayment_date("");
 		}
@@ -321,10 +322,6 @@ public class RecruitController {
 		}
 	}
 	
-<<<<<<< Updated upstream
-=======
-	
-	
 	/** 모집 페이지 글 삭제
 	 * @throws Exception */
 	@RequestMapping("/recruit/recruitCancel")
@@ -385,8 +382,6 @@ public class RecruitController {
 			model.addAttribute("part",part);
 			return "recruit/recruitEdit"; 
 		}
-	
->>>>>>> Stashed changes
 	/**파일 업로드 안돼.. 흑.. 왜..*/
 	public String recruitWriteWithFile(RecruitBoard recruitBoard, @RequestPart MultipartFile file) throws Exception {
 		System.out.println("컨트롤러 입니당" + recruitBoard);

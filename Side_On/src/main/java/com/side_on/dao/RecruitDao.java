@@ -54,8 +54,7 @@ public interface RecruitDao {
 
 	public ArrayList<Apply> myApply(String memberId);
 
-<<<<<<< Updated upstream
-=======
+
 	public int recruitCancel(int recruit_num, String memberId, String join_yn);
 
 	public ArrayList<RecruitBoard> recruitMyRecruit(String memberId);
@@ -68,9 +67,6 @@ public interface RecruitDao {
 
 	public int updateRecruitBoard(RecruitBoard recruitBoard);
 
->>>>>>> Stashed changes
-
-	
 
 
 

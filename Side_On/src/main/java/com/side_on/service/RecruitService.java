@@ -110,8 +110,6 @@ public class RecruitService {
 		return dao.myApply(memberId);
 	}
 
-<<<<<<< Updated upstream
-=======
 	public int recruitCancel(int recruit_num, String memberId, String join_yn) {
 		return dao.recruitCancel(recruit_num, memberId, join_yn);
 	}
@@ -135,11 +133,6 @@ public class RecruitService {
 	public int updateRecruitBoard(RecruitBoard recruitBoard) {
 		return dao.updateRecruitBoard(recruitBoard);
 	}
-
->>>>>>> Stashed changes
-
-
-	
 
 
 
