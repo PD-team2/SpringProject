@@ -423,7 +423,8 @@
                     <!-- an error submitting the form-->
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                     <!-- Submit Button-->
-                    <div class="text-center"><button type="button" class="btn-warning" onclick="sendMail();">문의하기</button></div>
+                    <div class="text-center">
+                    <a onclick="sendMail();"><img src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/sendButton.png"></a></div>
                 </form>
             </div>
         </section>
