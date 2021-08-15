@@ -107,36 +107,9 @@
         <section class="service-section" id="services">
             <div class="container">
                 <div class="text-center">
-                   <img class="SideOnExplainImg" src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/SideOn_Explain.png" alt="..." />
+                   <img class="SideOnExplainImg" src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/SideOnExplain.png" alt="..." />
                 </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <img class="serviceImg" src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/Management%20People.png" alt="..." />
-                        </span>
-                        <h4 class="my-3">최적 프로젝트 팀 모집</h4>
-                        <p class="text-muted">본인이 필요한 직군의 사람들을 여기서 모집해보세요.<br>
-                        모집분야를 제공합니다.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                             <img class="serviceImg" src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/Connection.png" alt="..." />
-                        </span>
-                        <h4 class="my-3">팀원 찾기</h4>
-                        <p class="text-muted">본인이 필요한 팀원을 직접 찾아서 연락해보세요.<br>
-                        Side-On에선 가능합니다!</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                             <img class="serviceImg" src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/Analytics.png" alt="..." />
-                        </span>
-                        <h4 class="my-3">다양한 서포트 제공</h4>
-                        <p class="text-muted">프로젝트 관리를 위한 페이지부터<br>
-                        운영진과의 채팅, 투표기능까지 <br>
-                        당신의 프로젝트를 서포트합니다.</p>
-                    </div>
-                </div>
-            </div>
+               
         </section>
          <!-- Portfolio Grid-->
             <!-- Header-->
