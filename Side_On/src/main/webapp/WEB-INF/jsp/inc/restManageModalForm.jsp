@@ -12,7 +12,7 @@
 			var restResult = $('input[name="restResult"]:checked').val();
 			
 			if(restResult != null){		
-				alert( restNo +' 번 게시글 ' + restResult + ' 처리가 완료되었습니다');
+				alert( restNo +' 번 신고사항 ' + restResult + ' 처리가 완료되었습니다');
 				console.log(restNo + ' ' + restResult);
 				
 			} else {
@@ -26,7 +26,7 @@
 <div id="restModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
-    <form action="restManageModal">
+    <form action="/rest/restManageModal" method="post">
       <div class="modal-header">
           <h4 class="modal-title" id="mySmallModalLabel">신고 처리<a class="anchorjs-link" href="#mySmallModalLabel"><span class="anchorjs-icon"></span></a></h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
