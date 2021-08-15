@@ -1,5 +1,6 @@
 package com.side_on.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -28,7 +29,7 @@ public interface FindDao {
 	/** 게시글 삭제 */
 	public int deleteFindList(int find_no);
 
-	public List<Find> findMemberList();
+	public ArrayList<Find> findMemberList();
 
 	public List<Find> findMemberTest() throws Exception;
 	

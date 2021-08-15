@@ -12,7 +12,7 @@
  public class Find {
  	
 	private int find_no;
- 	
+
  	private String find_date;
  	
  	private String find_title;

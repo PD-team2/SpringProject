@@ -1,5 +1,6 @@
 package com.side_on.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +26,8 @@ public class FindService {
 	}
 	
 	/** 게시글 전체조회 */
-	public List<Find> findMemberList() {
-		List<Find> list = findDao.findMemberList();
-		return list;
+	public ArrayList<Find> findMemberList() {
+		return findDao.findMemberList();
 	}
 
 	/** 게시글 상세조회 */

@@ -1,5 +1,6 @@
 package com.side_on.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -30,10 +31,12 @@ public class FindController {
 	public String FindMemberList(Model model) {
 		log.info("### findMember List :: ");
 		
-		List<Find> list = findService.findMemberList();
-		model.addAttribute("list", list);
+		ArrayList<Find> find = findService.findMemberList();
 		
-		log.debug("### list :: " + list);
+		model.addAttribute("find",find);
+		
+//		log.debug("### list :: " + list);
+		System.out.println("컨트롤러++++"+find);
 		return "find/list";
 	}
 	
