@@ -38,7 +38,7 @@
   <fieldset>
 	<div class="justify-content-center text-center">
 	<h2>
-	<legend>글이 성공적으로 등록되었습니다.</legend>
+	<legend>글이 성공적으로 삭제되었습니다.</legend>
     </h2>
 	<br>
 	<br>
@@ -58,6 +58,9 @@
                 </div>
 			<br>
 			<br>	
+			<br>
+			<br>
+			
 			</div>
 
         </section>
