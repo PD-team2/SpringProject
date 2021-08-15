@@ -97,10 +97,10 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="head-subheading">Welcome To Side-On Platform</div>
-                <div class="head-subheading2">STUDY / DEVELOP / EVOLVE</div>
+                <div class="head-subheading1">Welcome to</div>
+                <div class="head-subheading2">Side-On Platform!</div>
+                <div class="head-subheading3">Study / Develop / Evolve</div>
                 <a class="JoinButton" href="#services">Side-On?</a>
-                <img class="logoLocation" src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/Side%20On%20logo.png" alt="..." />
             </div>
         </header>
         <!-- Services-->
