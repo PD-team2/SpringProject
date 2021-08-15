@@ -9,15 +9,25 @@
 		select * from find_member
 	</select>
 	-->
+	<resultMap type="com.side_on.dto.Find" id="fineList">
+	  <result property="find_no" column="find_no"/>
+	  <result property="find_date" column="find_date"/>
+	  <result property="find_title" column="find_title"/>
+	  <result property="find_writer" column="find_writer"/>
+	  <result property="find_address" column="find_address"/>
+	  <result property="find_position" column="find_position"/>
+	   <result property="find_imgpath" column="find_imgpath"/>
+	   <result property="find_content" column="find_content"/>
+	</resultMap>
 	
     <select id="findMemberTest" resultType="com.side_on.dto.Find">
-    	select find_no, find_title, find_writer from find_member
+    	select * from find_member
     </select>
     
 	<!--게시판 조회 
  	public List<Find> selectFindList() -->
-	<select id="findMemberList" resultType="com.side_on.dto.Find">
-		select * from find_member
+	<select id="findMemberList" resultMap="fineList">
+		select find_no, find_title, find_writer from find_member
 	</select>
 	
 	<!-- 게시글 본문 조회 

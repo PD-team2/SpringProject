@@ -32,6 +32,8 @@
 			</div>
         </header>
         
+        <c:out value="${list }"></c:out>
+        
         <!-- Section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
@@ -76,7 +78,8 @@
                             </div>
                         </div>
                     </div>
-                    <c:forEach var="find" items="${list}" varStatus="status">
+           
+ <c:forEach var="find" items="${find}" varStatus="status">
                       <div class="col mb-5">
                         <div class="card h-100">
                             <!-- image -->
@@ -94,7 +97,7 @@
                             </div>
                         </div>
                     </div>
-                        </c:forEach>
+</c:forEach>
                    
                <!-- 글쓰기 버튼 -->
 				<div class="text-center1">
