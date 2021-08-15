@@ -222,26 +222,6 @@ public class RecruitController {
 	}
 	
 	
-	/** 모집 페이지 글 작성 DB 저장 
-	 * @throws Exception */
-	@RequestMapping("/recruit/recruitCancel")
-	public String recruitCancel(int recruit_num, HttpSession session, Model model)  {
-		
-		String memberId= (String)session.getAttribute("memberId");
-		String join_yn = "n";
-		
-		int result = service.recruitCancel(recruit_num, memberId, join_yn);
-		
-		if(result==1) {
-			return "recruit/recruitHome";
-		}else {
-			model.addAttribute("title","[오류] 모집 글 작성 실패");
-			model.addAttribute("message", "모집 글 작성을 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요");
-			return "error";
-		}
-	}
-	
-	
 	/**파일 업로드 안돼.. 흑.. 왜..*/
 	public String recruitWriteWithFile(RecruitBoard recruitBoard, @RequestPart MultipartFile file) throws Exception {
 		System.out.println("컨트롤러 입니당" + recruitBoard);
