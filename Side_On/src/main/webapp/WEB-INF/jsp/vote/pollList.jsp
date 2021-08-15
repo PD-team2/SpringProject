@@ -9,19 +9,21 @@
 <title>JSP Poll</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
-<jsp:include page="../inc/header.jsp"/><br><br><br><br>
+<%@ include file="../inc/header.jsp" %>
+<header class="bg-warning py-5">
+    <a href="/board/QnABoard" style="text-decoration:none">
+    	<div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+        <!-- 헤더...어떻게... -->
+        <div style="padding-top: 8%;">
+            <h1 class="display-5 fw-bolder">투표하기</h1>
+            <p class="lead fw-normal text-white-80 mb-0">투표리스트를 확인하고 투표를 해보세요.</p>
+	    </div>
+	    </div>
+		</div>
+ 	</a>
+</header>	
 	
-	<header class="bg-warning py-5">
-            <div class="container px-5 px-lg-5 my-5">
-                <div class="text-center text-white">
-                <!-- 헤더...어떻게... -->
-                <div style="padding-top: 1%;">
-                    <h1 class="display-5 fw-bolder">투표하기</h1>
-                    <p class="lead fw-normal text-white-80 mb-0">투표리스트를 확인하고 투표를 해보세요.</p>
-            </div>
-            </div>
-         </div>
-        </header><br><br>
 <div align="center">
 <jsp:include page="pollForm.jsp"/>
 <b>설문 리스트</b>
