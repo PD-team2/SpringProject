@@ -42,5 +42,17 @@
 		FROM REST
 		WHERE rest_no =#{restNo}
 	</select>
+	
+	<insert id="insertRest" parameterType="String">
+		INSERT into rest 
+		VALUES(SEQ_REST.nextval
+				, #{noticeNo}
+				, #{memberId}
+				, #{reason}
+				, to_char(sysdate, 'yyyy-MM-dd')
+				, null 
+				,'F'
+				, null)
+	</insert>
 
 </mapper>

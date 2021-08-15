@@ -58,4 +58,24 @@ public class RestService {
 		}
 	}
 
+	/**
+	 * 신고 접수
+	 * @param noticeNo 글 번호
+	 * @param reason 신고 사유
+	 */
+	public void restReportModal(String noticeNo, String reason) {
+		log.debug(noticeNo + "/" + reason);
+		if(reason != null) {			
+			String memberId = noticeDao.selectRestUser(noticeNo);
+			log.debug("### " + memberId);
+			noticeDao.updatePostCondition(noticeNo);
+			if(memberId != null) {
+				restDao.insertRest(noticeNo, memberId, reason);
+				log.debug(memberId + "/" + noticeNo + "/" + reason);
+			}
+		} else { 
+			log.debug("사유 부재 업데이트 실패" + noticeNo);
+		}
+	}
+
 }

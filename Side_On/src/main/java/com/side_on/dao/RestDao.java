@@ -24,4 +24,7 @@ public interface RestDao {
 	/** 숨김 게시글 재게시용 글번호 조회 */
 	public String selectRestPostNo(String restNo);
 
+	/** 신고 접수 */
+	public void insertRest(String noticeNo, String memberId, String reason);
+
 }
