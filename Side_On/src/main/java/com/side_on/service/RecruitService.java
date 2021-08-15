@@ -109,6 +109,10 @@ public class RecruitService {
 		return dao.myApply(memberId);
 	}
 
+	public int recruitCancel(int recruit_num, String memberId, String join_yn) {
+		return dao.recruitCancel(recruit_num, memberId, join_yn);
+	}
+
 
 
 	

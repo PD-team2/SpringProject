@@ -149,5 +149,10 @@
  	    <select  id="myApply" resultMap="applyList" parameterType="String">
  	   		select apply_num,join_yn from apply where memberId= #{memberId}
  	   </select>
+ 	   
+ 	   <insert id="recruitCancel">
+ 	   		update apply set join_yn = #{join_yn} where Recruit_num = #{recruit_num} and memberId = #{memberId}
+ 	   
+ 	   </insert>
 
 </mapper>

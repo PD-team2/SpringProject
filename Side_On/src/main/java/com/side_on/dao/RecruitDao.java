@@ -53,6 +53,8 @@ public interface RecruitDao {
 
 	public ArrayList<Apply> myApply(String memberId);
 
+	public int recruitCancel(int recruit_num, String memberId, String join_yn);
+
 
 	
 
