@@ -36,9 +36,9 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/recruit/recruitAdmin">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Member Management</span>
+                    <span>Reward Management</span>
                 </a>
             </li>
 
