@@ -50,14 +50,6 @@
                 </a>
             </li>
 
-            <!-- Nav Item - 커뮤니티 -->
-            <li class="nav-item">
-                <a class="nav-link" href="../board/chatAdmin">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Chat</span>
-                </a>
-            </li>
-
             <!-- Nav Item - vote -->
             <li class="nav-item">
                 <a class="nav-link" href="../vote/voteHome">
