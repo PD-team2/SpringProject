@@ -19,8 +19,9 @@
         <div class="text-center text-white">
         <!-- 헤더...어떻게... -->
         <div style="padding-top: 8%;">
-            <h1 class="display-5 fw-bolder">채팅하기</h1>
-            <p class="lead fw-normal text-white-80 mb-0">방을 개설하거나 채팅할 수 있습니다.</p>
+            <h1 class="display-5 fw-bolder">연락하기</h1>
+            <p class="lead fw-normal text-white-80 mb-0">채팅방을 개설하여 팀원들과 채팅하거나 이미지파일을 전송할 수 있습니다.<br>
+             Git utterances 기능을 이용해서 댓글을 남길 수 있습니다.</p>
 	    </div>
 	    </div>
 		</div>
@@ -43,7 +44,7 @@
 	</div>
 	
 	<!-- utteranc -->
-	<div class="utterances" style="height: auto;top:50px;">
+	<div class="utterances" style="height: auto;top:50px;bottom:50px;">
 		<script src="https://utteranc.es/client.js"
 		        repo="PD-team2/SpringProject"
 		        issue-term="pathname"
