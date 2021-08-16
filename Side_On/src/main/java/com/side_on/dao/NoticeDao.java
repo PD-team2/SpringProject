@@ -22,4 +22,13 @@ public interface NoticeDao {
 
 	public Notice selectAdminNotice(String noticeNo);
 
+	/** 경고 게시글 숨김 해제 */
+	public void updatePostCondition(String noticeNo);
+
+	/** 경고 게시글 작성자 아이디 select */
+	public String selectRestUser(String noticeNo);
+	
+	/** 공지사항 삭제 */
+	public void deleteNoticeDetailNo(String noticeNo);
+	
 }

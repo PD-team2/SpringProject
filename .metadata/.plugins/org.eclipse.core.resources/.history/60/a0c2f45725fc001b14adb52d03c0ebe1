@@ -1,0 +1,118 @@
+package com.side_on.dto;
+
+public class PageMakerRc {
+	/* 시작 페이지 */
+	private int startPage;
+	
+	/* 끝 페이지 */
+	private int endPage;
+	
+	/* 이전 페이지, 다음 페이지 존재유무 */
+	private boolean prev, next;
+	
+	/*전체 게시물 수*/
+	private int count;
+	
+	/* 현재 페이지, 페이지당 게시물 표시수 정보 */
+	private CriteriaRc cri;	
+	
+	//화면에 보여지는 페이지블럭의 수
+	private int displayPageNum = 6;
+	
+	/* 생성자 */
+	public PageMakerRc() {}
+	
+	public PageMakerRc(CriteriaRc cri, int count) {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public PageMakerRc(int count, int startPage, int endPage, boolean prev, boolean next, CriteriaRc cri,
+			int displayPageNum) {
+		super();
+		this.count = count;
+		this.startPage = startPage;
+		this.endPage = endPage;
+		this.prev = prev;
+		this.next = next;
+		this.cri = cri;
+		this.displayPageNum = displayPageNum;
+	}
+
+	public int getCount() {
+		return count;
+	}
+	
+	
+
+	public void setCount(int count) { //변경
+		this.count = count;
+		System.out.println("DB에서 총 글의 개수를 계산");
+		//총 글의 개수를 가지고 왔을때 필요한 정보를 계산
+		calcDate();
+	}
+	
+	private void calcDate() {
+		endPage = (int) (Math.ceil(cri.getPageNum()/(double)displayPageNum) * displayPageNum);
+		startPage = (endPage - displayPageNum) +1;
+		int tempEndPage = (int) (Math.ceil(count/(double)cri.getAmount()));
+		if(endPage > tempEndPage) endPage = tempEndPage;
+		prev = (startPage == 1? false:true);
+		next = (endPage * cri.getAmount() >= count? false:true);
+		System.out.println("페이징처리정보 계산");
+	}
+
+	public int getStartPage() {
+		return startPage;
+	}
+
+	public void setStartPage(int startPage) {
+		this.startPage = startPage;
+	}
+
+	public int getEndPage() {
+		return endPage;
+	}
+
+	public void setEndPage(int endPage) {
+		this.endPage = endPage;
+	}
+
+	public boolean isPrev() {
+		return prev;
+	}
+
+	public void setPrev(boolean prev) {
+		this.prev = prev;
+	}
+
+	public boolean isNext() {
+		return next;
+	}
+
+	public void setNext(boolean next) {
+		this.next = next;
+	}
+
+	public CriteriaRc getCri() {
+		return cri;
+	}
+
+	public void setCri(CriteriaRc cri) { //변경
+		this.cri = cri;
+	}
+
+	public int getDisplayPageNum() {
+		return displayPageNum;
+	}
+
+	public void setDisplayPageNum(int displayPageNum) {
+		this.displayPageNum = displayPageNum;
+	}
+	
+	@Override
+	public String toString() {
+		return "PageMaker [count=" + count + ", startPage=" + startPage + ", endPage=" + endPage + ", prev="
+				+ prev + ", next=" + next + ", cri=" + cri + ", displayPageNum=" + displayPageNum + "]";
+	}	
+}

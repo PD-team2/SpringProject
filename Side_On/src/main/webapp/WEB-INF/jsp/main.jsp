@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SideOn</title>
+<title>Side-On</title>
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
@@ -29,7 +29,7 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" Style="background-color: white;">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" Style="background-color: #4D4D4D;">
             <div class="container">
             <!-- 로고 추가해야함  -->
                 <a class="navbar-brand" href="/"><img src="https://raw.githubusercontent.com/PD-team2/SpringProject_Output/main/JaeHyunKim/IMG/Side%20On.png" alt="..." /></a>
@@ -42,50 +42,50 @@
                        
                          <c:choose>
 							<c:when test="${(empty memberId && empty grade) || empty dto}">
-								<li class="nav-item"><a class="nav-link" href="/member/loginForm" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/member/loginForm" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>LogIn</a></li>	
-								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>Recruit</a></li>
-								<li class="nav-item"><a class="nav-link" href="/find/list" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/find/list" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>Find</a></li>
-								<li class="nav-item"><a class="nav-link" href="/board/FaQBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/board/FaQBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>Contact</a></li>
 							</c:when>
 							
 							<c:when test="${(not empty memberId && not empty grade) || empty dto}">
 							<c:if test="${grade == 'A' || dto.grade == 'A'}">
-								<li class="nav-item"><a class="nav-link" href="/notice/noticeList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/notice/noticeList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>Notice</a></li>	
-								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>Recruit</a></li>
-								<li class="nav-item"><a class="nav-link" href="/find/list" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/find/list" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>Find</a></li>
-								<li class="nav-item"><a class="nav-link" href="/vote/pollList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/vote/pollList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>vote</a></li>		
-								<li class="nav-item"><a class="nav-link" href="/board/replyBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/board/replyBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>Board</a></li>
-								<li class="nav-item"><a class="nav-link" href="/board/Mypage" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/board/Mypage" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>MyPage</a></li>
-								<li class="nav-item"><a class="nav-link" href="/admin/dashboard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/admin/dashboard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>AdminPage</a></li>
-								<li class="nav-item"><a class="nav-link" href="/member/logout" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/member/logout" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>LogOut</a></li>	
 							</c:if>
 							
 							<c:if test="${grade == 'G' || dto.grade == 'G'}">
-								<li class="nav-item"><a class="nav-link" href="/notice/noticeList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/notice/noticeList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>Notice</a></li>	
-								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/recruit/recruitHome" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>Recruit</a></li>
-								<li class="nav-item"><a class="nav-link" href="/find/list" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/find/list" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>Find</a></li>
-								<li class="nav-item"><a class="nav-link" href="/vote/pollList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/vote/pollList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>vote</a></li>	
-								<li class="nav-item"><a class="nav-link" href="/board/replyBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/board/replyBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>Board</a></li>
-								<li class="nav-item"><a class="nav-link" href="/board/Mypage" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/board/Mypage" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>MyPage</a></li>
-								<li class="nav-item"><a class="nav-link" href="/member/logout" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/member/logout" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>LogOut</a></li>
 							</c:if>	
 							</c:when>			
@@ -97,46 +97,19 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="head-subheading">Welcome To Side-On Platform</div>
-                <div class="head-subheading2">STUDY / DEVELOP / EVOLVE</div>
-                <a class="JoinButton" href="#services">Side-On?</a>
-                <img class="logoLocation" src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/Side%20On%20logo.png" alt="..." />
+                <div class="head-subheading1">Welcome to</div>
+                <div class="head-subheading2">Side-On Platform!</div>
+                <div class="head-subheading3">Study / Develop / Evolve</div>
+                <a class="mastheadButton" href="#services"><img src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/mainButton.png" alt="..." /></a>
             </div>
         </header>
         <!-- Services-->
         <section class="service-section" id="services">
             <div class="container">
                 <div class="text-center">
-                   <img class="SideOnExplainImg" src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/SideOn_Explain.png" alt="..." />
+                   <img class="SideOnExplainImg" src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/SideOnExplain.png" alt="..." />
                 </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <img class="serviceImg" src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/Management%20People.png" alt="..." />
-                        </span>
-                        <h4 class="my-3">최적 프로젝트 팀 모집</h4>
-                        <p class="text-muted">본인이 필요한 직군의 사람들을 여기서 모집해보세요.<br>
-                        모집분야를 제공합니다.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                             <img class="serviceImg" src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/Connection.png" alt="..." />
-                        </span>
-                        <h4 class="my-3">팀원 찾기</h4>
-                        <p class="text-muted">본인이 필요한 팀원을 직접 찾아서 연락해보세요.<br>
-                        Side-On에선 가능합니다!</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                             <img class="serviceImg" src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/Analytics.png" alt="..." />
-                        </span>
-                        <h4 class="my-3">다양한 서포트 제공</h4>
-                        <p class="text-muted">프로젝트 관리를 위한 페이지부터<br>
-                        운영진과의 채팅, 투표기능까지 <br>
-                        당신의 프로젝트를 서포트합니다.</p>
-                    </div>
-                </div>
-            </div>
+               
         </section>
          <!-- Portfolio Grid-->
             <!-- Header-->
@@ -450,7 +423,8 @@
                     <!-- an error submitting the form-->
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                     <!-- Submit Button-->
-                    <div class="text-center"><button type="button" class="btn-warning" onclick="sendMail();">문의하기</button></div>
+                    <div class="text-center">
+                    <a onclick="sendMail();"><img src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/sendButton.png"></a></div>
                 </form>
             </div>
         </section>

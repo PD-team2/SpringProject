@@ -6,10 +6,8 @@
     height: 600px;
     margin: auto;
     margin-top: 40px;
-    margin-bottom: 40px;
-    
+    margin-bottom: 40px;   
 }
-
 
 .container {
 	position:relative;
@@ -33,7 +31,6 @@
     overflow: auto;
     border-radius: 8px;
     padding:20px;
-
 }
 
 .chating .me {
@@ -41,17 +38,19 @@
     font-size:20px;
     color: #ffc800;
     text-align: right;
-
 }
+
 .chating .others {
     font-family:'Pretendard'; 
     font-size:20px;
     color: #585858;
     text-align: left;
 }
+
 table.inputTable {
 	 margin: auto;
 }
+
 input {
     margin-top: 12px;
     margin: auto;
@@ -64,12 +63,12 @@ input {
     border-radius: 8px;
     border:0px;
 }
+
 #yourMsg {
     display: none;
 }
 
-.inputTable Button {
-	
+.inputTable Button {	
     margin-top: 0px;
     margin-left: 10px;
     font-family:'Pretendard'; 
@@ -80,5 +79,4 @@ input {
     width: 135px;
     height: 56px;
     border:0px;
-
 }

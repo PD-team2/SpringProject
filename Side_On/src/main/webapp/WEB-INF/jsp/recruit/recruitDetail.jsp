@@ -15,7 +15,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" >
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 	
+	<script type="text/javascript">
+	  Kakao.init('2a2410bb5eab80b194f96b2e1d912b59'); // 초기화
+	 
+	  var title = $('#title').val();
+	  var url = $('#url').val();
+
+	  
+	  function sendLink() { // 카카오톡 공유하기
+	    Kakao.Link.sendDefault({
+	      objectType: 'text',
+	      text: '${list.title}',
+	      link: {
+	        mobileWebUrl: 'http://localhost:8070/recruit/recruitDetail?recruit_num=${list.recruit_num}',
+	        webUrl: 'http://localhost:8070/recruit/recruitDetail?recruit_num=${list.recruit_num}'
+	      },
+	    })
+	  }
+	
+</script>
 
 </head>
 <body>
@@ -48,24 +68,38 @@
                         </div>
                         
                      <div>
-                  		<h3 class="center">user01님</h3>
-                  	</div>
-                        
+                  		<h3 class="center">${list.memberId}</h3>
+                  	</div>             
                     </div>
+                    
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h2>
-                                    	K사 개발자와 함께하는 미니 프로젝트
+                                    	${list.title}
                                     </h2>
+                                    <input type="hidden" value="${list.title }" id="title" value="title">
+                                    <input type="hidden" value="${list.recruit_num }" id="url" name="url">
                                     <h4 style="color:gray;">
-                                 		머신러닝을 사용한 프로젝트를 개발합니다.
+                                 		${list.simple_info}
                                  		<hr>
                                     </h4>
-                                   	<h5>지원 방법 : 무료 </h5>
-                                   	<p>해당 게시글은 무료로 지원이 가능합니다</p>
-                                   	
-                                   	<h5>지원 방법 : 유료 ( 30,000원 )</h5>
-                                   	<p>해당 게시글은 결제 후 지원이 가능합니다</p>
+                                    <c:choose>
+	                                    <c:when  test="${ list.pay_check == 'y'}">
+	                                    	<h5>지원 방법 : 유료 (${list.pay_amount}원) </h5>
+		                                   	<p>해당 게시글은 결제 후 지원이 가능합니다</p>
+		                                  </c:when> 	
+		                                  
+		                                  <c:when  test="${ list.pay_check == 'Y'}">
+	                                    	<h5>지원 방법 : 유료 (${list.pay_amount}원) </h5>
+		                                   	<p>해당 게시글은 결제 후 지원이 가능합니다</p>
+		                                  </c:when> 
+		                                  
+		                                  <c:otherwise>
+		                                   	<h5>지원 방법 : 무료 </h5>
+		                                   	<p>해당 게시글은 무료로 지원이 가능합니다</p>
+		                                  </c:otherwise>
+                                   </c:choose>
+                                   
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">리더 소개</a>
@@ -77,24 +111,95 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="공유하기"/>
-                    </div>
-                  
-                 
+                	 <a id="kakao-link-btn" href="javascript:sendLink()">
+					  <img
+					    src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+					  />
+					</a>
+
+                    </div>   
+                    
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-work">
                         <hr>
-                    
 	                           <h5 class="center">모집 분야</h5><br>
 	                            <ul class="center" style=" margin-left: -10%" >
+	                            
+	                     	   <!-- 모집분야 조건문 -->     
+	                            <c:if test="${ list.front != null  && list.front > 0}">
+	                        	    <c:if test="${ part.front != null }">
+								 		<li>
+								 				  <h5 class="center">프론트엔드 ${part.front} / ${list.front }</h5>
+								 		</li>
+							 		</c:if>
+							 	</c:if>	
+							 	
+							 	<c:if test="${ list.back != null  && list.back > 0}">
+							 		 <c:if test="${ part.back != null }">
+								 		<li>
+								 				  <h5 class="center">백엔드 ${part.back} / ${list.back }</h5>
+								 		</li>
+							 		</c:if>
+							 	</c:if>	
+							 	
+							 	<c:if test="${ list.aos != null  && list.aos > 0}">
+							 		<c:if test="${ part.aos != null }">
 							 		<li>
-							 				  <h5 class="center">프론트엔드 0/2</h5>
+							 				  <h5 class="center">안드로이드 ${part.aos} / ${list.aos }</h5>
 							 		</li>
+							 		</c:if>
+							 	</c:if>	
+							 	
+							 	<c:if test="${ list.ios != null  && list.ios > 0}">
+							 		<c:if test="${ part.ios != null }">
+							 		<li>
+							 				  <h5 class="center">IOS  ${part.ios} / ${list.ios }</h5>
+							 		</li>
+							 		</c:if>
+							 	</c:if>	
+							 	
+							 	<c:if test="${ list.server != null  && list.server > 0}">
+							 		<c:if test="${ part.server != null  }">
+								 		<li>
+								 				  <h5 class="center">서버 ${part.server} / ${list.server }</h5>
+								 		</li>
+							 		</c:if>	
+							 	</c:if>	
+							 	
+							 	<c:if test="${ list.uxui != null  && list.uxui > 0}">
+							 		<c:if test="${ part.uxui != null  }">
+								 		<li>
+								 				  <h5 class="center"> UXUI  ${part.uxui} / ${list.uxui }</h5>
+								 		</li>
+							 		</c:if>
+							 	</c:if>	
+							 	
+							 	<c:if test="${ list.plan != null  && list.plan > 0}">
+								 	<c:if test="${ part.plan != null }">
+								 		<li>
+								 				  <h5 class="center">기획 ${part.plan} / ${list.plan }</h5>
+								 		</li>
+							 		</c:if>
+							 	</c:if>	
+							 	
+							 	
+							 	<c:if test="${ list.pm != null  && list.pm > 0}">
+							 		<c:if test="${ part.pm != null }">
+								 		<li>
+								 				  <h5 class="center"> PM ${part.pm} / ${list.pm }</h5>
+								 		</li>
+							 		</c:if>
+							 	</c:if>	
+							 		
+							 		
+							 		
 					 			</ul>			
                         </div>
-                        <button type="submit" style = "margin-left:40%"class="btn btn-warning center" onclick="apply()">지원하기</button>
+                        
+                        <input type="button" class="btn btn-warning" style= "margin-left:38%;"onclick="location.href='/recruit/recruitApply?recruit_num=${list.recruit_num}'" value="지원하기">
+                      <!-- <button type="button" style = "margin-left:40%"class="btn btn-warning center"onclick="location.href='recruitDetail?recruit_num=${list.recruit_num}'">지원하기</button>  --> 
                     </div>
                     
                     
@@ -103,33 +208,39 @@
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                       
                                         <div class="row">
-                                            <div class="col-md-9">
-                                          안녕하세요, 현재 네카라쿠배 중 카카오에 근무하고 있는 5년차 시니어 개발자 김코코입니다. 
-                                            </div>
-                                         </div>   
-                       
-                            </div>
+	                                            <div class="col-md-9">
+	                              			         ${list.content}
+	                                         	</div>   
+                       					</div> 	
+                         	</div>
+                         			   
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <label>프로젝트 기간</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>2021.08.15~2021.08.30</p>
+                                                <p>  ${list.start_date} ~ ${list.end_date} </p>
                                             </div>
                                         </div>
                                         
                                     <div class="row">
                                             <div class="col-md-9">
-                                        머신러닝을 이용한 프로젝트를 개발하려고 합니다. 프로젝트 하는 동안 제가 코드 리뷰 및 멘토링을 진행할거예요. 1석2조의 기회 놓치지마세요!
+                              		          ${pj_content}
                                             </div>
                                          </div>   
-               
                             </div>
                         </div>
                     </div>
                 </div>
             </form>           
+            
+            <div style="text-align: right;">
+            <button onclick="history.back()" type="button" class="btn btn-default" style="width: 100px; height: 35px;">뒤로가기</button>
+			&nbsp;&nbsp;
+			<!-- Small modal -->
+			<button type="button" class="btn btn-danger" style="width: 80px; height: 35px;" data-toggle="modal" data-target=".bs-example-modal-lg">신고</button>           
+            </div>
         </div>
 
 	<!-- 끝 -->
@@ -143,6 +254,8 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        
+        
    
 </body>
 </html>

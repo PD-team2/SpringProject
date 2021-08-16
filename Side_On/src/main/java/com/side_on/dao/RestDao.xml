@@ -24,5 +24,35 @@
 	<select id="selectRest" resultType="com.side_on.dto.Rest" parameterType="String">
 		select * from rest where rest_no=#{restNo}
 	</select>
+	
+	<update id="updateRestManageModal" parameterType="String">
+		UPDATE REST SET
+		rest_check = 'T', rest_result =#{restResult}, rest_confirm = to_char(sysdate, 'yyyy-MM-dd') 
+		WHERE rest_no =#{restNo}
+	</update>
+
+	<select id="selectRestUser" resultType="String" parameterType="String">
+		SELECT member_id 
+		FROM REST
+		WHERE rest_no =#{restNo}
+	</select>
+
+	<select id="selectRestPostNo" resultType="String" parameterType="String">
+		SELECT notice_no
+		FROM REST
+		WHERE rest_no =#{restNo}
+	</select>
+	
+	<insert id="insertRest" parameterType="String">
+		INSERT into rest 
+		VALUES(SEQ_REST.nextval
+				, #{noticeNo}
+				, #{memberId}
+				, #{reason}
+				, to_char(sysdate, 'yyyy-MM-dd')
+				, null 
+				,'F'
+				, null)
+	</insert>
 
 </mapper>

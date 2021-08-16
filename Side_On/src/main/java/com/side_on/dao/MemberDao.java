@@ -39,4 +39,7 @@ public interface MemberDao {
 	/** 내정보 변경 */
 	public int updateMember(String memberId, String memberPw, String name, String mobile, String email);
 
+	/** 경고 횟수 추가 */
+	public void updateRestCount(String memberId);
+	
 }

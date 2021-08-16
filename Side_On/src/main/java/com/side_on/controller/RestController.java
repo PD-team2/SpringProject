@@ -28,12 +28,24 @@ public class RestController {
 		return "rest/restList";
 	}
 	
-	@RequestMapping("/rest/restDetail")
-	public String restDetail(String restNo, Model model, HttpSession session) {
-		Rest dto = restService.restDetail(restNo);
-		log.debug("rest Controller :: restDetail : " + restNo);
-		model.addAttribute("dto", dto);
-		return "rest/restDetail";
+	@RequestMapping("/rest/restManageModal")
+	public String restManageModal(String restNo, String restResult) {
+		log.debug(restNo + " / " + restResult);
+		restService.restManageModal(restNo, restResult);
+		return "rest/restList";
+	}
+	
+	@RequestMapping("/notice/restReportModal")
+	public String restReportModal(String noticeNo, String radioReason, String textReason) {
+		log.debug(noticeNo + "/" + radioReason + "/" + textReason);
+		String reason = null;
+		if(radioReason.equals("etc")) {
+			reason = textReason;
+		} else {
+			reason = radioReason;
+		}
+		restService.restReportModal(noticeNo, reason);
+		return "notice/noticeList";
 	}
 	
 }

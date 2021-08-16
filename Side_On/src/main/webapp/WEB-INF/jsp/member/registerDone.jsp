@@ -28,7 +28,6 @@
    <!-- navibar -->
        <%@ include file="../inc/header.jsp" %>
     <div class="container">
-
 <!-- Outer Row -->
         <div class="row justify-content-center" >
 

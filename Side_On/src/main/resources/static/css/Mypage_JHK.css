@@ -18,11 +18,9 @@ a {
     text-align: center;
     width: 1249px;
     height: 632px;
-  
 }
    
-.MyProfile {
-    
+.MyProfile {   
     float:left;
     margin-right:24px;
     margin-top:24px;
@@ -44,9 +42,9 @@ div.title {
 
 div.expalin {  
     margin-top: 32px;
-    color:#7C7B7B;
-    
+    color:#7C7B7B;  
 }
+
 .button {
     position: relative;
     margin-top: 35px;

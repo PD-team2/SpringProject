@@ -1,0 +1,93 @@
+package com.side_on.dto;
+
+public class PageMakerRc {
+	/* 시작 페이지 */
+	private int startPage;
+	
+	/* 끝 페이지 */
+	private int endPage;
+	
+	/* 이전 페이지, 다음 페이지 존재유무 */
+	private boolean prev, next;
+	
+	/*전체 게시물 수*/
+	private int count;
+	
+	/* 현재 페이지, 페이지당 게시물 표시수 정보 */
+	private CriteriaRc cri;	
+	
+	//화면에 보여지는 페이지블럭의 수
+	private int displayPageNum = 6;
+	
+	public PageMakerRc() {}
+	/* 생성자 */
+	public PageMakerRc() {}
+	public PageMakerRc(int totalCount, int startPage, int endPage, boolean prev, boolean next, Criteria cri,
+			int displayPageNum) {
+		super();
+		this.totalCount = totalCount;
+		this.startPage = startPage;
+		this.endPage = endPage;
+		this.prev = prev;
+		this.next = next;
+		this.cri = cri;
+		this.displayPageNum = displayPageNum;
+	}
+
+	public int getStartPage() {
+		return startPage;
+	}
+
+	public void setStartPage(int startPage) {
+		this.startPage = startPage;
+	}
+
+	public int getEndPage() {
+		return endPage;
+	}
+
+	public void setEndPage(int endPage) {
+		this.endPage = endPage;
+	}
+
+	public boolean isPrev() {
+		return prev;
+	}
+
+	public void setPrev(boolean prev) {
+		this.prev = prev;
+	}
+
+	public boolean isNext() {
+		return next;
+	}
+
+	public void setNext(boolean next) {
+		this.next = next;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
+	}
+
+	public CriteriaRc getCri() {
+		return cri;
+	}
+
+	public void setCri(CriteriaRc cri) {
+		this.cri = cri;
+	}
+
+	@Override
+	public String toString() {
+		return "PageMakerDTO [startPage=" + startPage + ", endPage=" + endPage + ", prev=" + prev + ", next=" + next
+				+ ", count=" + count + ", cri=" + cri + "]";
+	}	
+	
+	
+	
+}

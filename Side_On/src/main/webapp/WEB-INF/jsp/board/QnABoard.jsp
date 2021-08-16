@@ -47,7 +47,8 @@
 			<th>${dto.qnaBoardNo}</th>
 			<th onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';">
 			<a href="QnABoardDetail?qnaBoardNo=${dto.qnaBoardNo}">${dto.qnaBoardTitle}</a></th>
-			<th onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';">${dto.memberId}</th>
+			<th onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';">
+			<a href="/board/QnABoard?pageNum=1&amount=10&keyword=${dto.memberId}&type=W">${dto.memberId}</a></th>
 			<th>${dto.qnaBoardDate}</th>
 			<th>${dto.qnaBoardViews}</th>
 		</tr>
@@ -55,7 +56,6 @@
 </table>  	          
 
 <!-- 페이징 영역 -->
-<nav class="pagination-outer center" aria-label="Page navigation">
 <div class="mappingArea">
 	 <ul class="pagination">
 	     <li class="page-item">
@@ -91,7 +91,6 @@
 		<input type="hidden" name="keyword" value="${pageMaker.cri.keyword }">	
 		<input type="hidden" name="type" value="${pageMaker.cri.type }">	
 	</form>
-	</nav>
 <!-- 검색창 -->
 <div class="search_wrap">
 		<div class="search_area">

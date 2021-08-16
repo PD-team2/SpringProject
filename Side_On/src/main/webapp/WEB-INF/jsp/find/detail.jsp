@@ -1,4 +1,4 @@
-qe	1<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -46,8 +46,7 @@ qe	1<%@ page language="java" contentType="text/html; charset=UTF-8"
                        	<div>
                         <p class="lead">실무 프로젝트 다수 경험있습니다. 자세한 포트폴리오가 궁금하신 분은 hhh@naver.com으로 메일주세요.</p>
                        	</div>
-                       	 <a class="badge bg-warning text-decoration-none link-light" href="#!">Front-end(프론트)</a>
-                       	 <a class="badge bg-warning text-decoration-none link-light" href="#!">Back-end(백엔드)</a>
+                       	 <a class="badge bg-warning text-decoration-none link-light" href="#!">Full-stack</a>
                         <br>
                         <br>
                         <div class="d-flex">
@@ -60,6 +59,10 @@ qe	1<%@ page language="java" contentType="text/html; charset=UTF-8"
                     </div>
                 </div>
                 <br>
+                  <div style='float:right;'>
+                  <a href="form"><input type="button" class="btn btn-warning" value="수정"><a>
+                  <a href="detail/delete"><input type="button" class="btn btn-danger" value="삭제"></a>
+                  </div>
                   <button type="reset" class="btn btn-light" ><a href="list" style="color:black; text-decoration:none;">목록으로 가기</a></button>
             </div>
             
