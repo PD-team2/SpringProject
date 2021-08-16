@@ -57,3 +57,7 @@ div.expalin {
 	box-sizing: border-box;
 	border-radius: 8px;
 }
+
+.button:hover {
+	color:#ffc800;
+}

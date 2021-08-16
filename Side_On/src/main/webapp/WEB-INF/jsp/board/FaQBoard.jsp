@@ -64,7 +64,7 @@ A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
 		<div class="footerTitle">문의 남기기</div>
 		<div class="footerExplain">문의사항을 남겨주시면 메일로 답변해드립니다.</div>
 		<div class="footerExplain2">답장 받으실 메일을 남겨주세요.</div>
-		<input type="button" class="btn-warning" style="margin-top:10px; margin-left:20px;" value="문의하기"
+		<input type="button" class="footerButton" style="margin-top:10px; margin-left:20px;" value="문의하기"
 		        onclick="location.href='contactEmail'">
 	</div>
 	<c:choose>
@@ -74,7 +74,7 @@ A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
 		<div class="footerTitle">문의 게시판</div>
 		<div class="footerExplain">문의 게시판을 이용하실 수 있습니다.</div>
 		<div class="footerExplain2">문의게시판 이동</div>
-		<input type="button" class="btn-warning" style="margin-top:10px; margin-left:20px;" value="문의게시판"
+		<input type="button" class="footerButton" style="margin-top:10px; margin-left:20px;" value="문의게시판"
 		        onclick="location.href='QnABoard'">
 		</div>
 	</c:if>
@@ -84,7 +84,7 @@ A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
 		<div class="footerTitle">문의 게시판</div>
 		<div class="footerExplain">문의 게시판을 이용하실 수 있습니다.</div>
 		<div class="footerExplain2">문의게시판 이동</div>
-		<input type="button" class="btn-warning"  style="margin-top:10px; margin-left:20px;" value="문의게시판"
+		<input type="button" class="footerButton"  style="margin-top:10px; margin-left:20px;" value="문의게시판"
 		        onclick="location.href='QnABoard'">
 		</div>
 	</c:if>	
