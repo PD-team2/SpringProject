@@ -39,6 +39,18 @@
 		         <result property="payment_date" column="payment_date"/>
 	</resultMap>
 	
+		<resultMap type="com.side_on.dto.Reward" id="reward">
+		 <result property="payment_id" column="payment_id"/>
+		  <result property="recruit_num" column="Recruit_num"/>
+		   <result property="apply_num" column="apply_num"/>
+		    <result property="writer_memberId" column="writer_memberId"/>
+		     <result property="apply_memberId" column="apply_memberId"/>
+		      <result property="pay_amount" column="pay_amount"/>
+		       <result property="payment_date" column="payment_date"/>
+		        <result property="reward_yn" column="reward_yn"/>
+	</resultMap>
+	
+	
  	<!--1. 모집 게시글 등록하기-->
 	<insert id="insertRecruitBoard" parameterType="com.side_on.dto.RecruitBoard">
 		insert into Recruit
@@ -166,12 +178,41 @@
         select email  from member where member_Id= #{memberId}
    	 </select>
    	 
-   	 <insert id="recruitDelete" >
+   	 <insert id="recruitDelete" > 
    	 	update recruit set visible_check = #{n} where Recruit_num = #{recruit_num}
    	 </insert>
    	 
    	 <insert id="updateRecruitBoard" parameterType="com.side_on.dto.RecruitBoard">
 		update recruit set start_date=#{start_date}, end_date=#{end_date}, title=#{title}, content=#{content},pay_check=#{pay_check}, pay_amount=#{pay_amount}, simple_info=#{simple_info}, pj_content=#{pj_content},project_name=#{project_name}, front=#{Front}, back=#{Back}, aos=#{aos}, ios=#{ios}, uxui=#{uxui}, plan=#{plan}, pm=#{pm}, server=#{server}
 		where recruit_num = #{recruit_num}
+	</insert>
+	
+	<select id="getWriterMemberId" parameterType="int" resultType="String">
+		select memberId from recruit where recruit_num = #{recruit_num}
+	</select> 
+	
+	<insert id="setReward"  parameterType="com.side_on.dto.Reward">
+	 INSERT INTO reward  VALUES(
+		 reward_SEQ.nextval,
+		#{recruit_num},
+		#{apply_num},
+		#{writer_memberId}, 
+		#{apply_memberId}, 
+		#{pay_amount}, 
+		#{payment_date},
+		#{reward_yn})
+	</insert>
+	
+	<select id="getPayAmount" resultType="String">
+		select pay_amount from recruit where memberId = #{writer_memberId} and Recruit_num = #{recruit_num}
+	</select>
+	
+	<select id="getRewardList"  resultMap="reward" >
+		select * from reward
+	</select>
+
+	<insert id="getReward" >
+		update reward set reward_yn='y'
+		where recruit_num = #{recruit_num} and payment_id = #{payment_id}
 	</insert>
 </mapper>

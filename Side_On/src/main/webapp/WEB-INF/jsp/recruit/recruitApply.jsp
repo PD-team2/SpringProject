@@ -201,7 +201,7 @@
 								
 								  <div class="form-group">
 								  	 <label for="pay" class="form-label mt-4">최종 결제 금액</label>
-								      <input type="text" class="form-control" id="pay" aria-describedby="pay" placeholder="${list.pay_amount }"disabled>
+								      <input type="text" class="form-control" id="pay_amount" aria-describedby="pay" placeholder="${list.pay_amount }"disabled>
 								    </div>  
 						    	</c:if>
 						    	
@@ -209,7 +209,7 @@
 								
 								  <div class="form-group">
 								  	 <label for="pay" class="form-label mt-4">최종 결제 금액</label>
-								      <input type="text" class="form-control" id="pay" aria-describedby="pay" placeholder="${list.pay_amount }"disabled>
+								      <input type="text" class="form-control" id="pay_amount" aria-describedby="pay" placeholder="${list.pay_amount }"disabled>
 								    </div>  
 						    	</c:if>
 								<br>

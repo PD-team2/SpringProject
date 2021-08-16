@@ -31,6 +31,7 @@ import com.side_on.dto.RecruitBoard;
 import com.side_on.dto.RecruitCriteria;
 import com.side_on.dto.RecruitMyPage;
 import com.side_on.dto.RecruitPaging;
+import com.side_on.dto.Reward;
 import com.side_on.service.RecruitService;
 import com.side_on.util.Utility;
 import com.side_on.util.RandomStringUtils;
@@ -189,9 +190,31 @@ public class RecruitController {
 	
 	/** 관리자 페이지 recruitAdmin*/
 	@RequestMapping("/recruit/recruitAdmin")
-	public String recruitAdmin() {
+	public String recruitAdmin(Model model) {
+		
+		ArrayList<Reward> reward = service.getRewardList();
+		model.addAttribute("reward", reward);
 		
 		return "recruit/recruitAdmin"; 
+	}
+	
+	/**리워드 지급*/
+	@RequestMapping("/recruit/reward/complete")
+	public String rewardComplete(int payment_id,int recruit_num, String pay_amount, Model model) {
+		
+	System.out.println("컨트롤러 입니다");
+	
+	
+		int result = service.getReward(payment_id, recruit_num,pay_amount);
+		
+		if(result == 1) {
+			return "recruit/recruitAdmin";
+		}else {
+			model.addAttribute("title", "[오류] 리워드 지급 실패");
+			model.addAttribute("message", "리워드 지급을 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요.");
+			return "error";
+		}
+	
 	}
 	
 	/** 지원하기 recruitApply*/
@@ -200,6 +223,8 @@ public class RecruitController {
 			
 		RecruitBoard list = service.memberDetail(recruit_num);
 		model.addAttribute("list",list);
+		
+		System.out.println("*******"+list);
 		
 		return "recruit/recruitApply"; 
 	}
@@ -213,15 +238,6 @@ public class RecruitController {
 		apply.setMember_id(memberId);
 		apply.setJoin_yn("y");
 		
-		
-		
-		if(apply.getPay_check()=="y") {
-			apply.setPayment_date(Utility.getCurrentDate());
-		//	int result = service.setReward();
-		}else {
-			apply.setPayment_date("");
-		}
-		
 		//지원 등록
 		int result = service.recruitApply(apply);
 		
@@ -229,13 +245,36 @@ public class RecruitController {
 		int apply_num = service.getApply_Num(recruit_num, memberId);
 		String part = apply.getPart();
 		int count = 1;
+	
+		String pay_check = apply.getPay_check();
 		
-		System.out.println(apply_num);
+		//**********************************
+		
+		// 리워드 테이블 저장 
+	
+		apply.setPayment_date(Utility.getCurrentDate());	
+			
+		//글번호 글 쓴이 가져오기
+		String writer_memberId = service.getWriterMemberId(recruit_num);
+		//가격 가져오기 
+		String pay_amount = service.getPayAmount(recruit_num,writer_memberId);
+			
+			Reward reward  = new Reward();
+			reward.setRecruit_num(apply.getRecruit_num());
+			reward.setWriter_memberId(writer_memberId);
+			reward.setApply_num(apply_num);
+			reward.setApply_memberId(memberId);
+			reward.setPay_amount(pay_amount);
+			reward.setReward_yn(apply.getPay_check());
+			
+			System.out.println("리워드 ++++++"+reward);
+			
+			int rewardResult = service.setReward(reward);
 
 		//모집 분야 count+1
-	//	service.plusCount(recruit_num,apply_num,count,part);
+		//	service.plusCount(recruit_num,apply_num,count,part);
 		
-		if (result == 1) {
+		if (result == 1 && rewardResult == 1 ) {
 			return "recruit/recruitHome";
 		} else {
 			model.addAttribute("title", "[오류] 지원 실패");

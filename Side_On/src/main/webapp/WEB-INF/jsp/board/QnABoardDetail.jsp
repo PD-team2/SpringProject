@@ -11,6 +11,7 @@
 </head>
 <body>
 <%@ include file="../inc/header.jsp" %>
+
 <!-- Header-->
 <header class="bg-warning py-5">
 <a href="/board/QnABoard" style="text-decoration:none">
@@ -25,6 +26,8 @@
  </div>
  </a>
 </header>
+
+<!-- QnA Board -->
 <div class="QnAForm">
 <table class="QnATable" >
 	<tr class="QnATitle">
@@ -78,7 +81,24 @@
 
 <input type="hidden" name="deleteButton" id="deleteButton" onclick="location.href='QnABoardDelete?qnaBoardNo=${dto.qnaBoardNo}'"></input>
 
+<!-- 라이브리 시티 설치 코드 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC81Mzc3NS8zMDI0OA==" class="LiveReArea">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
 
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+</div>
+<!-- 시티 설치 코드 끝 -->
 
 </body>
 </html>

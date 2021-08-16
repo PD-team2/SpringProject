@@ -7,6 +7,22 @@
 <head>
 	<%@ include file="../inc/adminHeadLink.jsp" %>
 	<title>리워드 관리 | Admin </title>
+	
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+	<script>
+	
+		function rewardPay() {
+			var cancel = confirm("[안내] 리워드를 지급하시겠습니까?");
+			
+			if(cancel == true){		
+				alert('[안내] 정상 지급 되었습니다.');
+		    	$('#reward').submit();
+			}else{
+				
+			}
+		}
+	
+	</script>
 </head>
 
 <body id="page-top">
@@ -57,27 +73,43 @@
                 								<table class="table" style="text-align: center; border: 1px solid #dddddd;">
                 									<thead>
                 										<tr>
+                											<th style="background-color: #eeeeee; text-align: center;">결제번호 </th>
                 											<th style="background-color: #eeeeee; text-align: center;">글 번호</th>
                 											<th style="background-color: #eeeeee; text-align: center;">리더</th>
-                											<th style="background-color: #eeeeee; text-align: center;">금액</th>
                 											<th style="background-color: #eeeeee; text-align: center;">결제자</th>
+                											<th style="background-color: #eeeeee; text-align: center;">금액</th>
                 											<th style="background-color: #eeeeee; text-align: center;">리워드 상태</th>
-                											<th style="background-color: #eeeeee; text-align: center;">리워드 </th>
                 										</tr>
                 									</thead>
                 									
-                									<tbody>             										
+                									<tbody>  
+  <c:forEach var="admin" items="${reward}">             									           			
+  
+ <form action="/recruit/reward/complete" method="post" name="reward" id="reward">
+  <input type="hidden" name="payment_id" id="payment_id" value="${admin.payment_id}" >
+    <input type="hidden" name="recruit_num" id="recruit_num" value="${admin.recruit_num}" >
+      <input type="hidden" name="pay_amount" id="pay_amount" value="${admin.pay_amount}" >
+  </form>						
                 											<tr>
-	               												<th>1</th>
-	               												<th>memberId</th>
-	               												<th>80,000</th>
-	               												<th>user01</th>
+                												<th>${admin.payment_id}</th>
+	               												<th>${admin.recruit_num}</th>
+	               												<th>${admin.writer_memberId}</th>
+	               												<th>${admin.apply_memberId}</th>
+	               												<th>${admin.pay_amount}</th>
 	               												<th>  
+	               												<c:if test="${admin.reward_yn == 'y'}">
 	               													<button type="button" class="btn btn-danger" disabled>미지급</button>
+	               													<button type="button" class="btn btn-success" onclick="rewardPay(${admin.pay_amount})">지급하기</button>
+	               												</c:if>
+	               												
+	               												<c:if test="${admin.reward_yn == 'n'}">
 	               													<button type="button" class="btn btn-success" disabled>지급 완료</button>
+	               												</c:if>
 	               												</th>
-	               												<th>  <button type="button" class="btn btn-success">지급하기</button></th>
+		               												
 	               											</tr>
+
+ </c:forEach>              											
                 									</tbody>
                 								</table>
                 							</div>

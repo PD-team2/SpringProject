@@ -14,6 +14,7 @@ import com.side_on.dto.Member;
 import com.side_on.dto.RecruitBoard;
 import com.side_on.dto.RecruitCriteria;
 import com.side_on.dto.RecruitMyPage;
+import com.side_on.dto.Reward;
 
 @Mapper
 public interface RecruitDao {
@@ -66,6 +67,18 @@ public interface RecruitDao {
 	public int recruitDelete(int recruit_num, String n);
 
 	public int updateRecruitBoard(RecruitBoard recruitBoard);
+
+	public int updateRecruitBoard(Reward reward);
+
+	public String getWriterMemberId(int recruit_num);
+
+	public int setReward(Reward reward);
+
+	public String getPayAmount(int recruit_num, String writer_memberId);
+
+	public ArrayList<Reward> getRewardList();
+
+	public int getReward(int payment_id, int recruit_num, String pay_amount);
 
 
 

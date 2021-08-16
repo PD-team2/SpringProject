@@ -16,6 +16,7 @@ import com.side_on.dto.RecruitBoard;
 import com.side_on.dto.RecruitCriteria;
 import com.side_on.dto.RecruitMyPage;
 import com.side_on.dto.RecruitPaging;
+import com.side_on.dto.Reward;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -132,6 +133,26 @@ public class RecruitService {
 
 	public int updateRecruitBoard(RecruitBoard recruitBoard) {
 		return dao.updateRecruitBoard(recruitBoard);
+	}
+
+	public String getWriterMemberId(int recruit_num) {
+		return dao.getWriterMemberId(recruit_num);
+	}
+
+	public int setReward(Reward reward ) {
+		return dao.setReward(reward);
+	}
+
+	public String getPayAmount(int recruit_num, String writer_memberId) {
+		return dao.getPayAmount(recruit_num, writer_memberId);
+	}
+
+	public ArrayList<Reward> getRewardList() {
+		return dao.getRewardList();
+	}
+
+	public int getReward(int payment_id, int recruit_num, String pay_amount) {
+		return dao.getReward( payment_id,  recruit_num,  pay_amount);
 	}
 
 
