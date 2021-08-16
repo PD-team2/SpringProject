@@ -156,7 +156,7 @@ public class RecruitController {
 		
 		String memberId= (String)session.getAttribute("memberId");
 		model.addAttribute("memberId", memberId);
-		return "recruit/recruitWrite"; 
+		return "recruit/recruitHome"; 
 	}
 	
 	/** 마이페이지 모집현황 보기 */
@@ -207,7 +207,7 @@ public class RecruitController {
 		int result = service.getReward(payment_id, recruit_num,pay_amount);
 		
 		if(result == 1) {
-			return "recruit/recruitAdmin";
+			return "redirect:/recruit/recruitAdmin";
 		}else {
 			model.addAttribute("title", "[오류] 리워드 지급 실패");
 			model.addAttribute("message", "리워드 지급을 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요.");
@@ -274,7 +274,7 @@ public class RecruitController {
 		//	service.plusCount(recruit_num,apply_num,count,part);
 		
 		if (result == 1 && rewardResult == 1 ) {
-			return "recruit/recruitHome";
+			return "recruit/recruitMyApply";
 		} else {
 			model.addAttribute("title", "[오류] 지원 실패");
 			model.addAttribute("message", "지원을 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요.");
@@ -290,7 +290,7 @@ public class RecruitController {
 		int result = service.recruitDelete(recruit_num, n);
 		
 		if (result == 1) {
-			return "recruit/recruitMyRecruit";
+			return "redirect:/recruit/recruitMyRecruit";
 		} else {
 			model.addAttribute("title", "[오류] 모집 글 삭제 실패");
 			model.addAttribute("message", "삭제를 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요.");
@@ -371,7 +371,7 @@ public class RecruitController {
 		int result = service.recruitCancel(recruit_num, memberId, join_yn);
 		
 		if(result==1) {
-			return "recruit/recruitHome";
+			return "recruit/recruitMyRecruit";
 		}else {
 			model.addAttribute("title","[오류] 모집 글 삭제 실패");
 			model.addAttribute("message", "글 삭제를 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요");
@@ -426,7 +426,7 @@ public class RecruitController {
 			
 			model.addAttribute("list",list);
 			model.addAttribute("part",part);
-			return "recruit/recruitEdit"; 
+			return "recruit/recruitMyRecruit"; 
 		}
 	
 	/** 아이디 찾기 /member/findID/complete*/
