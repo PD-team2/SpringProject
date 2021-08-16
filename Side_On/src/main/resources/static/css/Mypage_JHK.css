@@ -48,10 +48,12 @@ div.expalin {
 .button {
     position: relative;
     margin-top: 35px;
-    background-color:#595959;
+    background-color:#7C7B7B;
     color:#FFF6F6;
     font-size:18px;
     width: 250px;
     height: 56px;
-    border-radius: 8px;  
+    border: 2px solid #FFC800;
+	box-sizing: border-box;
+	border-radius: 8px;
 }
