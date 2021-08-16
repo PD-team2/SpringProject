@@ -22,6 +22,13 @@ public class BoardController {
 	@Autowired
 	public BoardService boardService;
 	
+	/** 채팅방 */
+	@RequestMapping("/board/chatRoom")
+	public String chatRoom() {
+	
+		return "board/chatRoom";
+	}
+	
 	/** 관리자 채팅화면 */
 	@RequestMapping("/board/chatAdmin")
 	public String chatAdmin() {

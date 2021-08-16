@@ -52,8 +52,8 @@
 									>Find</a></li>
 								<li class="nav-item"><a class="nav-link" href="/vote/pollList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>vote</a></li>	
-								<li class="nav-item"><a class="nav-link" href="/board/replyBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
-									>Board</a></li>
+								<li class="nav-item"><a class="nav-link" href="/board/chatRoom" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
+									>Contact</a></li>
 								<li class="nav-item"><a class="nav-link" href="/board/Mypage" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>MyPage</a></li>
 								<li class="nav-item"><a class="nav-link" href="/admin/dashboard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
@@ -71,8 +71,8 @@
 									>Find</a></li>
 								<li class="nav-item"><a class="nav-link" href="/vote/pollList" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>vote</a></li>	
-								<li class="nav-item"><a class="nav-link" href="/board/replyBoard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
-									>Board</a></li>
+								<li class="nav-item"><a class="nav-link" href="/board/chatRoom" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
+									>Contact</a></li>
 								<li class="nav-item"><a class="nav-link" href="/board/Mypage" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
 									>MyPage</a></li>
 								<li class="nav-item"><a class="nav-link" href="/member/logout" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='#ffffff';"
