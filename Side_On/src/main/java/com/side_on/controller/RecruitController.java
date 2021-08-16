@@ -156,7 +156,7 @@ public class RecruitController {
 		
 		String memberId= (String)session.getAttribute("memberId");
 		model.addAttribute("memberId", memberId);
-		return "recruit/recruitHome"; 
+		return "recruit/recruitWrite"; 
 	}
 	
 	/** 마이페이지 모집현황 보기 */
@@ -274,7 +274,7 @@ public class RecruitController {
 		//	service.plusCount(recruit_num,apply_num,count,part);
 		
 		if (result == 1 && rewardResult == 1 ) {
-			return "recruit/recruitMyApply";
+			return "redirect:/recruit/recruitHome";
 		} else {
 			model.addAttribute("title", "[오류] 지원 실패");
 			model.addAttribute("message", "지원을 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요.");
@@ -325,7 +325,7 @@ public class RecruitController {
 		int result = service.insertRecruitBoard(recruitBoard);
 		
 		if(result==1) {
-			return "recruit/recruitHome";
+			return "redirect:/recruit/recruitHome";
 		}else {
 			model.addAttribute("title","[오류] 모집 글 작성 실패");
 			model.addAttribute("message", "모집 글 작성을 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요");
@@ -352,7 +352,8 @@ public class RecruitController {
 		int result = service.updateRecruitBoard(recruitBoard);
 		
 		if(result==1) {
-			return "recruit/recruitHome";
+			model.addAttribute("memberId", memberId);
+			return "redirect:/recruit/recruitMyRecruit";
 		}else {
 			model.addAttribute("title","[오류] 모집 글 작성 실패");
 			model.addAttribute("message", "모집 글 작성을 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요");
@@ -360,23 +361,27 @@ public class RecruitController {
 		}
 	}
 	
-	/** 모집 페이지 글 삭제
+	/** 지원 취소
 	 * @throws Exception */
 	@RequestMapping("/recruit/recruitCancel")
 	public String recruitCancel(int recruit_num, HttpSession session, Model model)  {
 		
+		
 		String memberId= (String)session.getAttribute("memberId");
 		String join_yn = "n";
+		
+		System.out.println("컨트롤러*****"+recruit_num+","+memberId+","+join_yn);
+		
 		
 		int result = service.recruitCancel(recruit_num, memberId, join_yn);
 		
 		if(result==1) {
-			return "recruit/recruitMyRecruit";
+			return "redirect:/recruit/recruitMyApply";
 		}else {
-			model.addAttribute("title","[오류] 모집 글 삭제 실패");
-			model.addAttribute("message", "글 삭제를 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요");
+			model.addAttribute("title","[오류] 지원 취소 실패");
+			model.addAttribute("message", "지원 취소 작업을 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요");
 			return "error";
-		}
+		}	
 	}
 	
 	/**아이디 찾기*/
@@ -426,7 +431,7 @@ public class RecruitController {
 			
 			model.addAttribute("list",list);
 			model.addAttribute("part",part);
-			return "recruit/recruitMyRecruit"; 
+			return "recruit/recruitEdit"; 
 		}
 	
 	/** 아이디 찾기 /member/findID/complete*/

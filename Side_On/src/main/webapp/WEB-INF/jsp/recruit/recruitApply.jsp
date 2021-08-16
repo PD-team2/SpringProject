@@ -193,7 +193,7 @@
 						    
 						    <div class="form-group">
 						      <label for="exampleTextarea" class="form-label mt-4">자기소개</label>
-						      <textarea class="form-control" id="message" name="message" placeholder="자유롭게 자신을 소개해주세요." rows="3" maxlength="30" required></textarea>
+						      <textarea class="form-control" id="message" name="message" placeholder="자유롭게 자신을 소개해주세요." rows="3" maxlength="25" required></textarea>
 							   
 						    </div>
 							<br>			

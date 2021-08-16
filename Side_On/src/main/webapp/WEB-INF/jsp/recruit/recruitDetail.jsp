@@ -59,12 +59,9 @@
             <form  action="/recruit/recruitApply" method="get" name="apply" id="apply">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="profile-img">
-                            <img src="../img/bear2.jpg" alt=""/>
-                            <div class="file btn btn-lg btn-primary">
-                               <!-- 프로필 사진 -->
-                                <input type="file" name="file"/>
-                            </div>
+                    <div class="profile-img">
+                           	 <img class="img-fluid"  src="../img/user.png" alt="..." />
+                            
                         </div>
                         
                      <div>
@@ -226,7 +223,7 @@
                                         
                                     <div class="row">
                                             <div class="col-md-9">
-                              		          ${pj_content}
+                              		          ${list.pj_content}
                                             </div>
                                          </div>   
                             </div>

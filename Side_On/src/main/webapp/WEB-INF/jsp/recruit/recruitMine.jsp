@@ -59,12 +59,9 @@
             <form  action="/recruit/recruitApply" method="get" name="apply" id="apply">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="profile-img">
-                            <img src="../img/bear2.jpg" alt=""/>
-                            <div class="file btn btn-lg btn-primary">
-                               <!-- 프로필 사진 -->
-                                <input type="file" name="file"/>
-                            </div>
+                       <div class="profile-img">
+                           	 <img class="img-fluid"  src="../img/user.png" alt="..." />
+                            
                         </div>
                         
                      <div>
@@ -83,14 +80,14 @@
                                  		${list.simple_info}
                                  		<hr>
                                     </h4>
-                                    <c:choose>
-	                                    <c:when  test="${ list.pay_check == 'y' && list.pay_check == 'Y'}">
-	                                    	<h5>지원 방법 : 유료 (${list.pay_amount} ) </h5>
+                         			 <c:choose>
+	                                    <c:when  test="${ list.pay_check == 'y'}">
+	                                    	<h5>지원 방법 : 유료 (${list.pay_amount}원) </h5>
 		                                   	<p>해당 게시글은 결제 후 지원이 가능합니다</p>
 		                                  </c:when> 	
 		                                  
 		                                  <c:when  test="${ list.pay_check == 'Y'}">
-	                                    	<h5>지원 방법 : 유료 (${list.pay_amount} ) </h5>
+	                                    	<h5>지원 방법 : 유료 (${list.pay_amount}원) </h5>
 		                                   	<p>해당 게시글은 결제 후 지원이 가능합니다</p>
 		                                  </c:when> 
 		                                  

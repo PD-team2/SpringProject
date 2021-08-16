@@ -318,12 +318,9 @@
 	<div class="container emp-profile" style="font-family: 'Noto Sans KR', sans-serif;">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="profile-img">
-                            <img src="../img/bear2.jpg" alt=""/>
-                            <div class="file btn btn-lg btn-primary">
-                                대표 사진 선택
-                                <input type="file" name="file" id = "file" accept="image/*"  /> 
-                            </div>
+                         <div class="profile-img">
+                           	 <img class="img-fluid"  src="../img/user.png" alt="..." />
+                            
                         </div>
                         
                      <div >
