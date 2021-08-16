@@ -46,7 +46,7 @@
 		<%}%>	
 		</td>
 		<td><td>
-		<button type="button" class="btn btn-info" onclick="javascript:window.open('pollView?num=<%=num%>'
+		<button type="button" class="btn btn-danger" onclick="javascript:window.open('pollView?num=<%=num%>'
 			,'pollView','width=500, height=350')">결과</button>
 		</td>
 	</tr>
