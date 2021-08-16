@@ -26,7 +26,7 @@
 	
 <div align="center">
 <jsp:include page="pollForm.jsp"/>
-<b>설문 리스트</b>
+<b><font size="6em">설문 리스트</font></b><br><br>
 <table>
 	<tr>
 		<td>
