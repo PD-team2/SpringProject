@@ -20,10 +20,6 @@ public class FindService {
 	@Autowired
 	private FindDao findDao;
 
-	public List<Find> findMemberTest() throws Exception {
-		List<Find> testList = findDao.findMemberTest();
-		return testList;
-	}
 	
 	/** 게시글 전체조회 */
 	public ArrayList<Find> findMemberList() {
@@ -31,8 +27,8 @@ public class FindService {
 	}
 
 	/** 게시글 상세조회 */
-	public Find findMemberDetail(String find_writer) {
-		return findDao.selectFindDetail(find_writer);
+	public Find findMemberDetail(int find_no) {
+		return findDao.selectFindDetail(find_no);
 	}
 
 	/** 게시글 작성 */

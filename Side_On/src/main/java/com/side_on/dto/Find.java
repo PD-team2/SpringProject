@@ -27,4 +27,7 @@
  	
  	private String find_content;
  	
+ 	private String memberId;
+ 	
+ 	private String grade;
  }

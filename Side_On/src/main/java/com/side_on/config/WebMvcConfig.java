@@ -35,12 +35,13 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		//.excludePathPatterns("/resource/**");
 		
 		// 2. needToLoginInterceptor : 로그인 체킹 인턴셉터
-		registry.addInterceptor(needToLoginInterceptor).addPathPatterns("/find/form");
+		registry.addInterceptor(needToLoginInterceptor).addPathPatterns("/find/form").addPathPatterns("/find/updateForm")
+		.addPathPatterns("/find/update").addPathPatterns("/find/formDone").addPathPatterns("/find/delete").addPathPatterns("/find/deleteDone");
 		
 		// 3. needToLogoutInterceptor : 로그인상태에서는 사용해서는 안됨
 		registry.addInterceptor(needToLogoutInterceptor)
-			.addPathPatterns("/member/loginForm").addPathPatterns("/member/register")
-			.addPathPatterns("/member/registerDone").addPathPatterns("/member/idCheck");
+			.addPathPatterns("/member/register").addPathPatterns("/member/registerDone")
+			.addPathPatterns("/member/idCheck").addPathPatterns("/member/mobile").addPathPatterns("/member/mobileCheck");
 		
 		// 4. needToAdminInterceptor
 		registry.addInterceptor(needToAdminInterceptor)
