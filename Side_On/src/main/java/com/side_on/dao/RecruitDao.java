@@ -80,6 +80,12 @@ public interface RecruitDao {
 
 	public int getReward(int payment_id, int recruit_num, String pay_amount);
 
+	public String getMemberId(String name, String mobile);
+
+	public String getPwMemberId(String memberId, String mobile);
+
+	public int resetPw(String memberId, String resetPw);
+
 
 
 

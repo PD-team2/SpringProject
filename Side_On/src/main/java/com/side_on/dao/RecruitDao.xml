@@ -80,7 +80,7 @@
 
 		<!--2. 게시글 총 갯수 -->
    <select id="memberAll" resultMap="recruitList">
-        select recruit_num, memberId, title from recruit order by rownum desc
+        select recruit_num, memberId, title from recruit where visible_check = 'y' order by rownum desc
     </select>
 	
 	<!-- 3. 상세 게시글 조회 -->
@@ -106,35 +106,35 @@
     </select>
     
     <select id="selectFront"  resultType="int">
-    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part=#{front}
+    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part='front'
     </select>
     
      <select id="selectBack"  resultType="int">
-    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part=#{back}
+    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part='back'
     </select>
     
      <select id="selectAos"  resultType="int">
-    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part=#{aos}
+    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part='aos'
     </select>
     
      <select id="selectIos" resultType="int">
-    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part=#{ios}
+    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part='ios'
     </select>
     
      <select id="selectServer" resultType="int">
-    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part=#{server}
+    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part='server'
     </select>
     
      <select id="selectUxui"  resultType="int">
-    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part=#{uxui}
+    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part='uxui'
     </select>
     
      <select id="selectPlan" resultType="int">
-    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part=#{plan}
+    	select  COUNT(*) from apply where recruit_num = #{recruit_num} and part='plan'
     </select>
     
      <select id="selectPm"  resultType="int">
-    	select COUNT(*)from apply where recruit_num = #{recruit_num} and part=#{pm}
+    	select COUNT(*)from apply where recruit_num = #{recruit_num} and part='pm'
     </select>
 
 	<!-- 검색 -->
@@ -211,8 +211,21 @@
 		select * from reward
 	</select>
 
-	<insert id="getReward" >
+	<insert id="getReward" > 
 		update reward set reward_yn='y'
 		where recruit_num = #{recruit_num} and payment_id = #{payment_id}
 	</insert>
+	
+	<select id="getMemberId"  resultType="String">
+	    select member_Id from member where name=#{name} and mobile=#{mobile}
+	</select>
+	
+	<select id="getPwMemberId"  resultType="String">
+	    select member_Id from member where member_Id=#{memberId} and mobile=#{mobile} 
+	</select>
+	
+	 <insert id="resetPw" >
+		update member set member_pw=#{resetPw} where member_Id= #{memberId}
+	</insert>
+	
 </mapper>
