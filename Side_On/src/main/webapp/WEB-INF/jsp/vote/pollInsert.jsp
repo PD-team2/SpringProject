@@ -55,8 +55,8 @@
 				<tr>
 					<td>종료일</td>
 					<td colspan=2><select name="edateY">
-							<option value="2020">2020
 							<option value="2021">2021
+							<option value="2022">2022
 					</select>년 <select name="edateM">
 							<%
 								for (int i = 1; i <= 12; i++) {
