@@ -79,8 +79,10 @@ public class MemberController {
 	public String dashboard(Model model) {
 		List<Notice> noticeList = noticeService.dashboardNoticeList();
 		List<Rest> restList = restService.dashboardRestList();
+		int restCount = restService.restUnConfirmCount();
 		model.addAttribute("noticeList", noticeList);
 		model.addAttribute("restList", restList);
+		model.addAttribute("restCount", restCount);
 		return "admin/dashboard";
 	}
 	
