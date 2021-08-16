@@ -76,4 +76,10 @@
 		WHERE member_id=#{memberId}
 	</update>
 	
+	<select id="selectRestUnConfirmCount" resultType="int">
+		select count(*)
+		from rest
+		where rest_check ='T'
+	</select>
+	
 </mapper>

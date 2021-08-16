@@ -35,5 +35,8 @@ public interface RestDao {
 	
 	/** 경고 횟수 추가 */
 	public void updateRestCount(String memberId);
+
+	/** 대시보드 미처리 신고 카운트*/
+	public int selectRestUnConfirmCount();
 	
 }

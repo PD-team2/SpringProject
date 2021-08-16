@@ -74,5 +74,11 @@ public class RestService {
 			log.debug("사유 부재 업데이트 실패" + recruit_num);
 		}
 	}
+	
+	public int restUnConfirmCount() {
+		log.debug("### restUnConfirmCount :: ");
+		int result = restDao.selectRestUnConfirmCount();
+		return result;
+	}
 
 }

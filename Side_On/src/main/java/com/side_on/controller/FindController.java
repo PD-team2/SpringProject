@@ -1,15 +1,12 @@
 package com.side_on.controller;
 
 import java.util.ArrayList;
-import java.util.List;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.side_on.dto.Find;
 import com.side_on.service.FindService;
@@ -33,19 +30,10 @@ public class FindController {
 		
 		ArrayList<Find> find = findService.findMemberList();
 		
-		model.addAttribute("find",find);
+		model.addAttribute("find", find);
 		
 //		log.debug("### list :: " + list);
-		System.out.println("컨트롤러++++"+find);
 		return "find/list";
-	}
-	
-	
-	@RequestMapping(value = "/find/test", method = RequestMethod.GET)
-	public String findMemberTest(Model model) throws Exception {
-		List<Find> testList = findService.findMemberTest();
-		model.addAttribute("testList", testList);
-		return "find/test";
 	}
 	
 	
@@ -65,55 +53,55 @@ public class FindController {
 	
 	/** 게시글 상세조회 화면  */
 	@RequestMapping("/find/detail")
-	public String FindMemberDetail(String find_writer, Model model) {
+	public String FindMemberDetail(int find_no, Model model) {
 		log.info("### FindMemberDetail :: ");
 		
-		Find dto = findService.findMemberDetail(find_writer);
+		Find dto = findService.findMemberDetail(find_no);
 		
 		model.addAttribute("dto", dto);
 		return "find/detail";
 	}
 	
 	/** 게시글 삭제 */
-	@RequestMapping("find/detail/delete")
+	@RequestMapping("/find/delete")
 	public String FindMemberDelete(int find_no, Model model) {
 		log.info("### FindMember Delete :: ");
 		int result = findService.findMemberDelete(find_no);
 		if (result == 1) {
 			return "find/deleteDone";
 		} else {
-			model.addAttribute("message", "삭제되지 않았습니다. 다시 확인해주세요.");
-			return "find/error";
+			return "find/detail";
 		}
 	}
 	
 	/** 게시글 삭제 후 이동 페이지 */
-	@RequestMapping("/find/detail/deleteDone")
+	@RequestMapping("/find/deleteDone")
 	public String DeleteDone() {
 		return "find/deleteDone";
 	}
 	
 	
 		
-	/** 게시글 수정화면 
-	@RequestMapping("/find/detail/update")
-	public String FindMemberUpdate(String find_no, Model model) {
+	/** 게시글 수정화면 */
+	@RequestMapping("/find/updateForm")
+	public String FindMemberUpdate(int find_no, Model model) {
 		log.debug("### FindMember Update :: ");
-		Find dto = findService.FindMemberDetail(find_no);
+		Find dto = findService.findMemberDetail(find_no);
 		model.addAttribute("dto", dto);
-		return "find/form";
+		return "find/updateForm";
 	}
-	*/
+	
 	
 	/** 게시글 수정 */
-	@RequestMapping("/find/detail/update")
+	@RequestMapping("/find/update")
 	public String FindMemberUpdate(Find dto, Model model) {
 			int result = findService.updateFindMember(dto);
 			if (result == 1) {
-				return "find/detail";
+				return "find/formDone";
 			} else {
 				model.addAttribute("message", "수정 실패");
-				return "find/error";
+				log.debug("### error :: " + result);
+				return "find/detail";
 			}
 		}
 	

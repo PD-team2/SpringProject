@@ -61,25 +61,15 @@ A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
 <div class="footer">
 <div class="footerMenuForm">
 	<div class="footerMenu">
-		<div class="footerTitle">채팅문의</div>
-		<div class="footerExplain">관리자와 대화로 문의하실 수 있습니다</div>
-		<div class="footerExplain2">09:00 AM - 12:00 PM  / 01:00 PM - 06:00 PM</div>
-		<input type="button" class="btn-warning" style="margin-top:10px; margin-left:20px;" value="관리자와 채팅하기" 
-		       onclick="location.href='chat'">
-	</div>
-<c:choose>
-<c:when test="${(empty memberId && empty grade) || empty dto}">
-	<div class="footerMenu">
 		<div class="footerTitle">문의 남기기</div>
 		<div class="footerExplain">문의사항을 남겨주시면 메일로 답변해드립니다.</div>
 		<div class="footerExplain2">답장 받으실 메일을 남겨주세요.</div>
 		<input type="button" class="btn-warning" style="margin-top:10px; margin-left:20px;" value="문의하기"
 		        onclick="location.href='contactEmail'">
 	</div>
-</c:when>		
-	
-<c:when test="${(not empty memberId && not empty grade) || empty dto}">
-<c:if test="${grade == 'A' || dto.grade == 'A'}">
+	<c:choose>
+	<c:when test="${(not empty memberId && not empty grade) || empty dto}">
+	<c:if test="${grade == 'A' || dto.grade == 'A'}">
 		<div class="footerMenu">
 		<div class="footerTitle">문의 게시판</div>
 		<div class="footerExplain">문의 게시판을 이용하실 수 있습니다.</div>

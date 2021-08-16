@@ -29,6 +29,11 @@ function openIdChekWindow() {
 	var idWin = window.open("idCheck", "_blank", specs);
 }
 
+function openMobileWindow() {
+	var specs = "width=400,height=300,top=300,left=500";
+	var idWin = window.open("mobile", "_blank", specs);
+}
+
 </script>
 
 
@@ -97,7 +102,7 @@ function openIdChekWindow() {
                 				<!-- 이름 -->
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" id="name" name="name"
-                                        placeholder="이름" pattern="[a-zA-Z가-힣]{2,20}" required="required">
+                                        placeholder="이름" pattern="[a-zA-Z가-힣]{1,20}" required="required">
                                 	<div id="nameMsg"></div>
                                 </div>
                                 
@@ -115,12 +120,12 @@ function openIdChekWindow() {
                                         placeholder="핸드폰 번호 ex)010-0000-0000" pattern="\d{3}-\d{3,4}-\d{4}" maxlength="13" required="required">
                                 </div>
                                  <div class="col-sm-4 mb-3 mb-sm-0">
-                                   <input type="button" value="인증" class="btn btn-outline-warning btn-user btn-block">
+                                   <input type="button" value="인증" class="btn btn-outline-warning btn-user btn-block" onclick="openMobileWindow()">
                                 </div>
                                 </div>
                               	
                               	
-                                <input type="submit" value='완료' class="btn btn-primary btn-user btn-block" onclick="checkForm(); emailCheck();">                                
+                                <input type="submit" value='완료' class="btn btn-primary btn-user btn-block" onclick="return checkForm();">                                
                                	<!-- 테스트용 
                                	<input type="button" onclick="return checkForm();">
                                	-->
@@ -185,17 +190,17 @@ function checkForm() {
 		document.getElementById("memberPwMsg").innerHTML = "비밀번호와 비밀번호 확인이 동일하지 않습니다.";
 		document.getElementById("memberPwMsg").style.color = "red";
 		return false; 
-	}
-	
-	var name = document.getElementById("name").value;
-	
-	if(name.trim.length < 2 || name.trim().length > 20) {
-		document.getElementById("name").focus();
-		document.getElementById("nameMsg").innerHTML = "이름은 2글자 이상 입력해주세요.";
-		document.getElementById("nameMsg").style.color = "red";
-		document.getElementById("name").value = ""; 
-		return false; 
-	}
+	} 
+	 var email = document.getElementById("email").value;
+	 var emailtext = "@";
+	 if (email.indexOf(emailtext)!=-1) {
+	 } else {
+		 	document.getElementById("email").focus();
+			document.getElementById("emailMsg").innerHTML = "이메일 형식에 따라 입력해주세요.";
+			document.getElementById("emailMsg").style.color = "red";
+			document.getElementById("email").value = ""; 
+			return false; 
+}
 }
 
 /* 이메일 문자 "@" 포함 체크*/
@@ -212,6 +217,7 @@ function emailCheck() {
 		return false; 
  }
 }
+
     </script>
 
 </body>

@@ -13,12 +13,11 @@ import com.side_on.dto.Find;
 @Mapper
 public interface FindDao {
 	
-	/** 게시판 전체조회 
-	public List<Find> selectFindList();
-	*/
+	/** 게시판 전체조회 */
+	public ArrayList<Find> findMemberList();
 	
 	/** 게시글 세부조회 */
-	public Find selectFindDetail(String find_writer);
+	public Find selectFindDetail(int find_no);
 	
 	/** 게시글 등록 */
 	public int insertFindMember(Find dto);
@@ -29,9 +28,7 @@ public interface FindDao {
 	/** 게시글 삭제 */
 	public int deleteFindList(int find_no);
 
-	public ArrayList<Find> findMemberList();
 
-	public List<Find> findMemberTest() throws Exception;
 	
 
 }
