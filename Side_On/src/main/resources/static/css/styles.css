@@ -11284,8 +11284,9 @@ header.masthead .masthead-heading {
 }
 
 section#contact {
+  width:1902px;
   background-color: #212529;
-  background-image: url("../assets/img/map-image.png");
+  background-image: url("https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/ContactEmail.png");
   background-repeat: no-repeat;
   background-position: center;
 }
