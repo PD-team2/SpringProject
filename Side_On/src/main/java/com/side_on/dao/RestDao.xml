@@ -31,14 +31,14 @@
 		WHERE rest_no =#{restNo}
 	</update>
 
-	<select id="selectRestUser" resultType="String" parameterType="String">
+	<select id="selectRestUserForCount" resultType="String" parameterType="String">
 		SELECT member_id 
 		FROM REST
 		WHERE rest_no =#{restNo}
 	</select>
 
-	<select id="selectRestPostNo" resultType="String" parameterType="String">
-		SELECT notice_no
+	<select id="selectRestPostNo" resultType="int" parameterType="String">
+		SELECT recruit_num
 		FROM REST
 		WHERE rest_no =#{restNo}
 	</select>
@@ -46,7 +46,7 @@
 	<insert id="insertRest" parameterType="String">
 		INSERT into rest 
 		VALUES(SEQ_REST.nextval
-				, #{noticeNo}
+				, to_number(#{recruit_num})
 				, #{memberId}
 				, #{reason}
 				, to_char(sysdate, 'yyyy-MM-dd')
@@ -54,5 +54,26 @@
 				,'F'
 				, null)
 	</insert>
-
+	
+	<update id="updatePostCondition" parameterType="int">
+		UPDATE recruit set 
+		visible_check = 
+			CASE WHEN visible_check = 'Y' THEN 'N'
+				 WHEN visible_check = 'N' THEN 'Y'
+			END 
+		WHERE recruit_num =#{recruit_num}
+	</update>
+	
+	<select id="selectRestWriteUser" resultType="String" parameterType="int">
+		SELECT member_id 
+		FROM recruit
+		WHERE recruit_num =#{recruit_num}
+	</select>
+	
+	<update id="updateRestCount" parameterType="String">
+		UPDATE member set 
+		rest_count = to_number(rest_count) + 1 
+		WHERE member_id=#{memberId}
+	</update>
+	
 </mapper>

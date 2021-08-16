@@ -1,10 +1,15 @@
 package com.side_on.controller;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,7 +60,7 @@ public class MemberController {
 			session.setAttribute("dto", dto);
 			if(grade.equals("A")) {
 				log.debug("login admin Success :: ");
-				return "admin/dashboard";
+				return "main";
 			} else {
 				log.debug("login user Success :: ");
 				return "main";
@@ -131,6 +136,72 @@ public class MemberController {
 	public String idCheck() {
 		log.debug("### idCheck :: ");
 		return "member/idCheck";
+	}
+	
+	@RequestMapping("/member/myInfo")
+	protected String doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("내정보조회");
+		
+		HttpSession session = request.getSession(false);
+		
+		if (session == null || session.getAttribute("memberId") == null || session.getAttribute("grade") == null) {
+			request.setAttribute("message", "[오류] 회원전용 서비스입니다. 로그인 후 이용하시기 바랍니다.");
+			return "result";
+		}
+		
+		String loginMemberId = (String)session.getAttribute("memberId");
+		
+		Member dto = memberService.getMemberToDto(loginMemberId);
+		
+		if (dto == null) {
+			request.setAttribute("message", "[실패] 내정보 조회를 다시 확인하시기 바랍니다.");
+			return "main";
+		}
+		
+		request.setAttribute("dto", dto);
+		return "member/myInfo";
+	}
+	
+	@RequestMapping("/member/myInfoUpdate")
+	public String updateInfo(HttpServletResponse response, HttpSession session, Model model, String memberId, String memberPw, String name, String mobile, String email) throws IOException {
+		if (session == null || session.getAttribute("memberId") == null || session.getAttribute("grade") == null) {
+			model.addAttribute("message", "[오류] 회원전용 서비스입니다. 로그인 후 이용하시기 바랍니다.");
+			return "result";
+		}
+		
+		response.setContentType("text/html;charset=utf-8");
+		PrintWriter out = response.getWriter();
+		
+		if (!isRequired(memberId) || !isRequired(memberPw) || !isRequired(name) ||
+				!isRequired(mobile) || !isRequired(email)) {
+			out.println("<script type='text/javascript'>");
+			out.println("alert('[내정보변경저장 실패] 내정보 변경 필수 입력항목을 모두 입력하시기 바랍니다.');");
+			out.println("location.href='member/myInfo'");
+			out.println("</script");
+			return "member/myInfo";
+		}
+		
+		int result = memberService.setMember(memberId, memberPw, name, mobile, email); 
+		
+		if (result >= 1) {
+			out.println("<script type='text/javascript'>");
+			out.println("alert('[내정보변경 성공] 내정보 변경이 완료되었습니다.');");
+			out.println("location.href='board/Mypage.jsp'");
+			out.println("</script>");
+		} else {
+			out.println("<script type='text/javascript'>");
+			out.println("alert('[내정보변경저장 실패] 내정보 변경 저장시 문제가 발생했습니다. 다시 확인하시기 바랍니다.');");
+			out.println("location.href='main.jsp'");
+			out.println("</script>");
+		}
+		return "board/Mypage";
+	}
+
+	public boolean isRequired(String data) {
+		if (data != null && data.trim().length() > 0) {
+			return true;
+		}
+		return false;
 	}
 	 
 }

@@ -22,7 +22,7 @@ $(document).ready(function(){
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-    <form action="/notice/restReportModal" method="post">
+    <form action="/recruit/restReportModal" method="post">
       <div class="modal-header">
           <h4 class="modal-title" id="mySmallModalLabel">신고 접수<a class="anchorjs-link" href="#mySmallModalLabel"><span class="anchorjs-icon"></span></a></h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
@@ -34,7 +34,7 @@ $(document).ready(function(){
           <br><br>
           <input type='radio' name='radioReason' id="r3" value='etc' onclick="this.form.textReason.disabled=false"/><label for="r3">&nbsp;기타</label>
           <input type="text" name="textReason" placeholder="신고 사유를 입력하세요." id="restReason" name="restReason" style="width: 200px">
-          <input type="hidden" name="noticeNo" value="${param.noticeNo}" />
+          <input type="hidden" name="recruit_num" value="${param.recruit_num}" />
       </div>
 	  <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">취소하기</button>
