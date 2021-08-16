@@ -47,7 +47,8 @@
 			<th>${dto.qnaBoardNo}</th>
 			<th onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';">
 			<a href="QnABoardDetail?qnaBoardNo=${dto.qnaBoardNo}">${dto.qnaBoardTitle}</a></th>
-			<th onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';">${dto.memberId}</th>
+			<th onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';">
+			<a href="/board/QnABoard?pageNum=1&amount=10&keyword=${dto.memberId}&type=W">${dto.memberId}</a></th>
 			<th>${dto.qnaBoardDate}</th>
 			<th>${dto.qnaBoardViews}</th>
 		</tr>
