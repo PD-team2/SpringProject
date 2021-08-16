@@ -55,7 +55,7 @@ public class MemberController {
 			session.setAttribute("dto", dto);
 			if(grade.equals("A")) {
 				log.debug("login admin Success :: ");
-				return "admin/dashboard";
+				return "main";
 			} else {
 				log.debug("login user Success :: ");
 				return "main";
