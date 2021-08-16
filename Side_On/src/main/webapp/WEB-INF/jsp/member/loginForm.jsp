@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en" style="background-color: #FFD026">
 
@@ -50,7 +52,8 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="forgot-password">Forgot your ID or PW?</a>
+                                       <a class="small" href="/member/findID">아이디 찾기</a>
+                                         <a class="small" href="/member/findPw">비밀번호 찾기</a>
                                     </div>
                                     <div class="text-center">
                                         <a class="small" href="register">Create an Account!</a>

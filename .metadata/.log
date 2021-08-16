@@ -9820,3 +9820,90 @@ java.nio.file.FileSystemException: C:\00.practice\SpringProject\Side_On\target\c
 
 !ENTRY Activator 1 0 2021-08-16 21:01:04.300
 !MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-16 21:02:14.598
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY Activator 1 0 2021-08-16 21:02:14.606
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-16 21:02:14.612
+!MESSAGE classpath=115 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-16 21:02:14.625
+!MESSAGE buffering callback sts4.classpath.TXoMPlYl Side_On false 115
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-16 21:02:14.642
+!MESSAGE executing callback sts4.classpath.TXoMPlYl 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-16 21:02:14.691
+!MESSAGE executing callback sts4.classpath.TXoMPlYl SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-16 21:02:15.192
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-16 21:02:15.200
+!MESSAGE classpath=115 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-16 21:02:15.208
+!MESSAGE buffering callback sts4.classpath.TXoMPlYl Side_On false 115
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-16 21:02:15.209
+!MESSAGE executing callback sts4.classpath.TXoMPlYl 1 batched events
+
+!ENTRY Activator 1 0 2021-08-16 21:02:15.357
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-08-16 21:02:15.506
+!MESSAGE executing callback sts4.classpath.TXoMPlYl SUCCESS [done]
+
+!ENTRY Activator 1 0 2021-08-16 21:02:15.916
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:02:17.120
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:02:18.685
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:02:20.791
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:02:22.328
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:02:22.677
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:03:25.213
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:03:28.711
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:03:31.481
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:03:38.915
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:03:39.055
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:04:03.250
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:04:19.627
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:07:41.176
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:07:41.322
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:07:54.591
+!MESSAGE Has main method computation for project 'Side_On'
+
+!ENTRY Activator 1 0 2021-08-16 21:07:54.738
+!MESSAGE Has main method computation for project 'Side_On'
