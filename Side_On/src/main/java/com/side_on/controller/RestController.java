@@ -35,17 +35,17 @@ public class RestController {
 		return "rest/restList";
 	}
 	
-	@RequestMapping("/notice/restReportModal")
-	public String restReportModal(String noticeNo, String radioReason, String textReason) {
-		log.debug(noticeNo + "/" + radioReason + "/" + textReason);
+	@RequestMapping("/recruit/restReportModal")
+	public String restReportModal(int recruit_num, String radioReason, String textReason) {
+		log.debug(recruit_num + "/" + radioReason + "/" + textReason);
 		String reason = null;
 		if(radioReason.equals("etc")) {
 			reason = textReason;
 		} else {
 			reason = radioReason;
 		}
-		restService.restReportModal(noticeNo, reason);
-		return "notice/noticeList";
+		restService.restReportModal(recruit_num, reason);
+		return "recruit/recruitHome";
 	}
 	
 }

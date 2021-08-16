@@ -155,6 +155,18 @@ public class RecruitService {
 		return dao.getReward( payment_id,  recruit_num,  pay_amount);
 	}
 
+	public String getMemberId(String name, String mobile) {
+		return dao.getMemberId( name, mobile);
+	}
+
+	public String getPwMemberId(String memberId, String mobile) {
+		return dao.getPwMemberId( memberId, mobile);
+	}
+
+	public int resetPw(String memberId, String resetPw) {
+		return dao.resetPw( memberId, resetPw);
+	}
+
 
 
 	

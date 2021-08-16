@@ -41,19 +41,5 @@
 		select * from notice where notice_no=#{noticeNo}
 	</select>
 
-	<update id="updatePostCondition" parameterType="String">
-		UPDATE notice set 
-		visible_check = 
-			CASE WHEN visible_check = 'T' THEN 'F'
-				 WHEN visible_check = 'F' THEN 'T'
-			END 
-		WHERE notice_no =#{noticeNo}
-	</update>
-	
-	<select id="selectRestUser" resultType="String">
-		SELECT member_id 
-		FROM notice
-		WHERE notice_no =#{noticeNo}
-	</select>
 
 </mapper>

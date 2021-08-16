@@ -58,7 +58,7 @@ public class RecruitController {
 		
 		return "recruit/recruitHome"; 
 		
-	}
+	}	
 	
 	/** 모집 페이지 상세 페이지 */
 	@RequestMapping("/recruit/recruitDetail")
@@ -137,7 +137,7 @@ public class RecruitController {
 		part.setPlan(planCount);
 		part.setPm(pmCount);		
 		
-		System.out.println(recruit_num);
+		System.out.println("지원한 지원자 수 체크"+part);
 		ArrayList<Apply> apply = service.getApplyList(recruit_num);
 	
 		String memberId = list.getMemberId();
@@ -156,7 +156,7 @@ public class RecruitController {
 		
 		String memberId= (String)session.getAttribute("memberId");
 		model.addAttribute("memberId", memberId);
-		return "recruit/recruitWrite"; 
+		return "recruit/recruitHome"; 
 	}
 	
 	/** 마이페이지 모집현황 보기 */
@@ -166,7 +166,6 @@ public class RecruitController {
 		String memberId= (String)session.getAttribute("memberId");
 		ArrayList<RecruitBoard> list = service.recruitMyRecruit(memberId); 
 		
-//		ArrayList<Integer> count = list.
 		
 		model.addAttribute("list", list);
 		
@@ -208,7 +207,7 @@ public class RecruitController {
 		int result = service.getReward(payment_id, recruit_num,pay_amount);
 		
 		if(result == 1) {
-			return "recruit/recruitAdmin";
+			return "redirect:/recruit/recruitAdmin";
 		}else {
 			model.addAttribute("title", "[오류] 리워드 지급 실패");
 			model.addAttribute("message", "리워드 지급을 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요.");
@@ -275,7 +274,7 @@ public class RecruitController {
 		//	service.plusCount(recruit_num,apply_num,count,part);
 		
 		if (result == 1 && rewardResult == 1 ) {
-			return "recruit/recruitHome";
+			return "recruit/recruitMyApply";
 		} else {
 			model.addAttribute("title", "[오류] 지원 실패");
 			model.addAttribute("message", "지원을 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요.");
@@ -291,7 +290,7 @@ public class RecruitController {
 		int result = service.recruitDelete(recruit_num, n);
 		
 		if (result == 1) {
-			return "recruit/recruitMyRecruit";
+			return "redirect:/recruit/recruitMyRecruit";
 		} else {
 			model.addAttribute("title", "[오류] 모집 글 삭제 실패");
 			model.addAttribute("message", "삭제를 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요.");
@@ -372,12 +371,20 @@ public class RecruitController {
 		int result = service.recruitCancel(recruit_num, memberId, join_yn);
 		
 		if(result==1) {
-			return "recruit/recruitHome";
+			return "recruit/recruitMyRecruit";
 		}else {
 			model.addAttribute("title","[오류] 모집 글 삭제 실패");
 			model.addAttribute("message", "글 삭제를 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요");
 			return "error";
 		}
+	}
+	
+	/**아이디 찾기*/
+	@RequestMapping("/member/findID")
+	public String findID( Model model)  {
+		
+	
+		return "member/findID";
 	}
 	
 	/** 모집 글 수정 recruit/recruitEdit*/
@@ -419,8 +426,79 @@ public class RecruitController {
 			
 			model.addAttribute("list",list);
 			model.addAttribute("part",part);
-			return "recruit/recruitEdit"; 
+			return "recruit/recruitMyRecruit"; 
 		}
+	
+	/** 아이디 찾기 /member/findID/complete*/
+	@RequestMapping("/member/findIdComplete")
+	public String findIDComplete(String name, String mobile,  Model model) {
+		
+		System.out.println("컨트롤러+++++"+name+mobile);
+		
+		String memberId = service.getMemberId(name,mobile);
+		
+		if(memberId != null) {
+			model.addAttribute("memberId", memberId);
+			return "member/findIdComplete";
+			
+		}else {
+			model.addAttribute("title","[오류] 아이디 찾기 실패");
+			model.addAttribute("message", "아이디 찾기를 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요");
+			return "recruit/error";
+		}
+		
+	}
+	
+	/** 비밀번호 찾기 */
+	@RequestMapping("/member/findPw")
+	public String findIDComplete(Model model) {
+			return "member/findPw"; 
+	}
+	
+	/** 비밀번호 찾기 : 회원 확인ㄴ /member/findID/complete*/
+	@RequestMapping("/member/findPwComplete")
+	public String findPwComplete(String memberId, String mobile,  Model model) {
+		
+		System.out.println("findPwComplete*******"+memberId+","+mobile);
+		
+		String resetId = service.getPwMemberId(memberId, mobile);
+		
+		if(resetId != null) {
+			model.addAttribute("memberId", resetId);
+			return "member/resetPw";
+			
+		}else {
+			model.addAttribute("title","[오류] 회원 찾기 실패");
+			model.addAttribute("message", "회원 찾기를 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요");
+			return "recruit/error";
+		}
+		
+	}
+	
+	/**비밀번호 업데이트 */
+	@RequestMapping("/member/resetPw")
+	public String resetPw(String memberId,  Model model) {
+	
+		model.addAttribute("memberId", memberId);
+		return "member/resetPw";
+	}
+	
+	@RequestMapping("/member/resetPwComplete")
+	public String resetPwComplete(String memberId,  String resetPw, Model model) {
+		
+		int result = service.resetPw(memberId, resetPw);
+		
+		if(result == 1) {
+			return "/member/loginForm";
+			
+		}else {
+			model.addAttribute("title","[오류] 비밀번호 재설정 실패");
+			model.addAttribute("message", "비밀번호 재설정을 실패하였습니다. 관리자에게 문의하거나 다시 시도해주세요");
+			return "recruit/error";
+		}
+	}
+	
+	
 	/**파일 업로드 안돼.. 흑.. 왜..*/
 	public String recruitWriteWithFile(RecruitBoard recruitBoard, @RequestPart MultipartFile file) throws Exception {
 		System.out.println("컨트롤러 입니당" + recruitBoard);

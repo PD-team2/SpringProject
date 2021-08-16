@@ -18,10 +18,7 @@ public class RestService {
 
 	@Autowired
 	private RestDao restDao;
-	
-	@Autowired
-	private NoticeDao noticeDao;
-	
+		
 	@Autowired 
 	private MemberDao memberDao;
 	
@@ -40,7 +37,7 @@ public class RestService {
 	}
 	
 	/**
-	 * 신고 접수 프로세스 
+	 * 신고 처리 
 	 * @param restNo 신고 번호
 	 * @param restResult 신고 처리 결과
 	 */
@@ -48,13 +45,13 @@ public class RestService {
 		log.debug(restNo + " / " + restResult);
 		restDao.updateRestManageModal(restNo, restResult);
 		if(restResult.equals("신고접수")) {
-			String memberId = restDao.selectRestUser(restNo);
+			String memberId = restDao.selectRestUserForCount(restNo);
 			log.debug("### " + memberId);
-			memberDao.updateRestCount(memberId);
+			restDao.updateRestCount(memberId);
 		} else {
-			String noticeNo = restDao.selectRestPostNo(restNo);
-			log.debug("### " + noticeNo);
-			noticeDao.updatePostCondition(noticeNo);
+			int recruit_num = restDao.selectRestPostNo(restNo);
+			log.debug("### " + recruit_num);
+			restDao.updatePostCondition(recruit_num);
 		}
 	}
 
@@ -63,18 +60,18 @@ public class RestService {
 	 * @param noticeNo 글 번호
 	 * @param reason 신고 사유
 	 */
-	public void restReportModal(String noticeNo, String reason) {
-		log.debug(noticeNo + "/" + reason);
+	public void restReportModal(int recruit_num, String reason) {
+		log.debug(recruit_num + "/" + reason);
 		if(reason != null) {			
-			String memberId = noticeDao.selectRestUser(noticeNo);
+			String memberId = restDao.selectRestWriteUser(recruit_num);
 			log.debug("### " + memberId);
-			noticeDao.updatePostCondition(noticeNo);
+			restDao.updatePostCondition(recruit_num);
 			if(memberId != null) {
-				restDao.insertRest(noticeNo, memberId, reason);
-				log.debug(memberId + "/" + noticeNo + "/" + reason);
+				restDao.insertRest(recruit_num, memberId, reason);
+				log.debug(memberId + "/" + recruit_num + "/" + reason);
 			}
 		} else { 
-			log.debug("사유 부재 업데이트 실패" + noticeNo);
+			log.debug("사유 부재 업데이트 실패" + recruit_num);
 		}
 	}
 

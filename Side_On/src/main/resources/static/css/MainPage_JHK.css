@@ -7,9 +7,11 @@
 	left: 80px;
 	top: 540px;	
 }
+
 .SideOnExplainImg {
 	margin-left:-100px;
 }
+
 .serviceImg{
     width: 130px;
     height: 130px;
@@ -18,12 +20,13 @@
 .service-section {
     background: #FAFAFA;
 }
+
 .logoLocation {
     position: absolute;
     top: 600px;
-    right:100px;
-    
+    right:100px;  
 }
+
 .JoinButton {
     position: absolute;
     text-decoration:none;
@@ -72,6 +75,7 @@
     align-items: center;
     color: #FFFFFF;
 }
+
 .head-subheading3 {
     position: absolute;
     width: 1087px;
