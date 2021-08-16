@@ -19,7 +19,7 @@
 <table border="1" width="700" height="300">
 	<tr>
 		<td colspan="2" width="300">
-			<font size="10em">Q : <%=question%></font> <font size="10em" color="blue">(<%=sumCount%>)</font>
+			<font size="5em">Q : <%=question%></font> <font size="5em" color="blue">(<%=sumCount%>)</font>
 		</td>
 	</tr>
 	<tr>
