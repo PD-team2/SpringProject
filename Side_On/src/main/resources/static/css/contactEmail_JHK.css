@@ -66,7 +66,7 @@ hr {
 
 .text-area {
     width: 1184px;
-    height: 398px;
+    height: 350px;
     margin: auto;
     background: #F6F6F6; 
     resize:none;
@@ -76,7 +76,7 @@ textarea {
     font-family:'Pretendard'; 
     font-size: 18px;
     width: 1184px;
-    height: 398px;
+    height: 350px;
     padding: 37px;
     box-sizing: border-box;
     border-radius: 5px;
@@ -94,6 +94,7 @@ textarea {
 .btn-area {
     position: relative;
     margin-top: 10px;
+    margin-bottom: 50px;
     margin: auto;
     text-align: center;
     width: 1184px;
