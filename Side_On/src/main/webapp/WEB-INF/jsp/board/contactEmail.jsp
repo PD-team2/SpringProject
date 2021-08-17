@@ -44,7 +44,7 @@
 </div>    
 
 
-<div style="position: absolute; right: 370px; bottom: -40px;">
+<div style="position: absolute; right: 350px; bottom: -40px;">
 <button type="button" class="btn-warning" onclick="sendMail();">문의하기</button>
 <button type="button" class="btn-warning" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 	onclick="location.href='FaQBoard'">되돌아가기</button>
