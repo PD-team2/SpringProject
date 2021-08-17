@@ -8,11 +8,26 @@
 <title>프로젝트 모집/지원 | Side-On</title>
  
 <link type="text/css" rel="stylesheet" href="../css/RecruitHome_juri.css">
-
-<script type="text/javascript">
-
-
-</script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+			<script type="text/javascript">
+			 function searchCheck() {
+				 var search = document.getElementById('search').value;
+				 
+					if(search.trim() == ""){
+						alert('[안내] 검색어를 입력해주세요');
+						$('#search').focus();			
+						return false;
+					}else if(search.length > 10 ){
+						alert('[안내] 검색어는 10자리 이하로 입력해주세요');
+						$('#search').focus();			
+						return false;
+					}else{
+						$('#searchForm').submit();
+					}
+			}
+			
+			</script>
 
 </head>
 <body>
@@ -35,9 +50,9 @@
 			       	<div class="col-md-6 center" >
 			
 			                <div class="search-container" style="float: left;">
-			                    <form >
-			                      <input type="text" placeholder="Search.." name="search">
-			                      <button type="submit"><i class="fa fa-search"></i></button>
+			                    <form action="/recruitSearch" name="searchForm" id="searchForm">
+			                      <input type="text" placeholder="검색어를 입력하세요" name="search" id="search">
+			                      <button type="button"  onclick="searchCheck();"><i class="fa fa-search"></i></button>
 			                    </form>
 			                  </div>
 			         	<!--  	<div class="checkbox" style="float: left;">	    
@@ -71,7 +86,13 @@
             <div class="container" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
                
                 <div class="row">
-                
+                <c:if test="${empty list}">
+						<c:set var="none" value="검색 결과가 없습니다."></c:set>
+						
+						<h2 class="center" style="margin-top:10%;"><c:out value="${none }" /></h2>
+		
+						<a style="margin-top:10%; color:black;" href="/recruit/recruitHome" class="btn btn-warning" style="color:black;">전으로 돌아가기</a>
+				</c:if>
                 	<c:forEach var="list" items="${list}" varStatus="status"> 
 	                    <div class="col-lg-4 col-sm-6 mb-4">
 	                        <!-- Portfolio item 1-->

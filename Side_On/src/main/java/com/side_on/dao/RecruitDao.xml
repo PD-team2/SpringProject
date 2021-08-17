@@ -226,6 +226,14 @@
 	
 	 <insert id="resetPw" >
 		update member set member_pw=#{resetPw} where member_Id= #{memberId}
-	</insert>
+	</insert> 
+	
+	<select id="listSearch" resultType="com.side_on.dto.RecruitBoard" parameterType="String">
+	 select  recruit_num, memberId, title from recruit 
+	 where visible_check='y' and
+   	 title like  '%'||#{search, jdbcType=VARCHAR}||'%'  OR 
+   	 content like  '%'||#{search, jdbcType=VARCHAR}||'%'  
+   	 OR pj_content like  '%'||#{search, jdbcType=VARCHAR}||'%' 
+	</select>
 	
 </mapper>

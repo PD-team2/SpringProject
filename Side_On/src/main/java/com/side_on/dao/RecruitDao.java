@@ -86,6 +86,8 @@ public interface RecruitDao {
 
 	public int resetPw(String memberId, String resetPw);
 
+	public ArrayList<RecruitBoard> listSearch(String search);
+
 
 
 

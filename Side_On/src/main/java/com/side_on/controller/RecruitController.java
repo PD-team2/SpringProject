@@ -504,6 +504,20 @@ public class RecruitController {
 	}
 	
 	
+	/** 검색하기 /recruitSearch*/
+	@RequestMapping("/recruitSearch")
+	public String recruitSearch(String search,  Model model) {
+	
+		ArrayList<RecruitBoard> list = service.listSearch(search); 
+		
+		System.out.println("검색 내용 *********"+list);
+		
+		model.addAttribute("search", search);
+		model.addAttribute("list", list);
+		return "recruit/recruitHome";
+	}
+	
+	
 	/**파일 업로드 안돼.. 흑.. 왜..*/
 	public String recruitWriteWithFile(RecruitBoard recruitBoard, @RequestPart MultipartFile file) throws Exception {
 		System.out.println("컨트롤러 입니당" + recruitBoard);

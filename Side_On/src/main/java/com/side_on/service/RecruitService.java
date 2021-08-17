@@ -167,6 +167,10 @@ public class RecruitService {
 		return dao.resetPw( memberId, resetPw);
 	}
 
+	public ArrayList<RecruitBoard> listSearch(String search) {
+		return dao.listSearch( search);
+	}
+
 
 
 	
