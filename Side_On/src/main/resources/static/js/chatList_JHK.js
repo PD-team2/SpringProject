@@ -1,4 +1,5 @@
 	var ws;
+	
 	window.onload = function(){
 		getRoom();
 		createRoom();
