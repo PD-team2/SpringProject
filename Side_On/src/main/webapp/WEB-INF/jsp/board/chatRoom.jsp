@@ -3,10 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="../js/chatList_JHK.js"></script>
-<script src="/resource/js/reply_JHK.js"></script>
-<link type="text/css" rel="stylesheet" href="../css/chat_JHK.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="../js/chatList_JHK.js"></script>
+	<script src="/resource/js/reply_JHK.js"></script>
+	<link type="text/css" rel="stylesheet" href="../css/chat_JHK.css">
 <meta charset="UTF-8">
 	<title>ChatList|Side-On</title>
 </head>
@@ -32,7 +32,6 @@
 		<div class="inputArea">
 			<table class="inputTable">
 				<tr>
-					
 					<th><input type="text" name="roomName" id="roomName" placeholder="방 제목을 입력해주세요."></th>
 					<th><button id="createRoom" class="btn-warning">방 만들기</button></th>
 				</tr>
@@ -45,13 +44,7 @@
 	
 	<!-- utteranc -->
 	<div class="utterances" style="height: auto;top:50px;bottom:50px;">
-		<script src="https://utteranc.es/client.js"
-		        repo="PD-team2/SpringProject"
-		        issue-term="pathname"
-		        theme="github-light"
-		        crossorigin="anonymous"
-		        async>
-		</script>
-</div>
+		<script src="https://utteranc.es/client.js" repo="PD-team2/SpringProject" issue-term="pathname" theme="github-light" crossorigin="anonymous" async></script>
+	</div>
 </body>
 </html>
