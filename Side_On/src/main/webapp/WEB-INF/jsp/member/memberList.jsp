@@ -7,7 +7,7 @@
 
 <head>
 	<%@ include file="../inc/adminHeadLink.jsp" %>
-    <title>Rest</title>
+    <title>Member Management</title>
 </head>
 
 <body id="page-top">
@@ -33,8 +33,8 @@
                 <div class="card shadow mb-4">
                 	<!-- content header 제목 -->
                 	<div class="card-header py-3">
-                	REST LIST
-                	<a data-toggle="modal" data-target="#restModal" style="float: right;"><i class="fas fa-fw fa-cog"></i></a>
+                	Member LIST
+                	<a data-toggle="modal" data-target="#blackList" style="float: right;"><i class="fas fa-fw fa-cog"></i></a>
                 	</div>
                 	<!-- content body 내용 -->
                 	<div class="card-body">
@@ -43,35 +43,32 @@
                 				<table class="table" style="text-align: center; border: 1px solid #dddddd;">
                 					<thead>
                 						<tr>
-                							<th style="background-color: #eeeeee; text-align: center;">No</th>
-                							<th style="background-color: #eeeeee; text-align: center;">작성자</th>
+                							<th style="background-color: #eeeeee; text-align: center;">ID</th>
+                							<th style="background-color: #eeeeee; text-align: center;">email</th>
                 							<!-- 
                 							<th style="background-color: #eeeeee; text-align: center;">내용</th>
                 							<th style="background-color: #eeeeee; text-align: center;">글번호</th>
                 							 -->
-                							<th style="background-color: #eeeeee; text-align: center;">사유</th>
-                							<th style="background-color: #eeeeee; text-align: center;">신고접수</th>                							 
-                							<th style="background-color: #eeeeee; text-align: center;">신고처리</th>                							 
-                							<th style="background-color: #eeeeee; text-align: center;">처리상태</th>
+                							<th style="background-color: #eeeeee; text-align: center;">name</th>
+                							<th style="background-color: #eeeeee; text-align: center;">entry date</th>                							 
+                							<th style="background-color: #eeeeee; text-align: center;">rest count</th>
+                							<th style="background-color: #eeeeee; text-align: center;">reward</th>                							 
                 						</tr>
                 					</thead>
                 					<tbody>
-                					<c:forEach var="dto" items="${restList}" varStatus="status">
+                					<c:forEach var="dto" items="${memberList}" varStatus="status">
 	               						<tr>
-	               							<th>${dto.restNo}</th>
 	                						<th>${dto.memberId}</th>
-	                						<!-- 
-	                						<th><a href="../recruit/recruitDetail?recruit_num=${dto.recruit_num}" style="color: #3f3f3f;">${dto.recruit_num}</a></th>
-	                						 -->
-	                						<th>${dto.reason}</th>
-	                						<th>${dto.restEnroll}</th>
-	                						<th>${dto.restConfirm}</th>
-	                						<th id="restCheck">
+	               							<th>${dto.email}</th>
+	                						<th>${dto.name}</th>
+	                						<th>${dto.entryDate}</th>
+	                						<th>
 	                							<c:choose>
-	                								<c:when test="${dto.restCheck eq 'F'}">처리요청</c:when>
-	                								<c:when test="${dto.restCheck eq 'T'}">처리완료</c:when>
+	                								<c:when test="${dto.restCount >= 10}"><div style="color:red;">${dto.restCount}</div></c:when>
+	                								<c:when test="${dto.restCount < 10}"><div>${dto.restCount}</div></c:when>	                							
 	                							</c:choose>
 	                						</th>
+	                						<th>${dto.reward}</th>
 	                					</tr>
                 					</c:forEach>
                 					</tbody>
@@ -110,5 +107,5 @@
 	<%@ include file="../inc/adminBodyLink.jsp" %>
 
 </body>
-<%@ include file="../inc/restManageModalForm.jsp" %>
+<%@ include file="../inc/blackListModalForm.jsp" %>
 </html>

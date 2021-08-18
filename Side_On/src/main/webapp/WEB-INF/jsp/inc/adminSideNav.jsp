@@ -42,6 +42,14 @@
                 </a>
             </li>
 
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="/member/memberList">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Member Management</span>
+                </a>
+            </li>
+
             <!-- Nav Item - mypage -->
             <li class="nav-item">
                 <a class="nav-link" href="../notice/adminNoticeList">

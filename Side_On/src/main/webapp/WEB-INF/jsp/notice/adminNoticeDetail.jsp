@@ -57,9 +57,6 @@
                 						<tr>
                 							<th colspan="1" style="background-color: #eeeeee;">작성자</th>
                 							<td colspan="1">${dto.memberId}</td>
-                							
-                							<th colspan="1" style="background-color: #eeeeee; ">조회수</th>                							
-                							<td colspan="1">${dto.viewCount}</td>
 
                 							<th colspan="1" style="background-color: #eeeeee;">게시일</th>
                 							<td colspan="1">${dto.noticeDate}</td>
