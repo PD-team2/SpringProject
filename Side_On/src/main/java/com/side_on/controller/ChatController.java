@@ -19,6 +19,10 @@ public class ChatController {
 	List<Room> roomList = new ArrayList<Room>();
 	static int roomNumber = 0;
 	
+	/**
+	 * 채팅 구분
+	 * @return chat
+	 */
 	@RequestMapping("/chat")
 	public ModelAndView chat() {
 		ModelAndView mv = new ModelAndView();
@@ -28,7 +32,7 @@ public class ChatController {
 	
 	/**
 	 * 방 페이지
-	 * @return
+	 * @return room
 	 */
 	@RequestMapping("/room")
 	public ModelAndView room() {
@@ -40,7 +44,7 @@ public class ChatController {
 	/**
 	 * 방 생성하기
 	 * @param params
-	 * @return
+	 * @return roomList
 	 */
 	@RequestMapping("/createRoom")
 	public @ResponseBody List<Room> createRoom(@RequestParam HashMap<Object, Object> params){
@@ -57,7 +61,7 @@ public class ChatController {
 	/**
 	 * 방 정보가져오기
 	 * @param params
-	 * @return
+	 * @return roomList
 	 */
 	@RequestMapping("/getRoom")
 	public @ResponseBody List<Room> getRoom(@RequestParam HashMap<Object, Object> params){
@@ -66,7 +70,7 @@ public class ChatController {
 	
 	/**
 	 * 채팅방
-	 * @return
+	 * @return room
 	 */
 	@RequestMapping("/moveChating")
 	public ModelAndView chating(@RequestParam HashMap<Object, Object> params) {
