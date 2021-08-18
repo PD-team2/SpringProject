@@ -1,7 +1,6 @@
 package com.side_on.poll;
 
 import java.sql.Connection;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Vector;
@@ -14,6 +13,10 @@ public class PollMgr {
 		pool=DBConnectionMgr.getInstance();
 	}
 	
+	/**
+	 * 가장 최신 투표가 제일 위에 출력
+	 * @return
+	 */
 	public int getMaxNum() {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -34,6 +37,12 @@ public class PollMgr {
 		return maxNum;
 	}
 	
+	/**
+	 * 투표만들기
+	 * @param plBean
+	 * @param piBean
+	 * @return
+	 */
 	public boolean insertPoll(PollListBean plBean, PollItemBean piBean) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -44,7 +53,6 @@ public class PollMgr {
 			sql = "insert into tblpolllist(num, question,sdate,edate,type) values(TBLPOLLLIST_SEQ.NEXTVAL, ?, sysdate, ?, ?)";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, plBean.getQuestion());
-			//pstmt.setString(2, plBean.getSdate());
 			pstmt.setString(2, plBean.getEdate());
 			pstmt.setInt(3, plBean.getType());//1은 복수투표, 0은 단일투표
 			int cnt = pstmt.executeUpdate();
@@ -72,6 +80,11 @@ public class PollMgr {
 		return flag;
 	}
 	
+		/**
+		 * 투표 항목 갯수 조회
+		 * @param listNum
+		 * @return
+		 */
 		public int sumCount (int listNum) {
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -94,6 +107,10 @@ public class PollMgr {
 			return sum;
 		}
 	
+		/**
+		 * 투표 정렬
+		 * @return
+		 */
 		public Vector<PollListBean> getPollList(){
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -121,6 +138,11 @@ public class PollMgr {
 			return vlist;
 		}
 		
+		/**
+		 * 투표 리스트 조회
+		 * @param num
+		 * @return
+		 */
 		public PollListBean getPoll(int num) {
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -149,6 +171,11 @@ public class PollMgr {
 			return plBean;
 		}
 	
+		/**
+		 * 투표할 설문(투표) 선택
+		 * @param listNum
+		 * @return
+		 */
 		public Vector<String> getItemList(int listNum){
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -173,6 +200,12 @@ public class PollMgr {
 			return vlist;
 		}
 		
+		/**
+		 * 투표 인원 수 증가
+		 * @param listNum
+		 * @param itemNum
+		 * @return
+		 */
 		public boolean updatePoll(int listNum, String itemNum[]) {
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -198,6 +231,11 @@ public class PollMgr {
 			return flag;
 		}
 	    
+		/**
+		 * 각 항목 투표 인원 수 조회
+		 * @param listNum
+		 * @return
+		 */
 		public Vector<PollItemBean> getView(int listNum){
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -226,6 +264,11 @@ public class PollMgr {
 			return vlist;
 		}
 	    
+		/**
+		 * 투표 항목 중 가장 많이 투표된 항목 조회
+		 * @param listNum
+		 * @return
+		 */
 		public int getMaxCount(int listNum) {
 			Connection con = null;
 			PreparedStatement pstmt = null;
