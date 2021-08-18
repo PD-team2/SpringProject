@@ -1,3 +1,4 @@
+<!-- pollView.jsp -->
 <%@page import="java.util.Random"%>
 <%@page import="com.side_on.poll.PollItemBean"%>
 <%@page import="java.util.Vector"%>
