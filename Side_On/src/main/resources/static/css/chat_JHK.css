@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-
 .inputArea {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -12,7 +11,6 @@
     height: 800px;
     margin: auto;
     margin-top: 110px;
-    
 }
 
 * {
@@ -58,7 +56,6 @@
     overflow: auto;
     border-radius: 8px;
     padding:20px;
-
 }
 
 .chating .me {
@@ -66,17 +63,19 @@
     font-size:20px;
     color: #ffc800;
     text-align: right;
-
 }
+
 .chating .others {
     font-family:'Pretendard'; 
     font-size:20px;
     color: #585858;
     text-align: left;
 }
+
 table.inputTable {
 	 margin: auto;
 }
+
 input {
     margin-top: 12px;
     margin: auto;
@@ -89,6 +88,7 @@ input {
     border-radius: 8px;
     border:0px;
 }
+
 #yourMsg {
     display: none;
 }
@@ -104,7 +104,6 @@ input {
     width: 135px;
     height: 56px;
     border:0px;
-
 }
 
 .roomContainer{
@@ -115,27 +114,33 @@ input {
 	height: 500px;
 	overflow: auto;
 }
+
 .roomList{
 	border: none;
 }
+
 .roomList th{
 	border: 1px solid #FFBB00;
 	background-color: #fff;
 	color: #FFBB00;
 }
+
 .roomList td{
 	border: 1px solid #FFBB00;
 	background-color: #fff;
 	text-align: left;
 	color: #FFBB00;
 }
+
 .roomList .num{
 	width: 75px;
 	text-align: center;
 }
+
 .roomList .room{
 	width: 350px;
 }
+
 .roomList .go{
 	width: 71px;
 	text-align: center;
