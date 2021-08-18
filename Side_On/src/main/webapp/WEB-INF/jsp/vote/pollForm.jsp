@@ -1,3 +1,4 @@
+<!-- pollForm.jsp -->
 <%@page import="java.util.Vector"%>
 <%@page import="com.side_on.poll.PollListBean"%>
 <%@page contentType="text/html; charset=UTF-8"%>
