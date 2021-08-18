@@ -22,17 +22,22 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 @Component
 public class SocketHandler extends TextWebSocketHandler {
 	
-	List<HashMap<String, Object>> rls = new ArrayList<>(); //웹소켓 세션을 담아둘 리스트 ---roomListSessions
+	/**
+	 * Websocket 세션을 담아둘 리스트 roomListSessions
+	 */
+	List<HashMap<String, Object>> rls = new ArrayList<>();
 	private static final String FILE_UPLOAD_PATH = "C:/00.practice/websocket";
 	static int fileUploadIdx = 0;
 	static String fileUploadSession = "";
 	
+	/**
+	 * Websocket 구동
+	 */
 	@Override
 	public void handleTextMessage(WebSocketSession session, TextMessage message) {
 		//메시지 발송
 		String msg = message.getPayload(); //JSON형태의 String메시지를 받는다.
 		JSONObject obj = jsonToObjectParser(msg); //JSON데이터를 JSONObject로 파싱한다.
-		
 		String rN = (String) obj.get("roomNumber"); //방의 번호를 받는다.
 		String msgType = (String) obj.get("type"); //메시지의 타입을 확인한다.
 		HashMap<String, Object> temp = new HashMap<String, Object>();
@@ -66,6 +71,9 @@ public class SocketHandler extends TextWebSocketHandler {
 		}
 	}
 	
+	/**
+	 * 메세지 파일 전송
+	 */
 	@Override
 	public void handleBinaryMessage(WebSocketSession session, BinaryMessage message) {
 		//바이너리 메시지 발송
@@ -116,6 +124,9 @@ public class SocketHandler extends TextWebSocketHandler {
 		}
 	}
 	
+	/**
+	 * Websocket 연결
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void afterConnectionEstablished(WebSocketSession session) throws Exception {
@@ -153,6 +164,9 @@ public class SocketHandler extends TextWebSocketHandler {
 		session.sendMessage(new TextMessage(obj.toJSONString()));
 	}
 	
+	/**
+	 * Websocket 종료
+	 */
 	@Override
 	public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
 		//소켓 종료
