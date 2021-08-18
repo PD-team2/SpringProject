@@ -1,4 +1,4 @@
-var ws;
+	var ws;
 
 	function wsOpen(){
 		//웹소켓 전송시 현재 방의 번호를 넘겨서 보낸다.
