@@ -40,4 +40,7 @@ public interface MemberDao {
 	/** 내정보 변경 */
 	public int updateMember(String memberId, String memberPw, String name, String mobile, String email);
 
+	/** 블랙리스트 회원 삭제 */
+	public void deleteBlackMember(String memberId);
+
 }

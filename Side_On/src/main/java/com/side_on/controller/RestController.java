@@ -32,7 +32,7 @@ public class RestController {
 	public String restManageModal(String restNo, String restResult) {
 		log.debug(restNo + " / " + restResult);
 		restService.restManageModal(restNo, restResult);
-		return "rest/restList";
+		return "rest/restComplete";
 	}
 	
 	@RequestMapping("/recruit/restReportModal")
@@ -45,7 +45,7 @@ public class RestController {
 			reason = radioReason;
 		}
 		restService.restReportModal(recruit_num, reason);
-		return "recruit/recruitHome";
+		return "rest/restEnroll";
 	}
 	
 }

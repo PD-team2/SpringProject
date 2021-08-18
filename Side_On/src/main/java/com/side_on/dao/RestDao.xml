@@ -5,7 +5,7 @@
 	
 	<!-- public List<Notice> selectDashboardNoticeList() -->
 	<select id="selectDashboardRestList" resultType="com.side_on.dto.Rest">
-		SELECT *
+		SELECT rest_no, reason, rest_enroll, rest_check
 		FROM (
 			select * 
 			from rest 
@@ -17,7 +17,8 @@
 	
 	<!-- public List<Rest> selectRestList() -->
 	<select id="selectRestList" resultType="com.side_on.dto.Rest">
-		select * from rest order by to_number(rest_no) desc
+		select rest_no, member_id, reason, rest_enroll, rest_confirm, rest_check, rest_result
+		from rest order by to_number(rest_no) desc
 	</select>
 	
 	<!-- public Rest selectRest(String restNo) -->
@@ -43,7 +44,7 @@
 		WHERE rest_no =#{restNo}
 	</select>
 	
-	<insert id="insertRest" parameterType="String">
+	<insert id="insertRest">
 		INSERT into rest 
 		VALUES(SEQ_REST.nextval
 				, to_number(#{recruit_num})
@@ -55,7 +56,7 @@
 				, null)
 	</insert>
 	
-	<update id="updatePostCondition" parameterType="int">
+	<update id="updatePostCondition">
 		UPDATE recruit set 
 		visible_check = 
 			CASE WHEN visible_check = 'Y' THEN 'N'
@@ -65,7 +66,7 @@
 	</update>
 	
 	<select id="selectRestWriteUser" resultType="String" parameterType="int">
-		SELECT member_id 
+		SELECT memberId 
 		FROM recruit
 		WHERE recruit_num =#{recruit_num}
 	</select>
@@ -79,7 +80,7 @@
 	<select id="selectRestUnConfirmCount" resultType="int">
 		select count(*)
 		from rest
-		where rest_check ='T'
+		where rest_check ='F'
 	</select>
 	
 </mapper>

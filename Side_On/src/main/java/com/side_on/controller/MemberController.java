@@ -229,4 +229,24 @@ public class MemberController {
 	    }
 		return "/member/mobile";
 	}
+	
+	/** 전체 회원 리스트 */
+	@RequestMapping("/member/memberList")
+	public String allMemberList(Model model){
+		List<Member> memberList = memberService.allMemberList();
+		model.addAttribute("memberList", memberList);
+		log.debug("allMemberList 불러오기");
+		return "member/memberList";
+	}
+	
+	/** 블랙리스트 강제탈퇴 */
+	@RequestMapping("/member/blackList")
+	public String blackMemberId(String memberId) {
+		log.debug(memberId + "강제탈퇴 실행");
+		if(memberId != null) {
+			memberService.deleteBlackMember(memberId);
+		}
+		return "member/blackComplete";
+	}
+	
 }

@@ -93,4 +93,21 @@ public class MemberService {
 	public int setMember(String memberId, String memberPw, String name, String mobile, String email) {
 		return memberDao.updateMember(memberId, memberPw, name, mobile, email);
 	}
+
+	/**
+	 * 전체 회원 불러오기
+	 * @return memberList
+	 */
+	public List<Member> allMemberList() {
+		List<Member> memberList = memberDao.selectMemberList();
+		return memberList;
+	}
+
+	/**
+	 * 블랙 회원 강제탈퇴 
+	 * @param memberId 아이디
+	 */
+	public void deleteBlackMember(String memberId) {
+		memberDao.deleteBlackMember(memberId);
+	}
 }

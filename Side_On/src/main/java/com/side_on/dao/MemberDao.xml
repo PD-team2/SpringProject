@@ -39,8 +39,14 @@
         <update id="updateMember"  parameterType="com.side_on.dto.Member">
   	        update member set member_pw=#{memberPw}, email=#{email}, name=#{name}, mobile=#{mobile} where member_id=#{memberId}
         </update>
+        
+	<select id="selectMemberList" resultType="com.side_on.dto.Member">
+		select member_id, email, name, entry_date, rest_count, reward from member where grade='G' order by to_number(rest_count) desc
+	</select>
 	
-	
+	<delete id="deleteBlackMember" parameterType="String">
+		delete from member where member_id =#{memberId} 
+	</delete>
 	
 </mapper>
 

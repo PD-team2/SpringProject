@@ -13,7 +13,7 @@ public class Rest {
 	
 	private String restNo;
 	
-	private String noticeNo;
+	private int recruit_num;
 	
 	private String memberId;
 	
