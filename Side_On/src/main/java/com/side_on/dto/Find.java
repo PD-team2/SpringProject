@@ -27,6 +27,7 @@
  	
  	private String find_content;
  	
+ 	// member 연결
  	private String memberId;
  	
  	private String grade;

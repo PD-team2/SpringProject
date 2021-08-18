@@ -7,7 +7,9 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.side_on.dto.Criteria;
 import com.side_on.dto.Find;
+import com.side_on.dto.QnABoard;
 
 
 @Mapper
@@ -28,7 +30,5 @@ public interface FindDao {
 	/** 게시글 삭제 */
 	public int deleteFindList(int find_no);
 
-
-	
 
 }

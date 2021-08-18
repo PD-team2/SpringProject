@@ -9,8 +9,8 @@
         <link href="../css/findMember_sh.css" rel="stylesheet" />
         <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
         
+<!-- 삭제 여부 확인창 -->
 <script>
-
 function deleteConfirm() { 
 	alert("삭제하면 복구되지 않습니다. 정말 삭제하시겠습니까?");
 	alert("삭제되었습니다.")
@@ -36,7 +36,6 @@ function deleteConfirm() {
 	  }
 	</script>
 
-	  </script>
     </head>
     <body>
         <!-- navibar -->
@@ -46,7 +45,6 @@ function deleteConfirm() {
         <header class="bg-warning py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                <!-- 헤더...어떻게... -->
                 <div style="padding-top: 8%;">
                     <h1 class="display-5 fw-bolder">팀원찾기</h1>
                     <p class="lead fw-normal text-white-80 mb-0">직접 프로젝트에 필요한 팀원을 찾아보세요.</p>
@@ -59,7 +57,7 @@ function deleteConfirm() {
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="../img/teamplay.png" alt="..." /></div>
+                    
                     <div class="col-md-6">
                     <!-- 작성일 -->
                         <div class="small mb-1">${dto.find_date}</div>
@@ -79,33 +77,34 @@ function deleteConfirm() {
                         <p class="lead">${dto.find_content}</p>
                        	</div>
                     <!-- 포지션 -->
-                       	 <a class="badge bg-warning text-decoration-none link-light">${dto.find_position}</a>
+                       	 <a class="badge bg-info text-decoration-none link-light">${dto.find_position}</a>
                         <br>
                         <br>
+                    <!-- 카카오톡으로 공유하기 -->
                         <input type="hidden" value="${dto.find_title}" id="title" value="title">
-                                    <input type="hidden" value="${dto.find_no}" id="url" name="url">
+                        <input type="hidden" value="${dto.find_no}" id="url" name="url">
                         <div class="d-flex">
                            <a id="kakao-link-btn" href="javascript:sendLink()"> <button class="btn btn-outline-warning" type="button">
                             카카오톡으로 공유하기
                             </button>
                             </a>
-
                         </div>
-                       
-                 
                     </div>
                 </div>
                 <br>
+                <!-- 수정 / 삭제 -->
                   <c:choose>
 				  <c:when test="${(not empty memberId) || empty dto}">
 				  <c:if test="${ memberId == dto.find_writer }">
                   <div style='float:right;'>
                   <input type="button" class="btn btn-warning" onclick="location.href='updateForm?find_no=${dto.find_no}'" value="수정">
-                  <input type="button" class="btn btn-danger" value="삭제" onclick="location.href='delete?find_no=${dto.find_no}'"></a>
+                  <input type="button" class="btn btn-danger" value="삭제" onclick="deleteConfirm(); location.href='delete?find_no=${dto.find_no}';">
                   </div>
                   </c:if>
                   </c:when>
                   </c:choose>
+                 
+                 <!-- 목록으로 가기 -->
                   <button type="reset" class="btn btn-light" ><a href="list" style="color:black; text-decoration:none;">목록으로 가기</a></button>
             </div>
             <input type="hidden" name="deleteButton" id="deleteButton" onclick="location.href='delete?find_no=${dto.find_no}'"></input>

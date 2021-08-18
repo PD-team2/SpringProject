@@ -21,7 +21,6 @@
         <header class="bg-warning py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                <!-- 헤더...어떻게... -->
                 <div style="padding-top: 8%;">
                     <h1 class="display-5 fw-bolder">팀원찾기</h1>
                     <p class="lead fw-normal text-white-80 mb-0">직접 프로젝트에 필요한 팀원을 찾아보세요.</p>
@@ -29,11 +28,6 @@
 				</div>
 			</div>
         </header>
-        <script type="text/javascript">
-        function finalCheck() {
-        	alert("입력하신 정보로 글을 작성하시겠습니까?");
-        }
-        </script>
         
         <!-- Section-->
         <section class="py-5">
@@ -48,25 +42,33 @@
 	<br>
 	<br>
 	</div>
+
+	<!-- find_no 표시 -->
+	<input type="hidden" id="find_no" name="find_no" value="${dto.find_no}">
+	
+	<!-- 제목 -->
     <div class="form-group">
       <label for="exampleInputTitle" class="form-label mt-4">제목</label>
-      <input type="text" class="form-control" id="find_title" name="find_title" aria-describedby="title" value="${dto.find_title}" placeholder="제목은 2글자 이상, 15글자 이하로 작성해주세요."
-      minlength="2" maxlength="16" required="required">
+      <input type="text" class="form-control" id="find_title" name="find_title" aria-describedby="title" value="${dto.find_title}" placeholder="제목은 2글자 이상, 20글자 이하로 작성해주세요."
+      minlength="2" maxlength="21" required="required">
     </div>
 	
+	<!-- 아이디 -->
 	<div class="form-group">
       <label for="exampleInputWriter" class="form-label mt-4">아이디</label>
       <input type="text" class="form-control" id="find_writer" name="find_writer" aria-describedby="writer" value="${dto.find_writer}" readonly required="required">
       <small id="writer" class="form-text text-muted"></small>
     </div>
 	
+	<!-- 거주지역 -->
    <div class="form-group">
       <label for="exampleInputAdress" class="form-label mt-4">거주지역</label>
       <input type="text" class="form-control" id="find_address" name="find_address" aria-describedby="emailHelp" value="${dto.find_address}" placeholder="ex) 서울시 강남구" maxlength="20" required="required">
       <small id="adress" class="form-text text-muted"></small>
     </div>
 	
-    <div class="form-group">
+	<!-- 포지션 -->
+    <div class="form-group" require="required">
       <label for="examplePosition" class="form-label mt-4" id="find_position" name="find_position" value="${dto.find_position}" required="required">희망포지션</label>
 		<br>
     	<input type="checkbox" id="find_position" name="find_position" value="Front-end(프론트)">
@@ -87,35 +89,25 @@
   		<label for="position1">&nbsp;PM(Project Manager)</label><br>
     </div>
     
+    <!-- 자기소개 -->
     <div class="form-group">
       <label for="exampleTextarea" class="form-label mt-4">자기소개</label>
       <textarea class="form-control" id="find_content" name="find_content" placeholder="자유롭게 자신을 소개해주세요. (500자 이내로 작성 가능합니다.)" rows="3" maxlength="501" required="required"> ${dto.find_content}</textarea>
-	   
-    </div>
-    <div class="form-group">
-      <label for="formFile" class="form-label mt-4">대표 이미지</label>
-      <input class="form-control" type="file" id="form_imgpath" name="form_imgpath">
-	  <small id="imgfile" class="form-text text-muted">대표 이미지는 목록에 보여집니다.</small>
-    </div>
-    
+   
 	<br>
 	<br>
 	
+	<!-- 등록 / 취소 -->
 	<div class="justify-content-center text-center">
-    <input type="submit" value="등록" class="btn btn-warning">
+    <input type="submit" value="등록" class="btn btn-warning" onclick="return boxCheck();"> 
 	<a href="list"><input type="button" value="취소" class="btn btn-light"></a>
 	</div>
-  </fieldset>
-</form>
-	
-
-                           
+ 	 </fieldset>
+		</form>
                         </div>
                     </div>
-                </div>
 			<br>
 			<br>	
-			</div>
 
         </section>
         <!-- Footer-->

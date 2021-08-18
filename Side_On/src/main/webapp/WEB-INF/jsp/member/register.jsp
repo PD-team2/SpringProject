@@ -29,16 +29,13 @@ function openIdChekWindow() {
 	var idWin = window.open("idCheck", "_blank", specs);
 }
 
+/* 핸드폰 인증 페이지 팝업 */
 function openMobileWindow() {
 	var specs = "width=400,height=300,top=300,left=500";
 	var idWin = window.open("mobile", "_blank", specs);
 }
 
 </script>
-
-
-
-  
 </head>
 
 <body class="" style="background-color: #FFD026" >
@@ -123,12 +120,7 @@ function openMobileWindow() {
                                    <input type="button" value="인증" class="btn btn-outline-warning btn-user btn-block" onclick="openMobileWindow()">
                                 </div>
                                 </div>
-                              	
-                              	
                                 <input type="submit" value='완료' class="btn btn-primary btn-user btn-block" onclick="return checkForm();">                                
-                               	<!-- 테스트용 
-                               	<input type="button" onclick="return checkForm();">
-                               	-->
                                	
                                 <a href="/" class="btn btn-danger btn-user btn-block">
                                    취소
@@ -160,8 +152,8 @@ function openMobileWindow() {
     
     <script type="text/javascript">
 	
-/* 비밀번호 유효성 체크 */
-function checkForm() {
+	/* 비밀번호 유효성 체크 */
+	function checkForm() {
 	
 	var memberId = document.getElementById("memberId").value;
 	
@@ -203,13 +195,13 @@ function checkForm() {
 }
 }
 
-/* 이메일 문자 "@" 포함 체크*/
-function emailCheck() {
- 
- var email = document.getElementById("email").value;
- var emailtext = "@";
- if (email.indexOf(emailtext)!=-1) {
- } else {
+	/* 이메일 문자 "@" 포함 체크*/
+	function emailCheck() {
+	 
+ 	var email = document.getElementById("email").value;
+ 	var emailtext = "@";
+ 	if (email.indexOf(emailtext)!=-1) {
+ 	} else {
 	 	document.getElementById("email").focus();
 		document.getElementById("emailMsg").innerHTML = "이메일 형식에 따라 입력해주세요.";
 		document.getElementById("emailMsg").style.color = "red";

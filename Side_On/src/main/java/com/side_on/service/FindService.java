@@ -8,7 +8,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
 import com.side_on.dao.FindDao;
+import com.side_on.dto.Criteria;
 import com.side_on.dto.Find;
+import com.side_on.dto.QnABoard;
 import com.side_on.util.Utility;
 
 import lombok.extern.slf4j.Slf4j;

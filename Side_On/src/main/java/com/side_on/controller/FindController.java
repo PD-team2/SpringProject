@@ -8,7 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.side_on.dto.Criteria;
 import com.side_on.dto.Find;
+import com.side_on.dto.PageMaker;
 import com.side_on.service.FindService;
 
 
@@ -32,24 +34,8 @@ public class FindController {
 		
 		model.addAttribute("find", find);
 		
-//		log.debug("### list :: " + list);
 		return "find/list";
 	}
-	
-	
-	/** 글 작성 페이지 
-	@RequestMapping("/find/form")
-	public String FindMemberForm() {
-		return "find/form";
-	}
-	*/
-	
-	/** 글 상세 페이지
-	@RequestMapping("/find/detail")
-	public String FindMemberDetail() {
-		return "find/detail";
-	}
-	*/
 	
 	/** 게시글 상세조회 화면  */
 	@RequestMapping("/find/detail")

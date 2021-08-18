@@ -55,9 +55,6 @@ public class BeforeActionInterceptor implements HandlerInterceptor {
 		request.setAttribute("isLogin", isLogin);
 		request.setAttribute("isAdmin", isAdmin);
 		
-		log.debug("### isLogin: " + isLogin);
-		log.debug("### isAdmin: " + isAdmin);
-		
 		return HandlerInterceptor.super.preHandle(request, response, handler);
 	}
 

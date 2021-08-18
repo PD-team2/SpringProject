@@ -106,17 +106,16 @@ public class MemberController {
 		}
 	}
 	
+	/* 회원가입 */
 	@RequestMapping("/member/register")
 	public String register() {
-		log.debug("### register load :: ");
+		log.debug("### register :: ");
 		return "member/register";
 	}
 	
+	/* 회원가입 완료 */
 	@RequestMapping("/member/registerDone")
 	public String registerDone(Member dto, Model model) {
-		log.info("### register :: ");
-		log.debug("### " + dto);
-		
 		int result = memberService.addMember(dto);
 		if (result == 1) {
 			model.addAttribute("message", "[회원가입성공] 로그인 후 서비스 이용하세요");
@@ -127,16 +126,9 @@ public class MemberController {
 		}
 	}
 	
-	@RequestMapping("/member/test")
-	public String test() {
-		log.debug("### test :: ");
-		return "member/test";
-	}
-
-	
+	/* 아이디 중복체크 */
 	@RequestMapping("/member/idCheck")
 	public String idCheck() {
-		log.debug("### idCheck :: ");
 		return "member/idCheck";
 	}
 	
@@ -205,7 +197,8 @@ public class MemberController {
 		}
 		return false;
 	}
-	 
+	
+	/* 핸드폰 인증 */
 	@RequestMapping("/member/mobile")
 	public String sendMessage() {
 		log.debug("### sendMessage :: ");

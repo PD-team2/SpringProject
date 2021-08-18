@@ -16,12 +16,10 @@
         <!-- navibar -->
        <%@ include file="../inc/header.jsp" %>
     
-    
         <!-- Header-->
         <header class="bg-warning py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                <!-- 헤더...어떻게... -->
                 <div style="padding-top: 8%;">
                     <h1 class="display-5 fw-bolder">팀원찾기</h1>
                     <p class="lead fw-normal text-white-80 mb-0">직접 프로젝트에 필요한 팀원을 찾아보세요.</p>
@@ -35,33 +33,27 @@
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="justify-content-center">
                      <form>
-  <fieldset>
-	<div class="justify-content-center text-center">
-	<h2>
-	<legend>글이 성공적으로 삭제되었습니다.</legend>
-    </h2>
-	<br>
-	<br>
-	</div>
+  				<fieldset>
+				<div class="justify-content-center text-center">
+				<h2>
+				<legend>글이 성공적으로 삭제되었습니다.</legend>
+    			</h2>
+				<br>
+				<br>
+				</div>
 	
 	
-	<div class="justify-content-center text-center">
-	<a href="list"><input type="button" value="목록으로 가기" class="btn btn-light"></a>
-	</div>
-  </fieldset>
-</form>
-	
-
-                           
+			<div class="justify-content-center text-center">
+			<a href="list"><input type="button" value="목록으로 가기" class="btn btn-light"></a>
+			</div>
+  			</fieldset>
+			</form>
                         </div>
                     </div>
-                </div>
 			<br>
 			<br>	
 			<br>
 			<br>
-			
-			</div>
 
         </section>
         <!-- Footer-->
