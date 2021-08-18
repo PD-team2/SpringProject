@@ -21,8 +21,6 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../css/styles.css" rel="stylesheet" />
         <link href="../css/MainPage_JHK.css" rel="stylesheet" />
-        <link href="../css/RecruitHome_juri.css" rel="stylesheet" />
-        <link href="../css/findMember_sh.css" rel="stylesheet" />
         <!-- EmailJs Api -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 		<script type="text/javascript" src="../js/contactEmail_JHK.js"></script>
@@ -110,9 +108,6 @@
                    <img class="SideOnExplainImg" src="https://raw.githubusercontent.com/PD-team2/SpringProject/main/Side_On/src/main/resources/static/img/SideOnExplain.png" alt="..." />
                 </div>
         </section>
-        
-       
-       
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container">
@@ -197,7 +192,7 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="../js/scripts.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
