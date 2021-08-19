@@ -1,4 +1,6 @@
 # SpringProject
+- 작업스케줄(7/20-8/19)  
+  https://tame-army-cab.notion.site/2-WebProject-56cecd494feb44f2851f027805dcb4a5
 - ERD 작업   
   https://www.erdcloud.com/d/bwnEAQXsh2BgsQW7z
 - 팀 작업일지  
