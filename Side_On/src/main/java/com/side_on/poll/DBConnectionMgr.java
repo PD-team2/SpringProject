@@ -13,8 +13,8 @@ public class DBConnectionMgr {
     private Vector connections = new Vector(10);
     private String _driver = "oracle.jdbc.driver.OracleDriver";
     private String _url = "jdbc:oracle:thin:@localhost:1521:XE";
-    private String _user = "side_on";
-    private String _password = "side_on";
+    private String _user = "sideon";
+    private String _password = "sideon";
     
     private boolean _traceOn = false;
     private boolean initialized = false;
